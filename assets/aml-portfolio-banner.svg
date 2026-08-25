@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">Erik Yeghinyan AML and Financial Crime Portfolio</title>
+<desc id="desc">Professional navy banner with teal accents</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#071A2B"/>
+    <stop offset="1" stop-color="#123B4A"/>
+  </linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#7DE2D1" stroke-opacity=".07"/>
+  </pattern>
+</defs>
+<rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+<rect width="1200" height="320" rx="18" fill="url(#grid)"/>
+<rect x="72" y="67" width="8" height="186" rx="4" fill="#36C9B4"/>
+<text x="112" y="128" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Erik Yeghinyan</text>
+<text x="112" y="177" fill="#8FE7D9" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600">AML · FINANCIAL CRIME · BANKING OPERATIONS</text>
+<text x="112" y="222" fill="#D7E7EC" font-family="Arial, Helvetica, sans-serif" font-size="20">Transaction Monitoring  |  KYC/CDD/EDD  |  Fraud Risk  |  SAR Support</text>
+<g transform="translate(976 82)">
+  <path d="M72 0l72 28v58c0 55-31 91-72 112C31 177 0 141 0 86V28L72 0z" fill="none" stroke="#36C9B4" stroke-width="6"/>
+  <path d="M39 99l22 22 47-55" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
