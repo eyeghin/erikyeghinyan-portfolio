@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/aml-portfolio-banner.svg" alt="Erik Yeghinyan — AML and Financial Crime Portfolio" width="100%">
+  <img src="assets/aml-portfolio-banner.svg" alt="Erik Yeghinyan  |  AML and Financial Crime Portfolio" width="100%">
 </p>
 
 <p align="center">
@@ -10,48 +10,42 @@
 
 ## Professional Profile
 
-Financial crime investigations professional with **2+ years of experience** across fintech, consulting, and frontline banking. My work has covered the financial-crime lifecycle—from verifying who a customer is, to investigating how money moves, to recognizing risk during direct customer interactions.
+Financial crime investigations professional with **2+ years of experience** across fintech, consulting, and frontline banking. My work has covered the financial crime lifecycle | from verifying who a customer is, to investigating how money moves, to recognizing risk during direct customer interactions.
 
-I have investigated ACH, P2P, account-takeover, unusual-spending, and fraud alerts; combined transactional evidence with KYC, OSINT, and adverse-media findings; documented defensible decisions; escalated unexplained activity; and supported SAR narratives. **[Read my full career narrative →](professional-narrative.md)**
+I have investigated ACH, P2P, account takeover, unusual spending, and fraud alerts; combined transactional evidence with KYC, OSINT, and adverse media findings; documented defensible decisions; escalated unexplained activity; and supported SAR narratives. **[Read my full career narrative →](professional-narrative.md)**
 
 ## What I Have Been Doing
 
 | Environment | My responsibility | What that required |
 |---|---|---|
 | **Santander Bank** | First-line customer and transaction controls | Verify identity, understand transaction context, recognize fraud/AML red flags, protect customer information, and escalate concerns |
-| **Guidehouse / Green Dot Bank** | High-volume transaction-monitoring investigations | Review 30+ daily alerts in Unit21, analyze patterns and counterparties, document decisions, escalate risk, and support SAR narratives |
+| **Guidehouse / Green Dot Bank** | High-volume transaction monitoring investigations | Review 30+ daily alerts in Unit21, analyze patterns and counterparties, document decisions, escalate risk, and support SAR narratives |
 | **IDBank** | Digital onboarding and compliance operations | Review identity and documents, apply KYC/CDD/EDD/CIP, resolve inconsistencies, research risk, and refer cases for enhanced review |
 
 ## Recruiter Snapshot
 
 | 30+ | 25% | 30% | 3 |
 |:---:|:---:|:---:|:---:|
-| Daily investigations | Efficiency improvement | Fewer false-positive escalations | Advanced multilingual communication |
+| Daily investigations | Efficiency improvement | Fewer false positive escalations | Advanced multilingual communication |
 | **Unit21 & World-Check** | **AML/BSA & OFAC** | **KYC/CDD/EDD** | **ACH, P2P & ATO** |
 
 ## Selected Evidence of Work
 
 | Work sample | Skills demonstrated |
 |---|---|
-| **[My Financial Crime Career Narrative →](professional-narrative.md)** | How my onboarding, investigation, and frontline-banking experience connects |
-| **[Transaction-Monitoring Investigation →](case-studies/transaction-monitoring-case-study.md)** | Alert triage, transaction analysis, investigative judgment, disposition, and escalation |
+| **[My Financial Crime Career Narrative →](professional-narrative.md)** | How my onboarding, investigation, and frontline banking experience connects |
+| **[Transaction-Monitoring Investigation →](case-studies/transaction monitoring-case-study.md)** | Alert triage, transaction analysis, investigative judgment, disposition, and escalation |
 | **[KYC/CDD/EDD Workflow →](workflows/kyc-cdd-edd-workflow.md)** | Customer identification, risk rating, screening, enhanced review, and ongoing monitoring |
 | **[Payments & Fraud Typologies →](research/payments-fraud-typologies.md)** | ACH, P2P, account takeover, mule activity, synthetic identity, and bank–fintech differences |
-| **[SAR-Style Narrative →](samples/sample-sar-style-narrative.md)** | Objective, chronological, concise, and evidence-based investigative writing |
+| **[SAR Style Narrative →](samples/sample-sar-style-narrative.md)** | Objective, chronological, concise, and evidence based investigative writing |
 
-## How I Work an Alert
+## How I Review an Alert
 
-```mermaid
-flowchart LR
-    A["Understand the Alert"] --> B["Compare Customer Profile"]
-    B --> C["Trace Funds & Counterparties"]
-    C --> D["Research & Test Explanations"]
-    D --> E{"Evidence-Based Decision"}
-    E -->|Reasonably explained| F["Document & Close"]
-    E -->|Risk remains| G["Escalate & Support Review"]
-```
+<p align="center">
+  <img src="assets/investigation-workflow.svg" alt="My five step alert review process" width="100%">
+</p>
 
-I do not treat the alert as the conclusion. I establish what triggered it, compare the activity with the customer's expected and historical behavior, examine timing and flow of funds, research relevant parties, test reasonable explanations, and write a conclusion another reviewer can follow.
+An alert tells me where to begin. I review why it triggered, compare the activity with the customer profile, trace the movement of funds, research relevant parties, and test reasonable explanations. My final documentation shows what I reviewed, what I found, and why the evidence supports closure or escalation.
 
 ## Core Expertise
 
@@ -66,17 +60,17 @@ I do not treat the alert as the conclusion. I establish what triggered it, compa
 
 ## Experience
 
-### Santander Bank — Teller / Relationship Banker
+### Santander Bank  |  Teller / Relationship Banker
 *Massachusetts · September 2025–May 2026*
 
 Served in the first line of defense while handling customer transactions and account servicing. Applied KYC/CIP controls, gathered transaction context, recognized unusual activity and fraud indicators, protected confidential information, and escalated concerns to specialist teams.
 
-### Guidehouse | Green Dot Bank — AML Compliance Analyst
+### Guidehouse | Green Dot Bank  |  AML Compliance Analyst
 *Vilnius, Lithuania (Hybrid) · September 2024–September 2025*
 
-Completed 30+ daily alert investigations in Unit21 across ACH, P2P, account takeover, unusual spending, and fraud. Managed cases from triage through pattern analysis, documentation, adjudication, escalation, and resolution; synthesized KYC, OSINT, adverse-media, and transaction data into decision-ready findings and SAR narrative support.
+Completed 30+ daily alert investigations in Unit21 across ACH, P2P, account takeover, unusual spending, and fraud. Managed cases from triage through pattern analysis, documentation, adjudication, escalation, and resolution; synthesized KYC, OSINT, adverse media, and transaction data into decision-ready findings and SAR narrative support.
 
-### IDBank — Compliance Operations Specialist
+### IDBank  |  Compliance Operations Specialist
 *Yerevan, Armenia (Remote) · September 2023–September 2024*
 
 Reviewed customer onboarding and account activity using KYC, CDD, EDD, CIP, identity verification, document analysis, source-of-funds context, OSINT, and fraud indicators. Resolved inconsistencies, completed appropriate customer outreach, and escalated cases requiring enhanced review.
@@ -85,16 +79,16 @@ Reviewed customer onboarding and account activity using KYC, CDD, EDD, CIP, iden
 
 | Investigation tools | Data & productivity | Languages |
 |---|---|---|
-| Unit21, World-Check, case-management systems, OSINT, adverse media | Excel: PivotTables, XLOOKUP, Power Query; Google Workspace; Microsoft Office | Armenian: Native; English: Advanced/C2; **Russian: Advanced** |
+| Unit21, World-Check, case management systems, OSINT, adverse media | Excel: PivotTables, XLOOKUP, Power Query; Google Workspace; Microsoft Office | Armenian: Native; English: Advanced/C2; **Russian: Advanced** |
 
 ## Education & Credentials
 
-**LCC International University** — B.A. Communication, GPA 3.8/4.0 (2024)
+**LCC International University**  |  B.A. Communication, GPA 3.8/4.0 (2024)
 
 - Foundations in AML/KYC
 - Banking & Insurance AML/KYC
 - Crypto Financial Crime Bootcamp
-- Leveraging AI for GRC — PMI (April 2025)
+- Leveraging AI for GRC  |  PMI (April 2025)
 - GDPR Training
 
 > **My approach:** Effective AML work is not about treating every unusual transaction as suspicious. It is about understanding expected behavior, following the flow of funds, testing reasonable explanations, documenting evidence, and escalating risk with clarity.
