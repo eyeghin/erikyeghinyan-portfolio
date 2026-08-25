@@ -41,11 +41,21 @@ I have investigated ACH, P2P, account takeover, unusual spending, and fraud aler
 
 ## How I Review an Alert
 
-<p align="center">
-  <img src="assets/investigation-workflow.svg" alt="My five step alert review process" width="100%">
-</p>
+| 01 | 02 | 03 | 04 |
+|:---:|:---:|:---:|:---:|
+| **REVIEW THE TRIGGER** | **UNDERSTAND THE CUSTOMER** | **FOLLOW THE MONEY** | **RESEARCH THE RISK** |
+| Identify the behavior that generated the alert | Compare KYC, account purpose, expected activity, and history | Examine timing, value, velocity, channels, and counterparties | Review OSINT, adverse media, prior alerts, and available records |
 
-An alert tells me where to begin. I review why it triggered, compare the activity with the customer profile, trace the movement of funds, research relevant parties, and test reasonable explanations. My final documentation shows what I reviewed, what I found, and why the evidence supports closure or escalation.
+### Decision and Documentation
+
+| ACTIVITY REASONABLY EXPLAINED | RISK REMAINS UNRESOLVED |
+|:---|:---|
+| **Document the evidence and close** | **Escalate with a clear investigative rationale** |
+| State what was reviewed and why the activity is consistent with the available customer context | State the red flags, unresolved questions, supporting evidence, and reason for further review |
+
+> **The alert starts the review. The evidence determines the outcome.**
+
+I write each conclusion so another reviewer can understand what happened, what I examined, and why the evidence supports my decision.
 
 ## Core Expertise
 
