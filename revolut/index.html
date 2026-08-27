@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Erik Yeghinyan — sales, banking operations, customer activation, and AML portfolio for Revolut's New Business Account Executive role.">
+  <meta name="theme-color" content="#087cff">
+  <title>Erik Yeghinyan Portfolio</title>
+  <style>
+    :root{
+      --black:#070707;
+      --white:#fff;
+      --blue:#087cff;
+      --blue-deep:#0046e5;
+      --sky:#72c8ff;
+      --lime:#d7ff45;
+      --ice:#eaf5ff;
+      --gray:#f2f2f2;
+      --muted:#686868;
+      --radius:38px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--black);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .eyebrow{margin:0 0 18px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .button{min-height:52px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;background:var(--black);color:#fff;font-size:14px;font-weight:750;cursor:pointer;transition:transform .2s,box-shadow .2s}
+    .button:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.17)}
+    .button.white{background:#fff;color:#070707}
+    .button.clear{border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.12);backdrop-filter:blur(14px)}
+    .arrow{font-size:17px}
+
+    .hero{position:relative;min-height:calc(100vh - 16px);margin:8px;border-radius:28px;background:#0784ff url("../assets/revolut-core-hero.webp") center/cover no-repeat;color:#fff;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,57,172,.58) 0%,rgba(0,85,205,.18) 50%,rgba(0,38,111,.08) 100%)}
+    .nav{position:absolute;z-index:10;top:0;left:0;right:0;height:82px;padding:0 clamp(20px,4vw,58px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;color:#fff}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:790;letter-spacing:-.03em}
+    .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#fff;color:#070707;font-size:12px}
+    .nav-links{display:flex;gap:34px;font-size:13px;font-weight:650}
+    .nav-links a{opacity:.82;transition:opacity .2s}.nav-links a:hover{opacity:1}
+    .nav-action{justify-self:end;display:flex;gap:9px}
+    .nav-action a{padding:12px 18px;border-radius:999px;font-size:13px;font-weight:750}
+    .nav-action .contact{background:#fff;color:#070707}
+    .hero-content{position:relative;z-index:2;min-height:calc(100vh - 16px);padding:150px clamp(24px,6vw,94px) 66px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start}
+    .candidate-badge{padding:9px 13px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.13);font-size:11px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;backdrop-filter:blur(12px)}
+    .hero h1{max-width:1030px;margin:22px 0 22px;font-size:clamp(66px,9.1vw,148px);line-height:.82;letter-spacing:-.077em;font-weight:820}
+    .hero h1 span{display:block;font-family:Georgia,"Times New Roman",serif;font-weight:500;font-style:italic}
+    .hero-sub{max-width:650px;margin:0;color:rgba(255,255,255,.91);font-size:clamp(17px,1.5vw,22px);line-height:1.45;letter-spacing:-.02em}
+    .hero-actions{display:flex;gap:10px;margin-top:28px}
+    .hero-status{position:absolute;z-index:3;right:clamp(24px,4vw,58px);bottom:56px;width:265px;padding:18px 19px;border:1px solid rgba(255,255,255,.34);border-radius:22px;background:rgba(255,255,255,.15);backdrop-filter:blur(18px)}
+    .hero-status small{display:block;color:rgba(255,255,255,.72);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+    .hero-status strong{display:block;margin:10px 0 14px;font-size:18px;line-height:1.1;letter-spacing:-.035em}
+    .hero-status div{height:5px;border-radius:99px;background:rgba(255,255,255,.25);overflow:hidden}.hero-status i{display:block;width:90%;height:100%;background:#fff}
+
+    .statement{padding:150px 24px 115px;text-align:center}
+    .statement h2{max-width:1080px;margin:0 auto;font-size:clamp(52px,7.7vw,116px);line-height:.91;letter-spacing:-.073em}
+    .statement h2 em{font-family:Georgia,"Times New Roman",serif;color:var(--blue);font-weight:500}
+    .statement p{max-width:670px;margin:34px auto 0;color:var(--muted);font-size:18px;line-height:1.55}
+
+    .journey{margin:0 8px;padding:105px clamp(20px,5vw,78px);border-radius:var(--radius);background:var(--gray);overflow:hidden}
+    .journey-head{max-width:1180px;margin:0 auto 60px;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:end}
+    .journey h2{margin:0;max-width:820px;font-size:clamp(55px,7vw,100px);line-height:.88;letter-spacing:-.073em}
+    .journey-head>p{margin:0;color:var(--muted);font-size:17px;line-height:1.6}
+    .stage-layout{max-width:1180px;margin:auto;display:grid;grid-template-columns:255px minmax(0,1fr);gap:20px}
+    .stage-controls{padding:10px;display:flex;flex-direction:column;gap:5px;border-radius:28px;background:#fff}
+    .stage-btn{min-height:72px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border:0;border-radius:20px;background:transparent;color:#777;text-align:left;cursor:pointer}
+    .stage-btn span{font-size:15px;font-weight:740}.stage-btn small{font-size:11px}
+    .stage-btn.active{background:#070707;color:#fff}
+    .stage-screen{position:relative;min-height:600px;padding:56px;display:grid;grid-template-columns:1fr 320px;gap:54px;border-radius:34px;background:var(--blue);color:#fff;overflow:hidden;transition:background .35s}
+    .stage-screen[data-theme="black"]{background:#070707}
+    .stage-screen[data-theme="lime"]{background:var(--lime);color:#070707}
+    .stage-screen:before{content:"";position:absolute;width:500px;height:500px;right:-270px;top:-270px;border:1px solid rgba(255,255,255,.24);border-radius:50%;box-shadow:0 0 0 65px rgba(255,255,255,.07),0 0 0 130px rgba(255,255,255,.04)}
+    .stage-copy{position:relative;z-index:2;align-self:center}
+    .stage-copy .stage-index{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+    .stage-copy h3{max-width:650px;margin:17px 0 19px;font-size:clamp(45px,5.4vw,76px);line-height:.92;letter-spacing:-.063em}
+    .stage-copy>p{max-width:610px;margin:0;font-size:16px;line-height:1.62;opacity:.78}
+    .stage-chips{margin-top:30px;display:flex;flex-wrap:wrap;gap:8px}.stage-chips span{padding:10px 13px;border:1px solid currentColor;border-radius:999px;font-size:11px;opacity:.8}
+    .phone{position:relative;z-index:2;align-self:center;min-height:480px;padding:18px;border:2px solid rgba(255,255,255,.7);border-radius:44px;background:rgba(255,255,255,.15);box-shadow:0 28px 60px rgba(0,0,0,.16);backdrop-filter:blur(15px)}
+    .stage-screen[data-theme="lime"] .phone{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.5)}
+    .phone-notch{width:72px;height:20px;margin:0 auto 30px;border-radius:999px;background:rgba(0,0,0,.72)}
+    .phone-card{padding:21px;border-radius:25px;background:#fff;color:#070707}.phone-card small{color:#777}.phone-card strong{display:block;margin:28px 0 7px;font-size:37px;letter-spacing:-.06em}.phone-card p{margin:0;color:#777;font-size:11px}
+    .phone-list{margin-top:12px;display:grid;gap:9px}.phone-list div{padding:14px 15px;display:flex;align-items:center;justify-content:space-between;border-radius:18px;background:rgba(255,255,255,.17);font-size:11px}.stage-screen[data-theme="lime"] .phone-list div{background:rgba(0,0,0,.08)}
+    .phone-list b{font-size:12px}.phone-list i{width:9px;height:9px;border-radius:50%;background:#82ffa0}
+
+    .numbers{padding:138px max(24px,calc((100vw - 1180px)/2));background:#fff}
+    .numbers h2{max-width:920px;margin:0 0 70px;font-size:clamp(53px,7vw,98px);line-height:.9;letter-spacing:-.07em}
+    .number-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #ccc}
+    .number{padding:32px 24px 8px 0;border-right:1px solid #ccc}.number:last-child{border-right:0;padding-left:24px}.number:not(:first-child){padding-left:24px}
+    .number strong{display:block;font-size:clamp(43px,5vw,72px);letter-spacing:-.07em}.number span{display:block;max-width:170px;margin-top:10px;color:#666;font-size:12px;line-height:1.45}
+
+    .proof{margin:0 8px;padding:110px clamp(20px,5vw,78px);border-radius:var(--radius);background:#070707;color:#fff;overflow:hidden}
+    .proof-head{max-width:1180px;margin:0 auto 55px;display:flex;justify-content:space-between;align-items:end;gap:40px}
+    .proof h2{max-width:850px;margin:0;font-size:clamp(53px,7vw,98px);line-height:.89;letter-spacing:-.07em}
+    .slider-actions{display:flex;gap:8px}.slider-actions button{width:52px;height:52px;border:1px solid #555;border-radius:50%;background:transparent;color:#fff;font-size:20px;cursor:pointer}.slider-actions button:hover{background:#fff;color:#070707}
+    .track{max-width:1180px;margin:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+    .proof-card{min-width:380px;min-height:540px;padding:32px;display:flex;flex-direction:column;border-radius:32px;background:#1b1b1b;scroll-snap-align:start;overflow:hidden}
+    .proof-card.blue{background:#087cff}.proof-card.lime{background:#d7ff45;color:#070707}.proof-card.ice{background:#eaf5ff;color:#070707}
+    .proof-card small{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;opacity:.6}.proof-card h3{margin:55px 0 16px;font-size:38px;line-height:1;letter-spacing:-.055em}.proof-card p{margin:0;font-size:14px;line-height:1.65;opacity:.7}
+    .proof-result{margin-top:auto;padding-top:25px;border-top:1px solid currentColor}.proof-result strong{display:block;font-size:64px;line-height:.85;letter-spacing:-.075em}.proof-result span{display:block;margin-top:12px;font-size:11px;opacity:.65}
+
+    .experience{padding:145px max(24px,calc((100vw - 1180px)/2))}
+    .experience-head{margin-bottom:62px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}.experience h2{margin:0;font-size:clamp(55px,7vw,100px);line-height:.89;letter-spacing:-.07em}.experience-head p{margin:0;color:#666;font-size:17px;line-height:1.6}
+    .roles{border-top:1px solid #bbb}.role{border-bottom:1px solid #bbb}.role summary{min-height:120px;display:grid;grid-template-columns:50px 1.35fr 1fr 50px;align-items:center;gap:22px;cursor:pointer;list-style:none}.role summary::-webkit-details-marker{display:none}
+    .role-num{font-size:11px;color:#888}.role-title{display:flex;flex-direction:column;gap:7px}.role-title strong{font-size:24px;letter-spacing:-.04em}.role-title small{color:#707070}.role-tag{justify-self:start;padding:9px 12px;border-radius:999px;background:#eee;font-size:10px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}.plus{justify-self:end;width:38px;height:38px;display:grid;place-items:center;border:1px solid #bbb;border-radius:50%;font-size:19px;transition:transform .2s}.role[open] .plus{transform:rotate(45deg);background:#070707;color:#fff}
+    .role-body{padding:0 110px 32px 72px}.role-body p{max-width:820px;margin:0;color:#5e5e5e;font-size:15px;line-height:1.72}
+
+    .why{position:relative;min-height:790px;margin:0 8px;padding:90px clamp(24px,6vw,95px);display:flex;align-items:flex-end;border-radius:var(--radius);background:#087cff url("../assets/revolut-core-hero.webp") center 42%/cover;color:#fff;overflow:hidden}
+    .why:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,46,153,.88),rgba(0,80,205,.27) 68%,rgba(0,0,0,.03))}
+    .why-copy{position:relative;z-index:2;max-width:970px}.why h2{margin:0 0 24px;font-size:clamp(58px,8vw,116px);line-height:.87;letter-spacing:-.075em}.why h2 em{font-family:Georgia,"Times New Roman",serif;font-weight:500}.why blockquote{max-width:780px;margin:0;font-size:21px;line-height:1.45;letter-spacing:-.025em}.why-note{max-width:660px;margin-top:22px;color:rgba(255,255,255,.8);font-size:14px;line-height:1.6}
+
+    .toolkit{padding:130px 24px;text-align:center}.toolkit h2{max-width:900px;margin:0 auto 54px;font-size:clamp(50px,6.7vw,94px);line-height:.9;letter-spacing:-.07em}.tools{max-width:1000px;margin:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:9px}.tools span{padding:13px 16px;border-radius:999px;background:#f0f0f0;font-size:13px;font-weight:650}
+
+    .contact{margin:0 8px;padding:120px 24px;border-radius:var(--radius);background:#070707;color:#fff;text-align:center}.contact h2{max-width:1050px;margin:0 auto 35px;font-size:clamp(58px,8vw,116px);line-height:.87;letter-spacing:-.075em}.contact p{max-width:650px;margin:0 auto 30px;color:#aaa;font-size:17px;line-height:1.55}.contact-actions{display:flex;justify-content:center;gap:10px}
+    footer{padding:30px max(24px,calc((100vw - 1180px)/2));display:flex;justify-content:space-between;gap:24px;color:#777;font-size:11px}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:980px){
+      .nav{grid-template-columns:1fr auto}.nav-links{display:none}.nav-action>a:first-child{display:none}
+      .hero-content{padding-bottom:140px}.hero-status{left:24px;right:auto;bottom:42px}
+      .journey-head,.experience-head{grid-template-columns:1fr;gap:22px}.stage-layout{grid-template-columns:1fr}.stage-controls{flex-direction:row;overflow-x:auto}.stage-btn{min-width:160px}.stage-screen{grid-template-columns:1fr 280px}
+      .number-grid{grid-template-columns:repeat(2,1fr)}.number:nth-child(2){border-right:0}.number:nth-child(-n+2){border-bottom:1px solid #ccc}
+    }
+    @media(max-width:680px){
+      :root{--radius:28px}.hero{min-height:850px}.nav{height:70px;padding:0 18px}.brand span:last-child{display:none}.brand-mark{width:36px;height:36px}.nav-action a{padding:11px 15px}.hero-content{min-height:842px;padding:122px 20px 170px}.hero h1{font-size:clamp(62px,19vw,88px)}.hero-sub{font-size:16px}.hero-actions{flex-direction:column;width:100%}.hero-actions .button{width:100%}.hero-status{left:20px;bottom:34px;width:240px}
+      .statement{padding:100px 20px 84px}.statement h2{font-size:52px}.statement p{font-size:16px}
+      .journey{padding:74px 14px}.journey h2,.experience h2,.numbers h2,.proof h2{font-size:51px}.stage-controls{margin:0 -14px;border-radius:0}.stage-screen{min-height:670px;padding:32px 22px;grid-template-columns:1fr}.stage-copy h3{font-size:45px}.phone{min-height:410px;width:100%;max-width:320px;margin:auto}
+      .numbers{padding:98px 20px}.number-grid{grid-template-columns:1fr}.number,.number:not(:first-child),.number:last-child{padding:25px 0;border-right:0;border-bottom:1px solid #ccc}.number:last-child{border-bottom:0}
+      .proof{padding:78px 14px}.proof-head{align-items:flex-start;flex-direction:column}.proof-card{min-width:86vw;min-height:500px;padding:27px}
+      .experience{padding:100px 20px}.role summary{min-height:108px;grid-template-columns:30px 1fr 40px;gap:12px}.role-title strong{font-size:19px}.role-tag{display:none}.role-body{padding:0 25px 28px 42px}
+      .why{min-height:760px;padding:65px 22px}.why h2{font-size:59px}.why blockquote{font-size:18px}
+      .toolkit{padding:100px 18px}.toolkit h2{font-size:52px}
+      .contact{padding:90px 20px}.contact h2{font-size:58px}.contact-actions{flex-direction:column}.contact-actions .button{width:100%}
+      footer{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav" aria-label="Portfolio navigation">
+      <a class="brand" href="#top"><span class="brand-mark">EY</span><span>Erik Yeghinyan Portfolio</span></a>
+      <div class="nav-links"><a href="#journey">Role fit</a><a href="#proof">Proof</a><a href="#experience">Experience</a><a href="#why">Why Revolut</a></div>
+      <div class="nav-action"><a href="https://www.linkedin.com/in/erik-yeghinyan" target="_blank" rel="noreferrer">LinkedIn</a><a class="contact" href="mailto:eyeghinyane@gmail.com">Contact me</a></div>
+    </nav>
+    <div class="hero-content">
+      <div class="candidate-badge">Independent candidate portfolio · US market</div>
+      <h1>Built to change <span>the way business grows.</span></h1>
+      <p class="hero-sub">I combine outbound sales, CRM ownership, institutional prospecting, banking, onboarding, customer experience, and AML discipline—built for Revolut’s New Business Account Executive role.</p>
+      <div class="hero-actions"><a class="button white" href="#journey">Explore my fit <span class="arrow">↓</span></a><a class="button clear" href="mailto:eyeghinyane@gmail.com">Email Erik ↗</a></div>
+    </div>
+    <aside class="hero-status"><small>Candidate signal</small><strong>Sales instinct.<br>Risk intelligence.</strong><div><i></i></div></aside>
+  </header>
+
+  <main>
+    <section class="statement reveal">
+      <p class="eyebrow">One profile · full customer journey</p>
+      <h2>Growth isn’t one moment. It’s the <em>whole journey.</em></h2>
+      <p>From prospect research and persuasive conversations to onboarding, activation, relationship growth, and financial-crime controls—I understand what happens on both sides of the sale.</p>
+    </section>
+
+    <section class="journey reveal" id="journey">
+      <div class="journey-head"><div><p class="eyebrow">Your pipeline, reimagined</p><h2>Tap through how I create momentum.</h2></div><p>This portfolio works like a product: select a stage to see the experience, proof, and operating mindset I bring to that part of Revolut’s funnel.</p></div>
+      <div class="stage-layout">
+        <div class="stage-controls" role="tablist" aria-label="Sales journey stages">
+          <button class="stage-btn active" data-stage="prospect" role="tab" aria-selected="true"><span>Prospect</span><small>01</small></button>
+          <button class="stage-btn" data-stage="engage" role="tab" aria-selected="false"><span>Engage</span><small>02</small></button>
+          <button class="stage-btn" data-stage="activate" role="tab" aria-selected="false"><span>Activate</span><small>03</small></button>
+          <button class="stage-btn" data-stage="grow" role="tab" aria-selected="false"><span>Grow safely</span><small>04</small></button>
+        </div>
+        <article class="stage-screen" id="stageScreen" data-theme="blue" role="tabpanel">
+          <div class="stage-copy">
+            <span class="stage-index" id="stageIndex">01 · Prospect</span>
+            <h3 id="stageTitle">Research that earns attention.</h3>
+            <p id="stageText">At Btalk and DiplomaSafe, I researched organizations and decision-makers, built targeted prospect lists, and managed CRM follow-up to turn a broad market into relevant outreach.</p>
+            <div class="stage-chips" id="stageChips"><span>Lead sourcing</span><span>CRM pipeline</span><span>Email & LinkedIn outreach</span></div>
+          </div>
+          <div class="phone" aria-label="Candidate proof card">
+            <div class="phone-notch"></div>
+            <div class="phone-card"><small id="phoneLabel">Prospect readiness</small><strong id="phoneValue">Outbound</strong><p id="phoneNote">Focused research → relevant first touch</p></div>
+            <div class="phone-list"><div><b>Commercial signal</b><i></i></div><div><b>Customer empathy</b><i></i></div><div><b>Risk awareness</b><i></i></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="numbers reveal">
+      <p class="eyebrow">Proof at a glance</p>
+      <h2>Results that travel across roles.</h2>
+      <div class="number-grid">
+        <div class="number"><strong data-count="30" data-suffix="+">0</strong><span>accounts and AML alerts reviewed daily</span></div>
+        <div class="number"><strong data-count="30" data-suffix="%">0</strong><span>fewer false-positive escalations</span></div>
+        <div class="number"><strong data-count="25" data-suffix="%">0</strong><span>investigative efficiency improvement</span></div>
+        <div class="number"><strong data-count="2" data-prefix="~$" data-suffix="K">0</strong><span>daily retail sales supported</span></div>
+      </div>
+    </section>
+
+    <section class="proof reveal" id="proof">
+      <div class="proof-head"><div><p class="eyebrow">Evidence, not adjectives</p><h2>Commercial energy. Operational control.</h2></div><div class="slider-actions"><button id="prevCard" aria-label="Previous proof card">←</button><button id="nextCard" aria-label="Next proof card">→</button></div></div>
+      <div class="track" id="proofTrack">
+        <article class="proof-card blue"><small>01 · Outbound sales</small><h3>Own the conversation to close.</h3><p>As a Contract Sales Manager at Btalk, I managed the sales CRM, conducted calls and email outreach, followed up with decision-makers, and sold Armenian-language books to U.S. schools and large institutions.</p><div class="proof-result"><strong>CRM</strong><span>from outreach through sale</span></div></article>
+        <article class="proof-card lime"><small>02 · Retail sales</small><h3>Make every interaction useful.</h3><p>At Hollister, I learned to read intent quickly, translate product knowledge into relevant recommendations, and keep momentum in a high-volume sales environment.</p><div class="proof-result"><strong>~$2K</strong><span>daily sales supported</span></div></article>
+        <article class="proof-card ice"><small>03 · Activation</small><h3>Remove friction, keep control.</h3><p>At IDBank, I connected video verification, customer guidance, account setup, KYC, and fraud checks into a clearer onboarding experience.</p><div class="proof-result"><strong>4×</strong><span>disciplines connected in one journey</span></div></article>
+        <article class="proof-card"><small>04 · Risk intelligence</small><h3>Turn noise into decisions.</h3><p>At Guidehouse supporting Green Dot Bank, I reviewed ACH, P2P, unusual spending, and account-takeover activity while improving investigative focus.</p><div class="proof-result"><strong>−30%</strong><span>false-positive escalations</span></div></article>
+        <article class="proof-card blue"><small>05 · Communication</small><h3>Make complexity feel simple.</h3><p>At TP, I handled sensitive banking, healthcare, legal, and government conversations in Armenian, English, and Russian while protecting confidentiality.</p><div class="proof-result"><strong>3</strong><span>languages used with customers</span></div></article>
+      </div>
+    </section>
+
+    <section class="experience reveal" id="experience">
+      <div class="experience-head"><div><p class="eyebrow">Experience stack</p><h2>Built across banking, sales, and risk.</h2></div><p>Open each role to see the specific value it adds to the New Business Account Executive position.</p></div>
+      <div class="roles">
+        <details class="role" open><summary><span class="role-num">01</span><span class="role-title"><strong>Btalk Company</strong><small>Contract Sales Manager · Internship engagement</small></span><span class="role-tag">Outbound & CRM</span><span class="plus">+</span></summary><div class="role-body"><p>Managed the sales CRM, prospect follow-up, calls, and email outreach; presented Armenian-language book collections and closed sales with U.S. schools and large institutions.</p></div></details>
+        <details class="role"><summary><span class="role-num">02</span><span class="role-title"><strong>Santander US</strong><small>Bank Teller · Relationship Banking</small></span><span class="role-tag">Banking & sales</span><span class="plus">+</span></summary><div class="role-body"><p>Handled high-trust customer interactions, identified needs, explained banking solutions, supported referrals, and operated as a first line of defense for fraud and compliance.</p></div></details>
+        <details class="role"><summary><span class="role-num">03</span><span class="role-title"><strong>Guidehouse · Green Dot Bank</strong><small>AML Compliance Analyst</small></span><span class="role-tag">Risk intelligence</span><span class="plus">+</span></summary><div class="role-body"><p>Reviewed 30+ accounts and alerts daily across ACH, P2P, unusual spending, and account-takeover patterns; helped reduce false-positive escalations by 30% and improve efficiency by 25%.</p></div></details>
+        <details class="role"><summary><span class="role-num">04</span><span class="role-title"><strong>IDBank</strong><small>Compliance Operations Specialist</small></span><span class="role-tag">Onboarding & activation</span><span class="plus">+</span></summary><div class="role-body"><p>Combined video identity verification, KYC, account maintenance, fraud review, customer guidance, and product education to move customers through onboarding with confidence.</p></div></details>
+        <details class="role"><summary><span class="role-num">05</span><span class="role-title"><strong>TP</strong><small>Multilingual Customer Service Representative & Interpreter</small></span><span class="role-tag">Customer experience</span><span class="plus">+</span></summary><div class="role-body"><p>Resolved sensitive customer needs across banking, healthcare, legal, and government conversations in Armenian, English, and Russian while protecting confidentiality.</p></div></details>
+        <details class="role"><summary><span class="role-num">06</span><span class="role-title"><strong>DiplomaSafe</strong><small>Lead Research Specialist</small></span><span class="role-tag">Prospecting</span><span class="plus">+</span></summary><div class="role-body"><p>Researched organizations and decision-makers, built qualified prospect lists with Hunter.io, and supported disciplined outbound business-development activity.</p></div></details>
+        <details class="role"><summary><span class="role-num">07</span><span class="role-title"><strong>ESN Armenia</strong><small>Director of Communications & Public Relations · Internship</small></span><span class="role-tag">Stakeholder influence</span><span class="plus">+</span></summary><div class="role-body"><p>Led communications strategy, social media, and partner engagement across NGOs, institutions, alumni, and student communities—building confidence with decision-makers at different levels.</p></div></details>
+        <details class="role"><summary><span class="role-num">08</span><span class="role-title"><strong>Gausus Gyvenimas</strong><small>Research Assistant</small></span><span class="role-tag">Complex proposals</span><span class="plus">+</span></summary><div class="role-body"><p>Developed 70+ pages of research and proposal material that supported two funded Erasmus+ projects, translating complex requirements into persuasive, structured cases.</p></div></details>
+        <details class="role"><summary><span class="role-num">09</span><span class="role-title"><strong>Hollister Co.</strong><small>Brand Representative · Customer Service Associate</small></span><span class="role-tag">High-velocity sales</span><span class="plus">+</span></summary><div class="role-body"><p>Supported approximately $2K in daily sales through product knowledge, customer discovery, confident recommendations, and a fast, energetic floor experience.</p></div></details>
+        <details class="role"><summary><span class="role-num">10</span><span class="role-title"><strong>European Solidarity Corps · Kolpingo Kolegija</strong><small>Teaching Assistant & Volunteer</small></span><span class="role-tag">International service</span><span class="plus">+</span></summary><div class="role-body"><p>Supported learners and community activities in an international service environment, adapting communication across cultures and levels of understanding.</p></div></details>
+        <details class="role"><summary><span class="role-num">11</span><span class="role-title"><strong>Tumanyan Culture House</strong><small>Project Manager</small></span><span class="role-tag">Project ownership</span><span class="plus">+</span></summary><div class="role-body"><p>Coordinated cultural programming and community-facing projects, strengthening early experience in planning, stakeholder communication, and accountable delivery.</p></div></details>
+      </div>
+    </section>
+
+    <section class="why reveal" id="why">
+      <div class="why-copy"><p class="eyebrow">Why Revolut</p><h2>Yes, I’m a little <em>obsessed.</em></h2><blockquote>“My friends and colleagues joke that I’m obsessed with Revolut—and they’re not entirely wrong.”</blockquote><p class="why-note">I have genuinely recommended Revolut to people around me because I value how it turns complicated financial tasks into a simple, beautiful experience. That belief is the energy I want to bring to helping more business customers discover, activate, and grow with the product.</p></div>
+    </section>
+
+    <section class="toolkit reveal">
+      <p class="eyebrow">Operating toolkit</p><h2>Ready for a data-driven sales culture.</h2>
+      <div class="tools"><span>CRM administration</span><span>Cold calling</span><span>Email outreach</span><span>Institutional sales</span><span>Salesforce</span><span>HubSpot</span><span>Hunter.io</span><span>Zendesk</span><span>Unit21</span><span>World-Check</span><span>OSINT</span><span>Excel</span><span>Power Query</span><span>KYC / CDD / EDD</span><span>Armenian</span><span>English</span><span>Russian</span></div>
+    </section>
+
+    <section class="contact reveal">
+      <p class="eyebrow">Let’s build momentum</p><h2>Ready to help Revolut Business grow.</h2><p>Authorized to work in the United States with no sponsorship required. Open to remote work and relocation.</p>
+      <div class="contact-actions"><a class="button white" href="mailto:eyeghinyane@gmail.com">Email Erik ↗</a><a class="button clear" href="https://www.linkedin.com/in/erik-yeghinyan" target="_blank" rel="noreferrer">View LinkedIn ↗</a></div>
+    </section>
+  </main>
+
+  <footer><span>Erik Yeghinyan Portfolio</span><span>Independent portfolio · Not affiliated with or endorsed by Revolut</span><a href="#top">Back to top ↑</a></footer>
+
+  <script>
+    const stageData={
+      prospect:{index:"01 · Prospect",title:"Research that earns attention.",text:"At Btalk and DiplomaSafe, I researched organizations and decision-makers, built targeted prospect lists, and managed CRM follow-up to turn a broad market into relevant outreach.",chips:["Lead sourcing","CRM pipeline","Email & LinkedIn outreach"],label:"Prospect readiness",value:"Outbound",note:"Focused research → relevant first touch",theme:"blue"},
+      engage:{index:"02 · Engage",title:"Make complex value feel obvious.",text:"At Btalk, I reached U.S. schools and institutional decision-makers through calls and email, connected their needs to relevant Armenian-language book collections, and moved conversations toward a sale.",chips:["Cold calling","Needs discovery","Institutional selling"],label:"Customer signal",value:"Clear",note:"Listen → explain → earn trust",theme:"black"},
+      activate:{index:"03 · Activate",title:"Turn interest into confident usage.",text:"At IDBank, I supported digital verification, account setup, product guidance, KYC, and fraud review—removing friction without removing the controls that protect the customer.",chips:["Digital onboarding","Product education","KYC & fraud review"],label:"Activation mindset",value:"Ready",note:"Verify → explain → activate",theme:"lime"},
+      grow:{index:"04 · Grow safely",title:"Build the relationship—and protect it.",text:"Relationship banking sharpened my commercial instinct. AML work added the risk lens. Together, they help me identify value, support adoption, and grow customer relationships responsibly.",chips:["Solution selling","Upsell awareness","Risk discipline"],label:"Growth signal",value:"Balanced",note:"Adoption → value → trust",theme:"blue"}
+    };
+    const stageButtons=[...document.querySelectorAll(".stage-btn")];
+    const stageScreen=document.getElementById("stageScreen");
+    stageButtons.forEach(button=>button.addEventListener("click",()=>{
+      const data=stageData[button.dataset.stage];
+      stageButtons.forEach(item=>{item.classList.remove("active");item.setAttribute("aria-selected","false")});
+      button.classList.add("active");button.setAttribute("aria-selected","true");
+      stageScreen.dataset.theme=data.theme;
+      document.getElementById("stageIndex").textContent=data.index;
+      document.getElementById("stageTitle").textContent=data.title;
+      document.getElementById("stageText").textContent=data.text;
+      document.getElementById("stageChips").innerHTML=data.chips.map(item=>"<span>"+item+"</span>").join("");
+      document.getElementById("phoneLabel").textContent=data.label;
+      document.getElementById("phoneValue").textContent=data.value;
+      document.getElementById("phoneNote").textContent=data.note;
+    }));
+
+    const track=document.getElementById("proofTrack");
+    document.getElementById("nextCard").addEventListener("click",()=>track.scrollBy({left:394,behavior:"smooth"}));
+    document.getElementById("prevCard").addEventListener("click",()=>track.scrollBy({left:-394,behavior:"smooth"}));
+
+    const countUp=el=>{
+      const target=Number(el.dataset.count),prefix=el.dataset.prefix||"",suffix=el.dataset.suffix||"";
+      let start=0;const duration=850,startTime=performance.now();
+      const tick=now=>{const progress=Math.min((now-startTime)/duration,1);const value=Math.round(target*(1-Math.pow(1-progress,3)));el.textContent=prefix+value+suffix;if(progress<1)requestAnimationFrame(tick)};
+      requestAnimationFrame(tick);
+    };
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("visible");entry.target.querySelectorAll("[data-count]").forEach(countUp);observer.unobserve(entry.target)}
+    }),{threshold:.08});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    const hero=document.querySelector(".hero");
+    if(matchMedia("(pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+      hero.addEventListener("mousemove",event=>{const x=(event.clientX/innerWidth-.5)*8,y=(event.clientY/innerHeight-.5)*8;hero.style.backgroundPosition="calc(50% + "+x+"px) calc(50% + "+y+"px)"});
+    }
+  </script>
+</body>
+</html>
