@@ -24,7 +24,7 @@ jobs:
           cp index.html _site/index.html
           cp -R assets/. _site/assets/
           cp revolut/index.html _site/revolut/index.html
-          cp customer-service/index.html _site/customer-service/index.html
+          cp -R customer-service/. _site/customer-service/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
         with:
