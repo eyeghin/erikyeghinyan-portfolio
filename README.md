@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="mailto:eyeghinayne@gmail.com"><img src="https://img.shields.io/badge/Contact-Email-0B6E75?style=for-the-badge" alt="Email"></a>
+  <a href="mailto:eyeghinyane@gmail.com"><img src="https://img.shields.io/badge/Contact-Email-0B6E75?style=for-the-badge" alt="Email"></a>
   <img src="https://img.shields.io/badge/Location-Massachusetts-173B57?style=for-the-badge" alt="Massachusetts">
   <img src="https://img.shields.io/badge/Open_to-AML_%26_FinCrime_Roles-147D64?style=for-the-badge" alt="Open to AML and financial crime roles">
 </p>
@@ -20,7 +20,8 @@ I have investigated ACH, P2P, account takeover, unusual spending, and fraud aler
 |---|---|---|
 | **Santander Bank** | First-line customer and transaction controls | Verify identity, understand transaction context, recognize fraud/AML red flags, protect customer information, and escalate concerns |
 | **Guidehouse / Green Dot Bank** | High-volume transaction monitoring investigations | Review 30+ daily alerts in Unit21, analyze patterns and counterparties, document decisions, escalate risk, and support SAR narratives |
-| **IDBank** | Digital onboarding and compliance operations | Review identity and documents, apply KYC/CDD/EDD/CIP, resolve inconsistencies, research risk, and refer cases for enhanced review |
+| **IDBank** | Digital onboarding, compliance operations, and fraud | Review identity and documents, apply KYC/CDD/EDD/CIP, investigate onboarding concerns, research risk, and escalate cases |
+| **TP** | Multilingual call-center customer service and interpretation | Manage high-volume inbound calls, verify information, document interactions, de-escalate concerns, and protect confidentiality |
 
 ## Recruiter Snapshot
 
@@ -71,7 +72,7 @@ I write each conclusion so another reviewer can understand what happened, what I
 ## Experience
 
 ### Santander Bank  |  Teller / Relationship Banker
-*Massachusetts · September 2025–May 2026*
+*Massachusetts · June 2026–Present*
 
 Served in the first line of defense while handling customer transactions and account servicing. Applied KYC/CIP controls, gathered transaction context, recognized unusual activity and fraud indicators, protected confidential information, and escalated concerns to specialist teams.
 
@@ -84,6 +85,11 @@ Completed 30+ daily alert investigations in Unit21 across ACH, P2P, account take
 *Yerevan, Armenia (Remote) · September 2023–September 2024*
 
 Reviewed customer onboarding and account activity using KYC, CDD, EDD, CIP, identity verification, document analysis, source-of-funds context, OSINT, and fraud indicators. Resolved inconsistencies, completed appropriate customer outreach, and escalated cases requiring enhanced review.
+
+### TP  |  Multilingual Call Center Representative & Interpreter
+*Lithuania (Remote) · September 2023–September 2024*
+
+Handled high-volume inbound customer interactions in Armenian, English, and Russian across customer service, healthcare, legal, government, and administrative settings. Verified information, documented calls accurately, de-escalated concerns, routed complex cases, and maintained strict confidentiality.
 
 ## Tools, Data & Communication
 
@@ -100,6 +106,7 @@ Reviewed customer onboarding and account activity using KYC, CDD, EDD, CIP, iden
 - Crypto Financial Crime Bootcamp
 - Leveraging AI for GRC  |  PMI (April 2025)
 - GDPR Training
+- Enhancing Financial Inclusion with a Risk-Based Approach | ACAMS
 
 > **My approach:** Effective AML work is not about treating every unusual transaction as suspicious. It is about understanding expected behavior, following the flow of funds, testing reasonable explanations, documenting evidence, and escalating risk with clarity.
 
