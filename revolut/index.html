@@ -501,16 +501,16 @@
         position: relative;
       }
       .more li::before {
-        content: "";
+        content: "•";
         position: absolute;
-        left: 2px;
+        left: 1px;
         top: 50%;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: currentColor;
         transform: translateY(-50%);
-        opacity: 0.78;
+        font-size: 1.15rem;
+        line-height: 1;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        opacity: 0.9;
       }
       .product.open .more {
         grid-template-rows: 1fr;
