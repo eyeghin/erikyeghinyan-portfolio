@@ -20,11 +20,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare public site
         run: |
-          mkdir -p _site/assets _site/revolut _site/customer-service
+          mkdir -p _site/assets _site/revolut _site/customer-service _site/pathward
           cp index.html _site/index.html
           cp -R assets/. _site/assets/
-          cp revolut/index.html _site/revolut/index.html
+          cp -R revolut/. _site/revolut/
           cp -R customer-service/. _site/customer-service/
+          cp -R pathward/. _site/pathward/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
         with:
