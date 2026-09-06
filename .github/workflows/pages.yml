@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Generate portfolio with Python
+        run: python3 build_portfolio.py
       - name: Prepare public site
         run: |
           mkdir -p _site/assets _site/revolut _site/customer-service _site/pathward
