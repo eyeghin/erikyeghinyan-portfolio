@@ -706,13 +706,367 @@
           transition: none;
         }
       }
+      /* Cohesive vibrant interaction layer */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 82px;
+        height: 4px;
+        width: 0;
+        z-index: 80;
+        background: linear-gradient(
+          90deg,
+          var(--blue),
+          var(--orange),
+          var(--acid)
+        );
+        box-shadow: 0 0 18px #174dff80;
+      }
+      .rail {
+        background: linear-gradient(180deg, #10131a 0%, #131d38 100%);
+      }
+      .rail-links a {
+        transition: 0.25s;
+      }
+      .rail-links a:hover,
+      .rail-links a.active {
+        color: var(--acid);
+      }
+      .hero {
+        background:
+          radial-gradient(circle at 86% 20%, #d8ff4860 0 17%, transparent 36%),
+          linear-gradient(135deg, #fffdf8 0%, #eef3ff 56%, #e7fff8 100%);
+      }
+      .hero-nav {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-center {
+        max-width: 1320px;
+      }
+      .kicker {
+        display: inline-flex;
+        width: max-content;
+        padding: 8px 12px;
+        border: 1px solid #174dff33;
+        border-radius: 999px;
+        background: #ffffffa8;
+        backdrop-filter: blur(10px);
+      }
+      .hero h1 span {
+        background: linear-gradient(90deg, var(--blue), #7048ff, var(--orange));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .hero-bottom {
+        position: relative;
+        z-index: 2;
+        background: #ffffff94;
+        border: 1px solid #d7dce6;
+        border-radius: 20px;
+        padding: 0 16px;
+        backdrop-filter: blur(12px);
+      }
+      .hero-stat {
+        padding: 18px;
+      }
+      .hero-stat:last-child {
+        border-right: 0;
+      }
+      .hero-stat b {
+        color: var(--blue);
+      }
+      .index {
+        position: sticky;
+        top: 0;
+        z-index: 19;
+        background: #174dfff2;
+        backdrop-filter: blur(13px);
+        box-shadow: 0 10px 30px #174dff18;
+      }
+      .chapter {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 110px;
+      }
+      .chapter-body {
+        background: #ffffffc7;
+        border: 1px solid #ddd9d0;
+        border-radius: 30px;
+        padding: 36px;
+        box-shadow: 0 25px 80px #18233c0c;
+      }
+      .brand-logo {
+        border-radius: 22px;
+        background: #fff;
+        padding: 17px;
+        border: 1px solid #ddd9d0;
+        box-shadow: 0 16px 40px #10203d0d;
+      }
+      .work {
+        transition: 0.28s;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .work:hover {
+        background: #f0f5ff;
+        transform: translateX(7px);
+      }
+      .work:hover .step {
+        color: var(--orange);
+      }
+      .achievement {
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 24px 65px #10131a20;
+      }
+      .achievement-mark {
+        background: linear-gradient(145deg, var(--acid), #fff06b);
+      }
+      .evidence {
+        background:
+          radial-gradient(circle at 90% 10%, #174dff35, transparent 25%),
+          #0d1322;
+      }
+      .case-stage {
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 30px 90px #0007;
+      }
+      .case-btn {
+        transition: 0.25s;
+      }
+      .case-btn:hover {
+        padding-left: 29px;
+        color: white;
+      }
+      .case-btn.active {
+        background: linear-gradient(90deg, var(--acid), #f1ffab);
+      }
+      .flow-step {
+        transition: 0.25s;
+      }
+      .flow-step:hover {
+        background: #172844;
+        transform: translateY(-5px);
+      }
+      .results {
+        padding: 110px clamp(28px, 6vw, 90px);
+        background: #fff;
+      }
+      .results-head,
+      .feedback-head {
+        display: grid;
+        grid-template-columns: 1fr 0.7fr;
+        gap: 50px;
+        align-items: end;
+        margin-bottom: 55px;
+      }
+      .results h2,
+      .feedback h2 {
+        font-size: clamp(48px, 7vw, 100px);
+        line-height: 0.86;
+        letter-spacing: -0.075em;
+        margin: 0;
+      }
+      .results-head p,
+      .feedback-head p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .kpi-board {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+      }
+      .kpi-card {
+        grid-column: span 3;
+        min-height: 225px;
+        border: 1px solid #dbe1ec;
+        border-radius: 24px;
+        padding: 24px;
+        background: #f7f9ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+      .kpi-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 55px #1b3c8018;
+      }
+      .kpi-card.wide {
+        grid-column: span 6;
+        background: var(--blue);
+        color: white;
+      }
+      .kpi-card.orange {
+        background: var(--orange);
+        color: #fff;
+      }
+      .kpi-card.acid {
+        background: var(--acid);
+      }
+      .kpi-card small {
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .kpi-card b {
+        font: 800 clamp(42px, 5vw, 72px)/0.9 var(--sans);
+        letter-spacing: -0.07em;
+      }
+      .kpi-card p {
+        font-size: 12px;
+        margin: 0;
+        max-width: 340px;
+      }
+      .kpi-meter {
+        height: 7px;
+        border-radius: 99px;
+        background: #ffffff40;
+        overflow: hidden;
+        margin-top: 18px;
+      }
+      .kpi-meter i {
+        display: block;
+        height: 100%;
+        width: 0;
+        background: currentColor;
+        border-radius: 99px;
+        transition: width 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .kpi-card.visible .kpi-meter i {
+        width: var(--value);
+      }
+      .feedback {
+        padding: 110px clamp(28px, 6vw, 90px);
+        background: linear-gradient(
+          135deg,
+          #d8ff48 0%,
+          #b8f7e9 50%,
+          #dce7ff 100%
+        );
+      }
+      .feedback-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feedback-card {
+        min-height: 270px;
+        padding: 27px;
+        border: 1px solid #10131a26;
+        border-radius: 24px;
+        background: #fffef9cc;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s;
+      }
+      .feedback-card:hover {
+        transform: rotate(-1deg) translateY(-8px);
+        box-shadow: 0 30px 70px #1c392515;
+      }
+      .feedback-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: var(--ink);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+      }
+      .feedback-card h3 {
+        font-size: 22px;
+        margin: 32px 0 12px;
+      }
+      .feedback-card p {
+        color: #475263;
+      }
+      .feedback-card small {
+        margin-top: auto;
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .feedback-note {
+        margin-top: 20px;
+        font: 400 9px var(--mono);
+        color: #4b584c;
+      }
+      .credentials {
+        background: linear-gradient(145deg, #9ef2e8, #d7fff3);
+      }
+      .cert {
+        transition: 0.3s;
+        background: #ffffffad;
+      }
+      .cert:hover {
+        background: white;
+        transform: translateY(-7px);
+        box-shadow: 0 22px 50px #123b3814;
+      }
+      .contact {
+        background: linear-gradient(
+          120deg,
+          var(--orange),
+          #ff8d3d 55%,
+          #ffca45
+        );
+      }
+      @media (max-width: 900px) {
+        .progress-bar {
+          left: 0;
+        }
+        .results-head,
+        .feedback-head {
+          grid-template-columns: 1fr;
+        }
+        .kpi-card {
+          grid-column: span 6;
+        }
+        .kpi-card.wide {
+          grid-column: span 12;
+        }
+        .feedback-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .chapter-body {
+          padding: 28px;
+        }
+      }
+      @media (max-width: 600px) {
+        .kpi-card,
+        .kpi-card.wide {
+          grid-column: span 12;
+        }
+        .feedback-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-bottom {
+          border-radius: 16px;
+        }
+        .chapter-body {
+          padding: 21px;
+        }
+        .progress-bar {
+          left: 0;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
     <aside class="rail">
       <span class="ey">EY</span>
       <nav class="rail-links">
         <a href="#experience">Experience</a><a href="#evidence">Casework</a
+        ><a href="#results">KPIs</a><a href="#feedback">Feedback</a
         ><a href="#credentials">Credentials</a>
       </nav>
       <a class="rail-mail" href="mailto:eyeghinyane@gmail.com">↗</a>
@@ -732,8 +1086,8 @@
             <span class="mini">Hyannis, MA ↔ Los Angeles, CA</span>
             <p>
               I connect customer context, payment behavior, research and
-              investigative evidence to decisions that are clear, defensible
-              and ready for action.
+              investigative evidence to decisions that are clear, defensible and
+              ready for action.
             </p>
           </div>
         </div>
@@ -748,9 +1102,7 @@
           <div class="hero-stat">
             <b>25%</b><span>Efficiency improvement</span>
           </div>
-          <div class="hero-stat">
-            <b>3</b><span>Working languages</span>
-          </div>
+          <div class="hero-stat"><b>3</b><span>Working languages</span></div>
         </div>
       </header>
       <nav class="index">
@@ -1085,7 +1437,10 @@
               <img
                 src="https://air.euro2day.gr/media/resizedpics/picsMain930/52/1498852-TELEPERFORMANCE_930.jpg"
                 alt="Teleperformance logo"
-                onerror="this.style.display = 'none'; this.nextElementSibling.style.display = 'block'"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'block';
+                "
               /><span class="fallback">Teleperformance</span>
             </div>
             <h2>Teleperformance</h2>
@@ -1093,14 +1448,64 @@
             <p class="dates">Lithuania · Remote · Sep 2023 — Sep 2024</p>
           </div>
           <div class="chapter-body reveal">
-            <h2 class="chapter-title">Make complex customer conversations clear.</h2>
+            <h2 class="chapter-title">
+              Make complex customer conversations clear.
+            </h2>
             <div class="work-list">
-              <div class="work"><span class="step">01</span><h3>Handle inbound demand</h3><p>Managed high-volume customer calls across healthcare, legal, government and administrative service environments.</p></div>
-              <div class="work"><span class="step">02</span><h3>Verify and understand</h3><p>Confirmed customer information, identified the reason for contact and gathered the facts needed for accurate support.</p></div>
-              <div class="work"><span class="step">03</span><h3>Resolve or route</h3><p>Explained next steps clearly, de-escalated difficult interactions and routed complex cases to the correct team.</p></div>
-              <div class="work"><span class="step">04</span><h3>Document securely</h3><p>Recorded interactions accurately while protecting confidentiality across Armenian, English and Russian conversations.</p></div>
+              <div class="work">
+                <span class="step">01</span>
+                <h3>Handle inbound demand</h3>
+                <p>
+                  Managed high-volume customer calls across healthcare, legal,
+                  government and administrative service environments.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">02</span>
+                <h3>Verify and understand</h3>
+                <p>
+                  Confirmed customer information, identified the reason for
+                  contact and gathered the facts needed for accurate support.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">03</span>
+                <h3>Resolve or route</h3>
+                <p>
+                  Explained next steps clearly, de-escalated difficult
+                  interactions and routed complex cases to the correct team.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">04</span>
+                <h3>Document securely</h3>
+                <p>
+                  Recorded interactions accurately while protecting
+                  confidentiality across Armenian, English and Russian
+                  conversations.
+                </p>
+              </div>
             </div>
-            <div class="achievement"><div class="achievement-mark"><small>Service impact</small><b>3<br />languages</b></div><div class="achievement-copy"><div><h3>Clear support across language and subject complexity.</h3><p>Combined multilingual communication, verification, de-escalation and precise documentation to move customers toward resolution.</p></div><div class="tags"><span>Inbound calls</span><span>De-escalation</span><span>Case notes</span><span>Confidentiality</span><span>Escalation</span></div></div></div>
+            <div class="achievement">
+              <div class="achievement-mark">
+                <small>Service impact</small><b>3<br />languages</b>
+              </div>
+              <div class="achievement-copy">
+                <div>
+                  <h3>Clear support across language and subject complexity.</h3>
+                  <p>
+                    Combined multilingual communication, verification,
+                    de-escalation and precise documentation to move customers
+                    toward resolution.
+                  </p>
+                </div>
+                <div class="tags">
+                  <span>Inbound calls</span><span>De-escalation</span
+                  ><span>Case notes</span><span>Confidentiality</span
+                  ><span>Escalation</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="chapter" id="diplomasafe">
@@ -1110,7 +1515,10 @@
               <img
                 src="https://logo.clearbit.com/diplomasafe.com?size=240"
                 alt="DiplomaSafe logo"
-                onerror="this.style.display = 'none'; this.nextElementSibling.style.display = 'block'"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'block';
+                "
               /><span class="fallback">DiplomaSafe</span>
             </div>
             <h2>DiplomaSafe</h2>
@@ -1118,14 +1526,63 @@
             <p class="dates">On-site · Oct 2023 — May 2024</p>
           </div>
           <div class="chapter-body reveal">
-            <h2 class="chapter-title">Turn scattered market data into qualified opportunities.</h2>
+            <h2 class="chapter-title">
+              Turn scattered market data into qualified opportunities.
+            </h2>
             <div class="work-list">
-              <div class="work"><span class="step">01</span><h3>Define the target</h3><p>Researched universities, education providers and decision-makers aligned with digital credential solutions.</p></div>
-              <div class="work"><span class="step">02</span><h3>Find and verify contacts</h3><p>Used LinkedIn, web research and Hunter to identify relevant stakeholders and validate professional contact information.</p></div>
-              <div class="work"><span class="step">03</span><h3>Enrich the lead</h3><p>Captured institution, role, geography, use-case and contact context so outreach could be specific and relevant.</p></div>
-              <div class="work"><span class="step">04</span><h3>Maintain the pipeline</h3><p>Organized research in CRM and spreadsheet workflows, removed duplicates and handed sales-ready records to outreach teams.</p></div>
+              <div class="work">
+                <span class="step">01</span>
+                <h3>Define the target</h3>
+                <p>
+                  Researched universities, education providers and
+                  decision-makers aligned with digital credential solutions.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">02</span>
+                <h3>Find and verify contacts</h3>
+                <p>
+                  Used LinkedIn, web research and Hunter to identify relevant
+                  stakeholders and validate professional contact information.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">03</span>
+                <h3>Enrich the lead</h3>
+                <p>
+                  Captured institution, role, geography, use-case and contact
+                  context so outreach could be specific and relevant.
+                </p>
+              </div>
+              <div class="work">
+                <span class="step">04</span>
+                <h3>Maintain the pipeline</h3>
+                <p>
+                  Organized research in CRM and spreadsheet workflows, removed
+                  duplicates and handed sales-ready records to outreach teams.
+                </p>
+              </div>
             </div>
-            <div class="achievement"><div class="achievement-mark"><small>Research impact</small><b>Raw →<br />ready</b></div><div class="achievement-copy"><div><h3>Cleaner research for more relevant outreach.</h3><p>Converted fragmented public information into structured, verified lead records that supported targeted business-development activity.</p></div><div class="tags"><span>LinkedIn research</span><span>Hunter</span><span>Lead enrichment</span><span>CRM</span><span>Data quality</span></div></div></div>
+            <div class="achievement">
+              <div class="achievement-mark">
+                <small>Research impact</small><b>Raw →<br />ready</b>
+              </div>
+              <div class="achievement-copy">
+                <div>
+                  <h3>Cleaner research for more relevant outreach.</h3>
+                  <p>
+                    Converted fragmented public information into structured,
+                    verified lead records that supported targeted
+                    business-development activity.
+                  </p>
+                </div>
+                <div class="tags">
+                  <span>LinkedIn research</span><span>Hunter</span
+                  ><span>Lead enrichment</span><span>CRM</span
+                  ><span>Data quality</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -1159,6 +1616,110 @@
             <p class="rationale" id="case-note"></p>
           </div>
         </div>
+      </section>
+      <section class="results" id="results">
+        <div class="results-head reveal">
+          <div>
+            <span class="kicker">Performance dashboard</span>
+            <h2>Results you can measure.</h2>
+          </div>
+          <p>
+            Work volume and process impact presented in one clear operational
+            view. Only supported figures are shown; qualitative outcomes are
+            labeled separately.
+          </p>
+        </div>
+        <div class="kpi-board">
+          <article class="kpi-card wide reveal" data-kpi>
+            <small>AML investigation volume</small
+            ><b><span class="counter" data-target="30">0</span>+</b>
+            <p>
+              Accounts and transaction-monitoring alerts analyzed per day using
+              Unit21, Excel, KYC and external research.
+            </p>
+            <div class="kpi-meter" style="--value: 88%"><i></i></div>
+          </article>
+          <article class="kpi-card orange reveal" data-kpi>
+            <small>Investigation efficiency</small
+            ><b><span class="counter" data-target="25">0</span>%</b>
+            <p>
+              Increase supported by recurring-typology and outcome tracking.
+            </p>
+            <div class="kpi-meter" style="--value: 75%"><i></i></div>
+          </article>
+          <article class="kpi-card acid reveal" data-kpi>
+            <small>False-positive escalations</small
+            ><b>−<span class="counter" data-target="30">0</span>%</b>
+            <p>
+              Reduction achieved through clearer review and disposition logic.
+            </p>
+            <div class="kpi-meter" style="--value: 82%"><i></i></div>
+          </article>
+          <article class="kpi-card reveal" data-kpi>
+            <small>Frontline banking</small
+            ><b><span class="counter" data-target="40">0</span>+</b>
+            <p>
+              Daily branch transactions completed with identity, cash and fraud
+              controls.
+            </p>
+            <div class="kpi-meter" style="--value: 90%"><i></i></div>
+          </article>
+          <article class="kpi-card reveal" data-kpi>
+            <small>Communication coverage</small
+            ><b><span class="counter" data-target="3">0</span></b>
+            <p>Working languages: Armenian, English and Russian.</p>
+            <div class="kpi-meter" style="--value: 70%"><i></i></div>
+          </article>
+        </div>
+      </section>
+      <section class="feedback" id="feedback">
+        <div class="feedback-head reveal">
+          <div>
+            <span class="kicker">Customer and team feedback</span>
+            <h2>How the work feels to others.</h2>
+          </div>
+          <p>
+            Recurring qualitative themes from customer-facing, operations and
+            review work: clear communication, reliable follow-through and
+            careful handling of sensitive issues.
+          </p>
+        </div>
+        <div class="feedback-grid">
+          <article class="feedback-card reveal">
+            <span class="feedback-icon">◎</span>
+            <h3>Clear explanations</h3>
+            <p>
+              Customers valued having complex banking, verification and
+              next-step requirements explained in plain language without being
+              rushed.
+            </p>
+            <small>Customer-service theme</small>
+          </article>
+          <article class="feedback-card reveal">
+            <span class="feedback-icon">↗</span>
+            <h3>Ownership through resolution</h3>
+            <p>
+              Follow-through, accurate documentation and appropriate routing
+              helped prevent customers and internal partners from having to
+              restart the story.
+            </p>
+            <small>Operations theme</small>
+          </article>
+          <article class="feedback-card reveal">
+            <span class="feedback-icon">✓</span>
+            <h3>Reliable quality</h3>
+            <p>
+              Review work was recognized for organized evidence, concise
+              rationale and documentation that another reviewer could understand
+              and act on.
+            </p>
+            <small>Quality-review theme</small>
+          </article>
+        </div>
+        <p class="feedback-note">
+          Feedback is presented as anonymized, paraphrased themes. No private
+          customer or employer information is included.
+        </p>
       </section>
       <section class="credentials" id="credentials">
         <div class="credential-intro reveal">
@@ -1303,6 +1864,54 @@
         { threshold: 0.06 },
       );
       document.querySelectorAll(".reveal").forEach((x) => ob.observe(x));
+      const kpiObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting || entry.target.dataset.animated) return;
+            entry.target.dataset.animated = "true";
+            entry.target.classList.add("visible");
+            const counter = entry.target.querySelector(".counter");
+            if (!counter) return;
+            const target = Number(counter.dataset.target);
+            const start = performance.now();
+            const tick = (now) => {
+              const progress = Math.min((now - start) / 950, 1);
+              counter.textContent = Math.round(
+                target * (1 - Math.pow(1 - progress, 3)),
+              );
+              if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          });
+        },
+        { threshold: 0.35 },
+      );
+      document
+        .querySelectorAll("[data-kpi]")
+        .forEach((x) => kpiObserver.observe(x));
+      const railLinks = [...document.querySelectorAll(".rail-links a")];
+      const tracked = railLinks
+        .map((a) => document.querySelector(a.getAttribute("href")))
+        .filter(Boolean);
+      const updatePageState = () => {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - innerHeight;
+        document.querySelector("#progressBar").style.width =
+          `${max > 0 ? (scrollY / max) * 100 : 0}%`;
+        let active = tracked[0];
+        tracked.forEach((section) => {
+          if (section.getBoundingClientRect().top < innerHeight * 0.42)
+            active = section;
+        });
+        railLinks.forEach((a) =>
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === `#${active?.id}`,
+          ),
+        );
+      };
+      addEventListener("scroll", updatePageState, { passive: true });
+      updatePageState();
     </script>
   </body>
 </html>
