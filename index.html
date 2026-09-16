@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#f4f0e7" />
-    <title>Erik Yeghinyan — Financial Crime & Banking</title>
+    <meta name="theme-color" content="#071425" />
+    <title>Erik Yeghinyan | Financial Crime Portfolio</title>
     <meta
       name="description"
-      content="The financial crime and banking operations portfolio of Erik Yeghinyan."
+      content="Erik Yeghinyan — AML, transaction monitoring, fraud, banking operations and customer intelligence portfolio."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,15 +17,18 @@
     />
     <style>
       :root {
-        --ink: #10131a;
-        --ivory: #f4f0e7;
-        --paper: #fffdf8;
-        --blue: #174dff;
-        --orange: #ff5c35;
-        --acid: #d8ff48;
-        --cyan: #8ceee2;
-        --line: #cfcac0;
-        --muted: #66707d;
+        --navy: #071425;
+        --navy2: #0b1d33;
+        --panel: #102842;
+        --panel2: #142f4d;
+        --cream: #f4f0e8;
+        --gold: #d9b56d;
+        --cobalt: #4b7fff;
+        --mint: #65e5cd;
+        --white: #fff;
+        --muted: #96a9be;
+        --line: #28415c;
+        --ink: #101a28;
         --sans: Manrope, sans-serif;
         --mono: "DM Mono", monospace;
       }
@@ -34,12 +37,18 @@
       }
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 88px;
       }
       body {
         margin: 0;
-        background: var(--ivory);
-        color: var(--ink);
-        font: 15px/1.6 var(--sans);
+        background: var(--navy);
+        color: white;
+        font: 14px/1.6 var(--sans);
+        overflow-x: hidden;
+      }
+      button,
+      a {
+        font: inherit;
       }
       a {
         color: inherit;
@@ -50,650 +59,1049 @@
       p {
         margin-top: 0;
       }
-      .rail {
-        position: fixed;
-        z-index: 30;
-        left: 0;
-        top: 0;
-        width: 82px;
-        height: 100vh;
-        background: var(--ink);
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 22px 0;
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.04em;
       }
-      .ey {
-        width: 44px;
-        height: 44px;
+      .progress {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(
+          90deg,
+          var(--gold),
+          var(--mint),
+          var(--cobalt)
+        );
+      }
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        height: 78px;
+        background: #071425e8;
+        border-bottom: 1px solid #ffffff12;
+        backdrop-filter: blur(18px);
+      }
+      .topbar-inner {
+        width: min(1380px, 94vw);
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brand {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 800;
+      }
+      .seal {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--gold);
         border-radius: 50%;
         display: grid;
         place-items: center;
-        background: var(--acid);
-        color: var(--ink);
-        font-weight: 800;
+        color: var(--gold);
+        font: 500 11px var(--mono);
       }
-      .rail-links {
-        margin: auto;
+      .navlinks {
         display: flex;
-        flex-direction: column;
         gap: 24px;
+        align-items: center;
       }
-      .rail-links a {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
+      .navlinks a {
         text-decoration: none;
-        color: #c7c8cc;
-        font: 500 9px var(--mono);
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        color: #b6c5d5;
+        font-size: 11px;
       }
-      .rail-mail {
-        font-size: 18px;
-        text-decoration: none;
+      .navlinks a:hover {
+        color: white;
       }
-      .page {
-        margin-left: 82px;
+      .navlinks .contact-link {
+        padding: 10px 16px;
+        border: 1px solid var(--gold);
+        border-radius: 99px;
+        color: #f0d59e;
       }
       .hero {
-        min-height: 100vh;
-        padding: 40px clamp(28px, 6vw, 90px) 55px;
-        position: relative;
-        overflow: hidden;
+        min-height: calc(100vh - 78px);
         display: grid;
-        grid-template-rows: auto 1fr auto;
-      }
-      .hero-nav {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        font: 500 11px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
+        padding: 70px 0 55px;
+        position: relative;
+        isolation: isolate;
       }
-      .hero-nav .available {
-        display: flex;
+      .hero:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(#ffffff05 1px, transparent 1px),
+          linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+        background-size: 62px 62px;
+        mask-image: linear-gradient(to bottom, #000, transparent 87%);
+      }
+      .hero:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 600px;
+        height: 600px;
+        right: -170px;
+        top: -190px;
+        border-radius: 50%;
+        background: #356dff2e;
+        filter: blur(100px);
+      }
+      .wrap {
+        width: min(1320px, 92vw);
+        margin: auto;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-flex;
         align-items: center;
         gap: 9px;
-      }
-      .available i {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #36c763;
-      }
-      .hero-center {
-        display: grid;
-        align-content: center;
-        position: relative;
-        z-index: 1;
-      }
-      .kicker {
-        font: 500 11px var(--mono);
-        letter-spacing: 0.15em;
+        color: var(--gold);
+        font: 500 10px var(--mono);
         text-transform: uppercase;
-        color: var(--blue);
+        letter-spacing: 0.14em;
       }
-      h1 {
-        font-size: clamp(64px, 10.2vw, 156px);
-        line-height: 0.78;
-        letter-spacing: -0.085em;
-        margin: 32px 0 38px;
-        max-width: 1300px;
+      .eyebrow:before {
+        content: "";
+        width: 34px;
+        height: 1px;
+        background: currentColor;
       }
-      h1 span {
+      .hero h1 {
+        font-size: clamp(62px, 7.9vw, 118px);
+        line-height: 0.86;
+        margin: 31px 0;
+      }
+      .hero h1 span {
         display: block;
-        margin-left: 11vw;
-        color: var(--blue);
+        color: #789dff;
       }
       .hero-copy {
-        display: grid;
-        grid-template-columns: 0.7fr 1fr;
-        gap: 35px;
-        align-items: end;
-        max-width: 1000px;
-        margin-left: auto;
+        font-size: 18px;
+        color: #c2cedb;
+        max-width: 720px;
       }
-      .hero-copy p {
-        font-size: 17px;
-        margin: 0;
+      .hero-actions {
+        display: flex;
+        gap: 11px;
+        flex-wrap: wrap;
+        margin-top: 29px;
       }
-      .hero-copy .mini {
-        font: 400 10px var(--mono);
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 13px 19px;
+        border-radius: 99px;
+        background: var(--cream);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .btn.secondary {
+        background: transparent;
+        color: white;
+        border: 1px solid var(--line);
+      }
+      .executive-card {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(145deg, #102843, #09192b);
+        box-shadow: 0 40px 100px #0009;
+        overflow: hidden;
+      }
+      .exec-top {
+        height: 58px;
+        padding: 0 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        font: 500 9px var(--mono);
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.11em;
         color: var(--muted);
       }
-      .orb {
-        position: absolute;
-        width: 31vw;
-        height: 31vw;
-        max-width: 430px;
-        max-height: 430px;
-        right: -7vw;
-        top: 13vh;
-        border-radius: 50%;
-        background: linear-gradient(145deg, var(--acid), #fff);
-        box-shadow:
-          inset -45px -45px 80px #a9c52a55,
-          0 40px 90px #4d580b25;
-        animation: float 6s ease-in-out infinite;
+      .exec-body {
+        padding: 27px;
       }
-      .hero-bottom {
+      .exec-name {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        align-items: start;
+      }
+      .exec-name h2 {
+        font-size: 30px;
+        margin: 0;
+      }
+      .available {
+        color: #bfe977;
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+      }
+      .available:before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #bfe977;
+        margin-right: 8px;
+        box-shadow: 0 0 0 6px #bfe97715;
+      }
+      .exec-title {
+        color: #b3c2d2;
+        margin: 8px 0 25px;
+      }
+      .exec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .exec-item {
+        min-height: 110px;
+        padding: 17px;
+        border-radius: 15px;
+        border: 1px solid #2b4665;
+        background: #0a1a2d;
+      }
+      .exec-item:nth-child(1) {
+        background: var(--cobalt);
+        border: 0;
+      }
+      .exec-item:nth-child(4) {
+        background: #e8cf94;
+        color: #182131;
+        border: 0;
+      }
+      .exec-item b {
+        display: block;
+        font-size: 27px;
+      }
+      .exec-item span {
+        font-size: 10px;
+        color: #9fb2c8;
+      }
+      .exec-item:nth-child(1) span {
+        color: #dfe7ff;
+      }
+      .exec-item:nth-child(4) span {
+        color: #4f5763;
+      }
+      .hero-foot {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        margin-top: 65px;
         border-top: 1px solid var(--line);
       }
-      .hero-stat {
+      .hero-foot div {
         padding: 20px 18px 0;
         border-right: 1px solid var(--line);
       }
-      .hero-stat:first-child {
+      .hero-foot div:first-child {
         padding-left: 0;
       }
-      .hero-stat b {
+      .hero-foot div:last-child {
+        border-right: 0;
+      }
+      .hero-foot b {
         display: block;
         font-size: 28px;
-        letter-spacing: -0.05em;
       }
-      .hero-stat span {
+      .hero-foot span {
         font: 400 9px var(--mono);
         text-transform: uppercase;
-        letter-spacing: 0.08em;
         color: var(--muted);
       }
-      .index {
-        background: var(--blue);
-        color: white;
-        padding: 24px clamp(28px, 6vw, 90px);
-        display: flex;
-        gap: 26px;
-        align-items: center;
-        overflow: auto;
+      .section {
+        padding: 110px 0;
       }
-      .index > a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        white-space: nowrap;
-        font: 500 10px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        transition: 0.25s;
-      }
-      .index > a:hover {
-        color: var(--acid);
-        transform: translateY(-3px);
-      }
-      .index img {
-        width: 70px;
-        height: 32px;
-        object-fit: contain;
-        background: white;
-        border-radius: 4px;
-        padding: 5px;
-      }
-      .chapter {
-        min-height: 100vh;
-        padding: 85px clamp(28px, 6vw, 90px);
-        border-bottom: 1px solid var(--line);
-        display: grid;
-        grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1.35fr);
-        gap: 7vw;
-        align-items: start;
-        background: var(--paper);
-      }
-      .chapter:nth-of-type(even) {
-        background: var(--ivory);
-      }
-      .sticky {
-        position: sticky;
-        top: 65px;
-      }
-      .num {
-        font: 500 11px var(--mono);
-        color: var(--blue);
-        letter-spacing: 0.14em;
-      }
-      .brand-logo {
-        height: 105px;
-        margin: 35px 0;
-        display: flex;
-        align-items: center;
-      }
-      .brand-logo img {
-        max-width: 240px;
-        max-height: 78px;
-        object-fit: contain;
-        mix-blend-mode: multiply;
-      }
-      .brand-logo .fallback {
-        display: none;
-        font-size: 30px;
-        font-weight: 800;
-      }
-      .sticky h2 {
-        font-size: clamp(38px, 4.5vw, 70px);
-        line-height: 0.92;
-        letter-spacing: -0.065em;
-        margin: 0 0 18px;
-      }
-      .role {
-        font-size: 15px;
-        color: var(--muted);
-      }
-      .dates {
-        margin-top: 35px;
-        padding-top: 16px;
-        border-top: 1px solid var(--line);
-        font: 400 10px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-      }
-      .chapter-body {
-        padding-top: 28px;
-      }
-      .chapter-title {
-        font-size: clamp(31px, 3.6vw, 54px);
-        line-height: 1.02;
-        letter-spacing: -0.05em;
-        margin: 0 0 50px;
-        max-width: 820px;
-      }
-      .work-list {
-        border-top: 1px solid var(--ink);
-      }
-      .work {
-        display: grid;
-        grid-template-columns: 72px 0.75fr 1.25fr;
-        gap: 25px;
-        padding: 25px 0;
-        border-bottom: 1px solid var(--line);
-        align-items: start;
-      }
-      .work .step {
-        font: 500 10px var(--mono);
-        color: var(--blue);
-      }
-      .work h3 {
-        font-size: 16px;
-        line-height: 1.25;
-        margin: 0;
-      }
-      .work p {
-        font-size: 13px;
-        color: var(--muted);
-        margin: 0;
-      }
-      .achievement {
-        margin-top: 42px;
-        display: grid;
-        grid-template-columns: minmax(140px, 0.45fr) 1fr;
-        background: var(--ink);
-        color: white;
-        min-height: 210px;
-      }
-      .achievement-mark {
-        padding: 28px;
-        background: var(--acid);
-        color: var(--ink);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .achievement-mark small {
-        font: 500 9px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .achievement-mark b {
-        font-size: clamp(31px, 4vw, 56px);
-        line-height: 0.9;
-        letter-spacing: -0.06em;
-      }
-      .achievement-copy {
-        padding: 32px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .achievement-copy h3 {
-        font-size: 24px;
-        margin: 0 0 20px;
-      }
-      .achievement-copy p {
-        color: #c5c8ce;
-        margin: 0;
-      }
-      .tags {
-        display: flex;
-        gap: 7px;
-        flex-wrap: wrap;
-        margin-top: 26px;
-      }
-      .tags span {
-        border: 1px solid #ffffff28;
-        border-radius: 99px;
-        padding: 6px 9px;
-        font: 400 8px var(--mono);
-        text-transform: uppercase;
-      }
-      .evidence {
-        background: var(--ink);
-        color: white;
-        padding: 110px clamp(28px, 6vw, 90px);
-      }
-      .evidence-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 50px;
-        margin-bottom: 60px;
-      }
-      .evidence h2,
-      .credentials h2 {
-        font-size: clamp(50px, 7vw, 105px);
-        line-height: 0.85;
-        letter-spacing: -0.075em;
-        margin: 0;
-      }
-      .evidence-head p {
-        max-width: 450px;
-        color: #aeb3bd;
-      }
-      .case-stage {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        border: 1px solid #333943;
-      }
-      .case-nav {
-        border-right: 1px solid #333943;
-      }
-      .case-btn {
-        width: 100%;
-        padding: 22px;
-        border: 0;
-        border-bottom: 1px solid #333943;
-        background: transparent;
-        color: #aeb6c3;
-        text-align: left;
-        font: 500 10px var(--mono);
-        text-transform: uppercase;
-        cursor: pointer;
-      }
-      .case-btn.active {
-        background: var(--acid);
-        color: var(--ink);
-      }
-      .case-view {
-        padding: 35px;
-      }
-      .case-top {
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
-      }
-      .case-view h3 {
-        font-size: 32px;
-        line-height: 1.05;
-        margin: 5px 0 10px;
-      }
-      .case-context {
-        color: #aeb6c3;
-        font-size: 12px;
-      }
-      .risk {
-        font: 500 9px var(--mono);
-        color: var(--acid);
-        text-transform: uppercase;
-      }
-      .flow {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        margin-top: 38px;
-      }
-      .flow-step {
-        padding: 18px;
-        border: 1px solid #343b47;
-        border-right: 0;
-        min-height: 140px;
-      }
-      .flow-step:last-child {
-        border-right: 1px solid #343b47;
-      }
-      .flow-step b {
-        display: block;
-        font: 500 10px var(--mono);
-        color: var(--cyan);
-      }
-      .flow-step strong {
-        display: block;
-        margin: 18px 0 7px;
-        font-size: 12px;
-      }
-      .flow-step span {
-        font-size: 9px;
-        color: #aeb6c3;
-      }
-      .rationale {
-        margin-top: 28px;
-        padding-left: 18px;
-        border-left: 3px solid var(--orange);
-        color: #c2c6ce;
-        font-size: 12px;
-      }
-      .credentials {
-        padding: 110px clamp(28px, 6vw, 90px);
-        background: var(--cyan);
-      }
-      .credential-intro {
+      .section-head {
         display: grid;
         grid-template-columns: 1fr 0.7fr;
-        gap: 50px;
+        gap: 60px;
         align-items: end;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
       }
-      .credential-intro p {
+      .section-head h2 {
+        font-size: clamp(42px, 5vw, 72px);
+        line-height: 0.95;
+        margin: 17px 0 0;
+      }
+      .section-head p {
         margin: 0;
+        color: var(--muted);
       }
-      .cert-grid {
+      .dashboard-section {
+        background: var(--cream);
+        color: var(--ink);
+      }
+      .dashboard-section .section-head p {
+        color: #647187;
+      }
+      .dashboard-shell {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        border-top: 1px solid var(--ink);
-        border-left: 1px solid var(--ink);
+        grid-template-columns: 260px 1fr;
+        border: 1px solid #d6d3cc;
+        border-radius: 26px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 28px 80px #10233d12;
       }
-      .cert {
-        min-height: 230px;
-        padding: 24px;
-        border-right: 1px solid var(--ink);
-        border-bottom: 1px solid var(--ink);
-        display: flex;
-        flex-direction: column;
+      .company-menu {
+        background: #edf1f7;
+        padding: 16px;
+        border-right: 1px solid #d7dde7;
       }
-      .cert small {
+      .company-menu h3 {
         font: 500 9px var(--mono);
         text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #66788e;
+        padding: 8px 10px 17px;
+        margin: 0;
       }
-      .cert h3 {
-        font-size: 19px;
-        line-height: 1.2;
-        margin: 35px 0;
+      .company-tab {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 11px;
+        align-items: center;
+        padding: 12px;
+        border: 0;
+        border-radius: 13px;
+        background: transparent;
+        text-align: left;
+        color: #53647a;
+        cursor: pointer;
+        transition: 0.25s;
       }
-      .cert p {
+      .company-tab + .company-tab {
+        margin-top: 5px;
+      }
+      .company-tab:hover {
+        background: #fff;
+      }
+      .company-tab.active {
+        background: var(--navy);
+        color: white;
+        box-shadow: 0 12px 25px #07142520;
+      }
+      .tab-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: white;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        padding: 5px;
+      }
+      .tab-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .tab-logo span {
+        font-weight: 800;
+        color: #182638;
+      }
+      .company-tab strong {
+        display: block;
         font-size: 11px;
-        margin: auto 0 0;
       }
-      .degree {
-        margin-top: 50px;
+      .company-tab small {
+        font-size: 8px;
+        opacity: 0.7;
+      }
+      .company-view {
+        min-height: 690px;
+        padding: 32px;
+      }
+      .company-view-top {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 30px;
-        border-top: 1px solid var(--ink);
-        padding-top: 25px;
+        padding-bottom: 27px;
+        border-bottom: 1px solid #dce1e9;
       }
-      .degree h3 {
-        font-size: 26px;
+      .company-view-top h3 {
+        font-size: 32px;
+        margin: 5px 0 7px;
+      }
+      .company-view-top p {
+        color: #607187;
         margin: 0;
       }
-      .degree p {
-        margin: 6px 0 0;
+      .date-pill {
+        height: max-content;
+        padding: 9px 12px;
+        border-radius: 99px;
+        background: #edf3ff;
+        color: #325fbd;
+        font: 500 9px var(--mono);
+        white-space: nowrap;
       }
-      .degree b {
-        font-size: 40px;
+      .company-logos {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        min-height: 65px;
+        margin: 27px 0;
       }
-      .contact {
-        padding: 95px clamp(28px, 6vw, 90px);
-        background: var(--orange);
+      .company-logos img {
+        max-width: 170px;
+        max-height: 54px;
+        object-fit: contain;
+      }
+      .company-logos .wordmark {
+        font-size: 20px;
+        font-weight: 800;
+        color: #1a2b43;
+      }
+      .view-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 23px;
+      }
+      .work-panel,
+      .impact-panel {
+        border: 1px solid #dce1e9;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .panel-head {
+        padding: 15px 18px;
+        border-bottom: 1px solid #dce1e9;
+        background: #f8fafc;
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #5f7188;
+      }
+      .responsibility {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        padding: 17px 18px;
+        border-bottom: 1px solid #e5e9ef;
+      }
+      .responsibility:last-child {
+        border-bottom: 0;
+      }
+      .responsibility b {
+        width: 27px;
+        height: 27px;
+        border-radius: 8px;
+        background: #edf3ff;
+        color: #275bc7;
+        display: grid;
+        place-items: center;
+        font: 500 9px var(--mono);
+      }
+      .responsibility strong {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      .responsibility p {
+        font-size: 10px;
+        color: #67778b;
+        margin: 0;
+      }
+      .impact-panel {
+        padding: 20px;
+        background: var(--navy);
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      .impact-label {
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .impact-big {
+        font-size: clamp(39px, 4vw, 61px);
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+        margin: 28px 0 14px;
+        color: #8dacff;
+      }
+      .impact-panel h4 {
+        font-size: 17px;
+        margin: 0 0 9px;
+      }
+      .impact-panel p {
+        font-size: 11px;
+        color: #b1bfd0;
+      }
+      .toolset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: auto;
+      }
+      .toolset span {
+        border: 1px solid #ffffff24;
+        border-radius: 99px;
+        padding: 6px 8px;
+        font: 400 8px var(--mono);
+        color: #c5d0de;
+      }
+      .case-section {
+        background: linear-gradient(180deg, #071425, #0a1c32);
+      }
+      .case-shell {
+        border: 1px solid var(--line);
+        border-radius: 27px;
+        overflow: hidden;
+        background: #091a2e;
+        box-shadow: 0 35px 100px #0008;
+      }
+      .case-toolbar {
+        height: 61px;
+        padding: 0 21px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .case-toolbar b {
+        font-size: 13px;
+      }
+      .case-toolbar span {
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+        color: var(--mint);
+      }
+      .case-layout {
+        display: grid;
+        grid-template-columns: 230px 1fr;
+      }
+      .case-menu {
+        padding: 13px;
+        background: #081729;
+        border-right: 1px solid var(--line);
+      }
+      .case-btn {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        background: transparent;
+        color: #96aabe;
+        text-align: left;
+        cursor: pointer;
+        font-size: 10px;
+      }
+      .case-btn + .case-btn {
+        margin-top: 6px;
+      }
+      .case-btn.active {
+        background: var(--cobalt);
+        color: white;
+      }
+      .case-main {
+        padding: 25px;
+      }
+      .case-meta {
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 40px;
-        align-items: end;
+        gap: 25px;
       }
-      .contact h2 {
-        font-size: clamp(48px, 7vw, 105px);
-        line-height: 0.85;
-        letter-spacing: -0.075em;
-        margin: 0;
+      .case-meta h3 {
+        font-size: 27px;
+        margin: 5px 0;
       }
-      .contact a {
-        background: var(--ink);
-        color: white;
-        text-decoration: none;
-        padding: 16px 22px;
+      .case-meta p {
+        color: #9fb0c2;
+        font-size: 11px;
+      }
+      .risk-pill {
+        height: max-content;
+        padding: 8px 11px;
+        border: 1px solid #e7c57f55;
         border-radius: 99px;
-        font-weight: 700;
+        color: #e7c57f;
+        font: 500 9px var(--mono);
       }
-      .footer {
-        margin-left: 82px;
-        padding: 25px clamp(28px, 6vw, 90px);
+      .profile-line {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 19px 0;
+      }
+      .profile-item {
+        padding: 13px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+      .profile-item small {
+        display: block;
+        color: #7f94aa;
+        font: 400 8px var(--mono);
+        text-transform: uppercase;
+      }
+      .profile-item b {
+        display: block;
+        margin-top: 5px;
+        font-size: 10px;
+      }
+      .transaction-wrap {
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 700px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 11px 13px;
+        border-bottom: 1px solid #213b56;
+        font-size: 9px;
+      }
+      th {
+        background: #102842;
+        color: #8fa4bb;
+        font: 500 8px var(--mono);
+        text-transform: uppercase;
+      }
+      td {
+        color: #c1cede;
+      }
+      .tx-flag {
+        color: #ff9c89;
+      }
+      .investigation-flow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        margin-top: 19px;
+      }
+      .flow-step {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: #0e233c;
+        transition: 0.25s;
+      }
+      .flow-step:hover {
+        border-color: var(--cobalt);
+        transform: translateY(-4px);
+      }
+      .flow-step small {
+        color: var(--mint);
+        font: 500 8px var(--mono);
+      }
+      .flow-step strong {
+        display: block;
+        margin: 13px 0 6px;
+        font-size: 10px;
+      }
+      .flow-step span {
+        font-size: 8px;
+        color: #8fa2b8;
+      }
+      .case-decision {
+        margin-top: 19px;
+        padding: 17px;
+        border-left: 3px solid var(--gold);
+        background: #071425;
+        color: #b7c5d5;
+        font-size: 10px;
+      }
+      .case-decision b {
+        display: block;
+        color: white;
+        margin-bottom: 6px;
+      }
+      .results-section {
+        background: #fff;
+        color: var(--ink);
+      }
+      .results-section .section-head p {
+        color: #657387;
+      }
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+      }
+      .kpi {
+        grid-column: span 3;
+        min-height: 220px;
+        padding: 23px;
+        border: 1px solid #dce3ec;
+        border-radius: 21px;
+        background: #f7f9fc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.3s;
+      }
+      .kpi:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 24px 55px #112c5815;
+      }
+      .kpi.wide {
+        grid-column: span 6;
+        background: var(--navy);
+        color: white;
+      }
+      .kpi.gold {
+        background: #e6c783;
+      }
+      .kpi.blue {
+        background: var(--cobalt);
+        color: white;
+      }
+      .kpi small {
+        font: 500 9px var(--mono);
+        text-transform: uppercase;
+      }
+      .kpi b {
+        font-size: clamp(42px, 5vw, 68px);
+        letter-spacing: -0.07em;
+        line-height: 0.9;
+      }
+      .kpi p {
+        font-size: 10px;
+        margin: 0;
+        color: #637187;
+      }
+      .kpi.wide p,
+      .kpi.blue p {
+        color: #c6d1e0;
+      }
+      .meter {
+        height: 6px;
+        background: #00000014;
+        border-radius: 99px;
+        overflow: hidden;
+      }
+      .meter i {
+        display: block;
+        width: 0;
+        height: 100%;
+        background: currentColor;
+        transition: 1.2s;
+      }
+      .kpi.visible .meter i {
+        width: var(--w);
+      }
+      .feedback-section {
+        background: var(--cream);
+        color: var(--ink);
+      }
+      .feedback-section .section-head p {
+        color: #657387;
+      }
+      .feedback-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feedback {
+        min-height: 260px;
+        padding: 25px;
+        border: 1px solid #d8d3c9;
+        border-radius: 22px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s;
+      }
+      .feedback:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 25px 60px #10213a12;
+      }
+      .feedback-mark {
+        font-size: 38px;
+        line-height: 1;
+        color: var(--cobalt);
+      }
+      .feedback h3 {
+        font-size: 20px;
+        margin: 27px 0 10px;
+      }
+      .feedback p {
+        font-size: 12px;
+        color: #5f6d7e;
+      }
+      .feedback small {
+        margin-top: auto;
+        font: 500 8px var(--mono);
+        text-transform: uppercase;
+        color: #768294;
+      }
+      .disclaimer {
+        margin-top: 18px;
+        color: #788393;
+        font: 400 9px var(--mono);
+      }
+      .credentials-section {
+        background: #0b1d33;
+      }
+      .credential-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+      }
+      .credential {
+        min-height: 205px;
+        padding: 21px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #102842;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s;
+      }
+      .credential:hover {
+        transform: translateY(-6px);
+        border-color: var(--gold);
+      }
+      .credential-logo {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #3b5672;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font: 500 9px var(--mono);
+      }
+      .credential h3 {
+        font-size: 16px;
+        margin: 25px 0 8px;
+      }
+      .credential p {
+        margin: auto 0 0;
+        color: #96a9be;
+        font-size: 10px;
+      }
+      .education-row {
+        margin-top: 18px;
+        padding: 25px;
+        border: 1px solid var(--line);
+        border-radius: 19px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 25px;
+        align-items: center;
+        background: #071425;
+      }
+      .education-row h3 {
+        font-size: 21px;
+        margin: 0 0 5px;
+      }
+      .education-row p {
+        margin: 0;
+        color: #9bacbf;
+      }
+      .education-row b {
+        font-size: 30px;
+        color: var(--gold);
+      }
+      .capability-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 18px;
+      }
+      .capability {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #0d223a;
+      }
+      .capability h3 {
+        font-size: 16px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .chips span {
+        padding: 7px 9px;
+        border: 1px solid #35516d;
+        border-radius: 99px;
+        color: #b7c7d7;
+        font: 400 8px var(--mono);
+      }
+      .closing {
+        padding: 85px 0;
+        background: linear-gradient(110deg, #d8b76f, #f2d99d);
+        color: #152132;
+      }
+      .closing .wrap {
         display: flex;
         justify-content: space-between;
+        gap: 35px;
+        align-items: end;
+      }
+      .closing h2 {
+        font-size: clamp(42px, 6vw, 84px);
+        line-height: 0.9;
+        margin: 0;
+      }
+      .closing p {
+        margin: 13px 0 0;
+      }
+      .closing .btn {
+        background: var(--navy);
+        color: white;
+      }
+      .footer {
+        padding: 25px 0;
+        color: #778ba2;
         font: 400 9px var(--mono);
-        text-transform: uppercase;
+      }
+      .footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
       }
       .reveal {
         opacity: 0;
-        transform: translateY(20px);
-        transition: 0.7s;
+        transform: translateY(18px);
+        transition: 0.65s;
       }
       .reveal.in {
         opacity: 1;
         transform: none;
       }
-      @keyframes float {
-        50% {
-          transform: translate(-18px, 20px) rotate(8deg);
-        }
-      }
-      @media (max-width: 900px) {
-        .rail {
-          display: none;
-        }
-        .page,
-        .footer {
-          margin-left: 0;
-        }
-        .hero-copy,
-        .chapter,
-        .credential-intro {
+      @media (max-width: 960px) {
+        .hero-grid,
+        .section-head,
+        .dashboard-shell,
+        .case-layout {
           grid-template-columns: 1fr;
         }
-        .hero-copy {
-          margin: 0;
-        }
-        .orb {
-          opacity: 0.35;
-        }
-        .chapter {
-          gap: 35px;
-        }
-        .sticky {
-          position: static;
-        }
-        .chapter-body {
-          padding: 0;
-        }
-        .work {
-          grid-template-columns: 50px 1fr;
-        }
-        .work p {
-          grid-column: 2;
-        }
-        .flow {
-          grid-template-columns: 1fr 1fr;
-        }
-        .case-stage {
-          grid-template-columns: 1fr;
-        }
-        .case-nav {
+        .company-menu {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           border-right: 0;
+          border-bottom: 1px solid #d7dde7;
         }
-        .cert-grid {
-          grid-template-columns: 1fr 1fr;
+        .company-menu h3 {
+          grid-column: 1/-1;
+        }
+        .view-grid {
+          grid-template-columns: 1fr;
+        }
+        .company-view {
+          min-height: auto;
+        }
+        .case-menu {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        .kpi {
+          grid-column: span 6;
+        }
+        .kpi.wide {
+          grid-column: span 12;
+        }
+        .investigation-flow {
+          grid-template-columns: repeat(3, 1fr);
         }
       }
-      @media (max-width: 600px) {
-        .hero {
-          padding: 34px 6vw 45px;
+      @media (max-width: 650px) {
+        .navlinks a:not(.contact-link) {
+          display: none;
         }
         .hero h1 {
-          font-size: 58px;
+          font-size: 56px;
         }
-        .hero h1 span {
-          margin-left: 0;
-        }
-        .hero-bottom {
+        .hero-foot {
           grid-template-columns: 1fr 1fr;
         }
-        .hero-stat {
-          padding: 15px 8px;
-        }
-        .chapter,
-        .evidence,
-        .credentials {
-          padding: 75px 6vw;
-        }
-        .achievement {
+        .exec-grid,
+        .feedback-grid,
+        .credential-grid,
+        .capability-row {
           grid-template-columns: 1fr;
         }
-        .flow,
-        .cert-grid {
-          grid-template-columns: 1fr;
+        .company-menu {
+          grid-template-columns: 1fr 1fr;
         }
-        .flow-step {
-          border-right: 1px solid #343b47;
-          border-bottom: 0;
+        .company-tab {
+          grid-template-columns: 30px 1fr;
+          padding: 9px;
         }
-        .flow-step:last-child {
-          border-bottom: 1px solid #343b47;
+        .tab-logo {
+          width: 30px;
+          height: 30px;
         }
-        .case-top,
-        .evidence-head,
-        .contact,
-        .degree,
-        .footer {
+        .company-view {
+          padding: 20px;
+        }
+        .company-view-top,
+        .case-meta,
+        .education-row,
+        .closing .wrap,
+        .footer .wrap {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
         }
-        .case-nav {
+        .profile-line {
           grid-template-columns: 1fr;
         }
-        .contact {
-          padding: 75px 6vw;
+        .case-menu {
+          grid-template-columns: 1fr;
         }
-        .index {
-          padding: 20px 6vw;
+        .case-main {
+          padding: 18px;
         }
-        .brand-logo img {
-          max-width: 200px;
+        .investigation-flow {
+          grid-template-columns: 1fr 1fr;
         }
-        .chapter-title {
-          margin-bottom: 35px;
+        .kpi,
+        .kpi.wide {
+          grid-column: span 12;
+        }
+        .section {
+          padding: 78px 0;
+        }
+        .hero {
+          padding-top: 45px;
+        }
+        .feedback-grid {
+          gap: 12px;
+        }
+        .credential-grid {
+          gap: 10px;
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -706,1212 +1114,893 @@
           transition: none;
         }
       }
-      /* Cohesive vibrant interaction layer */
-      .progress-bar {
-        position: fixed;
-        top: 0;
-        left: 82px;
-        height: 4px;
-        width: 0;
-        z-index: 80;
-        background: linear-gradient(
-          90deg,
-          var(--blue),
-          var(--orange),
-          var(--acid)
-        );
-        box-shadow: 0 0 18px #174dff80;
-      }
-      .rail {
-        background: linear-gradient(180deg, #10131a 0%, #131d38 100%);
-      }
-      .rail-links a {
-        transition: 0.25s;
-      }
-      .rail-links a:hover,
-      .rail-links a.active {
-        color: var(--acid);
-      }
-      .hero {
-        background:
-          radial-gradient(circle at 86% 20%, #d8ff4860 0 17%, transparent 36%),
-          linear-gradient(135deg, #fffdf8 0%, #eef3ff 56%, #e7fff8 100%);
-      }
-      .hero-nav {
-        position: relative;
-        z-index: 2;
-      }
-      .hero-center {
-        max-width: 1320px;
-      }
-      .kicker {
-        display: inline-flex;
-        width: max-content;
-        padding: 8px 12px;
-        border: 1px solid #174dff33;
-        border-radius: 999px;
-        background: #ffffffa8;
-        backdrop-filter: blur(10px);
-      }
-      .hero h1 span {
-        background: linear-gradient(90deg, var(--blue), #7048ff, var(--orange));
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      .hero-bottom {
-        position: relative;
-        z-index: 2;
-        background: #ffffff94;
-        border: 1px solid #d7dce6;
-        border-radius: 20px;
-        padding: 0 16px;
-        backdrop-filter: blur(12px);
-      }
-      .hero-stat {
-        padding: 18px;
-      }
-      .hero-stat:last-child {
-        border-right: 0;
-      }
-      .hero-stat b {
-        color: var(--blue);
-      }
-      .index {
-        position: sticky;
-        top: 0;
-        z-index: 19;
-        background: #174dfff2;
-        backdrop-filter: blur(13px);
-        box-shadow: 0 10px 30px #174dff18;
-      }
-      .chapter {
-        min-height: auto;
-        padding-top: 110px;
-        padding-bottom: 110px;
-      }
-      .chapter-body {
-        background: #ffffffc7;
-        border: 1px solid #ddd9d0;
-        border-radius: 30px;
-        padding: 36px;
-        box-shadow: 0 25px 80px #18233c0c;
-      }
-      .brand-logo {
-        border-radius: 22px;
-        background: #fff;
-        padding: 17px;
-        border: 1px solid #ddd9d0;
-        box-shadow: 0 16px 40px #10203d0d;
-      }
-      .work {
-        transition: 0.28s;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .work:hover {
-        background: #f0f5ff;
-        transform: translateX(7px);
-      }
-      .work:hover .step {
-        color: var(--orange);
-      }
-      .achievement {
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: 0 24px 65px #10131a20;
-      }
-      .achievement-mark {
-        background: linear-gradient(145deg, var(--acid), #fff06b);
-      }
-      .evidence {
-        background:
-          radial-gradient(circle at 90% 10%, #174dff35, transparent 25%),
-          #0d1322;
-      }
-      .case-stage {
-        border-radius: 25px;
-        overflow: hidden;
-        box-shadow: 0 30px 90px #0007;
-      }
-      .case-btn {
-        transition: 0.25s;
-      }
-      .case-btn:hover {
-        padding-left: 29px;
-        color: white;
-      }
-      .case-btn.active {
-        background: linear-gradient(90deg, var(--acid), #f1ffab);
-      }
-      .flow-step {
-        transition: 0.25s;
-      }
-      .flow-step:hover {
-        background: #172844;
-        transform: translateY(-5px);
-      }
-      .results {
-        padding: 110px clamp(28px, 6vw, 90px);
-        background: #fff;
-      }
-      .results-head,
-      .feedback-head {
-        display: grid;
-        grid-template-columns: 1fr 0.7fr;
-        gap: 50px;
-        align-items: end;
-        margin-bottom: 55px;
-      }
-      .results h2,
-      .feedback h2 {
-        font-size: clamp(48px, 7vw, 100px);
-        line-height: 0.86;
-        letter-spacing: -0.075em;
-        margin: 0;
-      }
-      .results-head p,
-      .feedback-head p {
-        margin: 0;
-        color: var(--muted);
-      }
-      .kpi-board {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 15px;
-      }
-      .kpi-card {
-        grid-column: span 3;
-        min-height: 225px;
-        border: 1px solid #dbe1ec;
-        border-radius: 24px;
-        padding: 24px;
-        background: #f7f9ff;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-        transition: 0.3s;
-      }
-      .kpi-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 55px #1b3c8018;
-      }
-      .kpi-card.wide {
-        grid-column: span 6;
-        background: var(--blue);
-        color: white;
-      }
-      .kpi-card.orange {
-        background: var(--orange);
-        color: #fff;
-      }
-      .kpi-card.acid {
-        background: var(--acid);
-      }
-      .kpi-card small {
-        font: 500 9px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .kpi-card b {
-        font: 800 clamp(42px, 5vw, 72px)/0.9 var(--sans);
-        letter-spacing: -0.07em;
-      }
-      .kpi-card p {
-        font-size: 12px;
-        margin: 0;
-        max-width: 340px;
-      }
-      .kpi-meter {
-        height: 7px;
-        border-radius: 99px;
-        background: #ffffff40;
-        overflow: hidden;
-        margin-top: 18px;
-      }
-      .kpi-meter i {
-        display: block;
-        height: 100%;
-        width: 0;
-        background: currentColor;
-        border-radius: 99px;
-        transition: width 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
-      }
-      .kpi-card.visible .kpi-meter i {
-        width: var(--value);
-      }
-      .feedback {
-        padding: 110px clamp(28px, 6vw, 90px);
-        background: linear-gradient(
-          135deg,
-          #d8ff48 0%,
-          #b8f7e9 50%,
-          #dce7ff 100%
-        );
-      }
-      .feedback-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-      .feedback-card {
-        min-height: 270px;
-        padding: 27px;
-        border: 1px solid #10131a26;
-        border-radius: 24px;
-        background: #fffef9cc;
-        backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        transition: 0.3s;
-      }
-      .feedback-card:hover {
-        transform: rotate(-1deg) translateY(-8px);
-        box-shadow: 0 30px 70px #1c392515;
-      }
-      .feedback-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 14px;
-        background: var(--ink);
-        color: white;
-        display: grid;
-        place-items: center;
-        font-size: 20px;
-      }
-      .feedback-card h3 {
-        font-size: 22px;
-        margin: 32px 0 12px;
-      }
-      .feedback-card p {
-        color: #475263;
-      }
-      .feedback-card small {
-        margin-top: auto;
-        font: 500 9px var(--mono);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-      .feedback-note {
-        margin-top: 20px;
-        font: 400 9px var(--mono);
-        color: #4b584c;
-      }
-      .credentials {
-        background: linear-gradient(145deg, #9ef2e8, #d7fff3);
-      }
-      .cert {
-        transition: 0.3s;
-        background: #ffffffad;
-      }
-      .cert:hover {
-        background: white;
-        transform: translateY(-7px);
-        box-shadow: 0 22px 50px #123b3814;
-      }
-      .contact {
-        background: linear-gradient(
-          120deg,
-          var(--orange),
-          #ff8d3d 55%,
-          #ffca45
-        );
-      }
-      @media (max-width: 900px) {
-        .progress-bar {
-          left: 0;
-        }
-        .results-head,
-        .feedback-head {
-          grid-template-columns: 1fr;
-        }
-        .kpi-card {
-          grid-column: span 6;
-        }
-        .kpi-card.wide {
-          grid-column: span 12;
-        }
-        .feedback-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .chapter-body {
-          padding: 28px;
-        }
-      }
-      @media (max-width: 600px) {
-        .kpi-card,
-        .kpi-card.wide {
-          grid-column: span 12;
-        }
-        .feedback-grid {
-          grid-template-columns: 1fr;
-        }
-        .hero-bottom {
-          border-radius: 16px;
-        }
-        .chapter-body {
-          padding: 21px;
-        }
-        .progress-bar {
-          left: 0;
-        }
-      }
     </style>
   </head>
   <body>
-    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-    <aside class="rail">
-      <span class="ey">EY</span>
-      <nav class="rail-links">
-        <a href="#experience">Experience</a><a href="#evidence">Casework</a
-        ><a href="#results">KPIs</a><a href="#feedback">Feedback</a
-        ><a href="#credentials">Credentials</a>
-      </nav>
-      <a class="rail-mail" href="mailto:eyeghinyane@gmail.com">↗</a>
-    </aside>
-    <main class="page" id="top">
-      <header class="hero">
-        <div class="hero-nav">
-          <span>Erik Yeghinyan · Portfolio</span
-          ><span class="available"><i></i>U.S. work authorized</span>
-        </div>
-        <div class="hero-center reveal">
-          <span class="kicker"
-            >Financial crime · Banking operations · Customer intelligence</span
+    <div class="progress" id="progress"></div>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top"
+          ><span class="seal">EY</span><span>Erik Yeghinyan</span></a
+        >
+        <div class="navlinks">
+          <a href="#experience">Experience</a><a href="#casework">Casework</a
+          ><a href="#results">KPIs</a><a href="#feedback">Feedback</a
+          ><a href="#credentials">Credentials</a
+          ><a class="contact-link" href="mailto:eyeghinyane@gmail.com"
+            >Contact</a
           >
-          <h1>Follow the money.<span>Understand the person.</span></h1>
-          <div class="hero-copy">
-            <span class="mini">Hyannis, MA ↔ Los Angeles, CA</span>
-            <p>
-              I connect customer context, payment behavior, research and
-              investigative evidence to decisions that are clear, defensible and
-              ready for action.
-            </p>
-          </div>
         </div>
-        <div class="orb" aria-hidden="true"></div>
-        <div class="hero-bottom">
-          <div class="hero-stat">
-            <b>30+</b><span>Daily alert reviews</span>
+      </div>
+    </nav>
+    <main id="top">
+      <header class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="reveal">
+              <span class="eyebrow">AML · FRAUD · BANKING OPERATIONS</span>
+              <h1>Risk decisions.<span>Made clear.</span></h1>
+              <p class="hero-copy">
+                I’m Erik Yeghinyan. I investigate payment behavior, understand
+                customer context, document the evidence and turn complex risk
+                into decisions that teams can act on.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="#experience">Explore my work</a
+                ><a
+                  class="btn secondary"
+                  href="https://linkedin.com/in/erik-yeghinyan"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn ↗</a
+                >
+              </div>
+            </div>
+            <aside class="executive-card reveal">
+              <div class="exec-top">
+                <span>Professional profile</span><span>Financial crime</span>
+              </div>
+              <div class="exec-body">
+                <div class="exec-name">
+                  <div>
+                    <h2>Erik Yeghinyan</h2>
+                    <p class="exec-title">
+                      AML · Transaction Monitoring · Fraud · Client Operations
+                    </p>
+                  </div>
+                  <span class="available">U.S. work authorized</span>
+                </div>
+                <div class="exec-grid">
+                  <div class="exec-item">
+                    <b>30+</b><span>Daily AML investigations</span>
+                  </div>
+                  <div class="exec-item">
+                    <b>40+</b><span>Daily banking transactions</span>
+                  </div>
+                  <div class="exec-item">
+                    <b>25%</b><span>Efficiency improvement</span>
+                  </div>
+                  <div class="exec-item">
+                    <b>3</b><span>Working languages</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
-          <div class="hero-stat">
-            <b>40+</b><span>Daily bank transactions</span>
+          <div class="hero-foot">
+            <div><b>6</b><span>Company environments</span></div>
+            <div><b>4</b><span>Control stages covered</span></div>
+            <div><b>30%</b><span>Fewer false escalations</span></div>
+            <div><b>3.8</b><span>University GPA</span></div>
           </div>
-          <div class="hero-stat">
-            <b>25%</b><span>Efficiency improvement</span>
-          </div>
-          <div class="hero-stat"><b>3</b><span>Working languages</span></div>
         </div>
       </header>
-      <nav class="index">
-        <a href="#santander">01 Santander</a
-        ><a href="#guidehouse">02 Guidehouse / Green Dot</a
-        ><a href="#swedbank">03 Swedbank</a><a href="#idbank">04 IDBank</a
-        ><a href="#teleperformance">05 Teleperformance</a
-        ><a href="#diplomasafe">06 DiplomaSafe</a>
-      </nav>
-      <div id="experience">
-        <section class="chapter" id="santander">
-          <div class="sticky reveal">
-            <span class="num">01 / FRONTLINE CONTROL</span>
-            <div class="brand-logo">
-              <img
-                src="https://www.unav.edu/documents/17025494/71430267/santander.jpg/7df8ad17-9da0-b00a-ac2d-fcad510cfbc6?t=1701427518350"
-                alt="Santander logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'block';
-                "
-              /><span class="fallback">Santander</span>
+      <section class="section dashboard-section" id="experience">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <span class="eyebrow">Interactive experience dashboard</span>
+              <h2>Select a company. See the work.</h2>
             </div>
-            <h2>Santander Bank N.A.</h2>
-            <p class="role">
-              Relationship Banker and Teller<br />First Line of Defense
+            <p>
+              Every role shows the operating environment, exact
+              responsibilities, tools used and demonstrated impact. Select a
+              company to change the complete workspace.
             </p>
-            <p class="dates">Massachusetts · May 2026 — Present</p>
           </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              Where customer service becomes risk control.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Process and reconcile</h3>
-                <p>
-                  Execute 40+ daily deposits, withdrawals, transfers, and loan,
-                  mortgage and credit-card payments while maintaining
-                  transaction accuracy.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Verify before execution</h3>
-                <p>
-                  Validate identity, transaction details and account activity
-                  against control requirements before completing customer
-                  requests.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Recognize risk at the counter</h3>
-                <p>
-                  Identify possible account takeover, unusual cash activity and
-                  other customer-risk concerns during live interactions.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Document and escalate</h3>
-                <p>
-                  Record decision-relevant facts, route concerns through Fraud
-                  and BSA/AML channels and preserve audit-ready records.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Measured output</small><b>40+<br />daily</b>
-              </div>
-              <div class="achievement-copy">
+          <div class="dashboard-shell reveal">
+            <aside class="company-menu">
+              <h3>Company directory</h3>
+              <button class="company-tab active" data-company="santander">
+                <span class="tab-logo"
+                  ><img
+                    src="https://www.unav.edu/documents/17025494/71430267/santander.jpg/7df8ad17-9da0-b00a-ac2d-fcad510cfbc6?t=1701427518350"
+                    alt="" /></span
+                ><span
+                  ><strong>Santander</strong
+                  ><small>Banking controls</small></span
+                ></button
+              ><button class="company-tab" data-company="guidehouse">
+                <span class="tab-logo"
+                  ><img
+                    src="https://mma.prnewswire.com/media/950386/Guidehouse_Logo.jpg?p=facebook"
+                    alt="" /></span
+                ><span
+                  ><strong>Guidehouse / Green Dot</strong
+                  ><small>AML investigations</small></span
+                ></button
+              ><button class="company-tab" data-company="swedbank">
+                <span class="tab-logo"
+                  ><img
+                    src="https://mb.cision.com/Public/13725/2077314/ba2f1661416737b5_org.jpg"
+                    alt="" /></span
+                ><span
+                  ><strong>Swedbank</strong
+                  ><small>Transaction monitoring</small></span
+                ></button
+              ><button class="company-tab" data-company="idbank">
+                <span class="tab-logo"
+                  ><img
+                    src="https://www.e-money.am/img/banks/idbank_800.webp"
+                    alt="" /></span
+                ><span
+                  ><strong>IDBank</strong
+                  ><small>Onboarding & fraud</small></span
+                ></button
+              ><button class="company-tab" data-company="tp">
+                <span class="tab-logo"
+                  ><img
+                    src="https://air.euro2day.gr/media/resizedpics/picsMain930/52/1498852-TELEPERFORMANCE_930.jpg"
+                    alt="" /></span
+                ><span
+                  ><strong>Teleperformance</strong
+                  ><small>Customer operations</small></span
+                ></button
+              ><button class="company-tab" data-company="diplomasafe">
+                <span class="tab-logo"
+                  ><img
+                    src="https://logo.clearbit.com/diplomasafe.com?size=240"
+                    alt=""
+                  /><span>DS</span></span
+                ><span
+                  ><strong>DiplomaSafe</strong
+                  ><small>Lead intelligence</small></span
+                >
+              </button>
+            </aside>
+            <div class="company-view">
+              <div class="company-view-top">
                 <div>
-                  <h3>High-volume banking with control discipline.</h3>
-                  <p>
-                    Maintained accurate execution across a varied transaction
-                    mix while applying identity, fraud and cash controls as the
-                    first line of defense.
-                  </p>
+                  <span class="eyebrow" id="companyType"></span>
+                  <h3 id="companyTitle"></h3>
+                  <p id="companyRole"></p>
                 </div>
-                <div class="tags">
-                  <span>Identity verification</span><span>Cash controls</span
-                  ><span>Fraud escalation</span><span>BSA/AML</span>
+                <span class="date-pill" id="companyDate"></span>
+              </div>
+              <div class="company-logos" id="companyLogos"></div>
+              <div class="view-grid">
+                <div class="work-panel">
+                  <div class="panel-head">What I did</div>
+                  <div id="responsibilities"></div>
                 </div>
+                <aside class="impact-panel">
+                  <span class="impact-label"
+                    >Achievement / operational impact</span
+                  ><strong class="impact-big" id="impactBig"></strong>
+                  <h4 id="impactTitle"></h4>
+                  <p id="impactCopy"></p>
+                  <div class="toolset" id="companyTools"></div>
+                </aside>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="chapter" id="guidehouse">
-          <div class="sticky reveal">
-            <span class="num">02 / AML INVESTIGATIONS</span>
-            <div class="brand-logo" style="height: 130px; gap: 22px">
-              <img
-                src="https://mma.prnewswire.com/media/950386/Guidehouse_Logo.jpg?p=facebook"
-                alt="Guidehouse logo"
-                onerror="this.style.display = 'none'"
-              />
-              <img
-                src="https://mms.businesswire.com/media/20250310239208/en/1258034/22/greendot_corporate_logo.jpg"
-                alt="Green Dot Bank logo"
-                onerror="this.style.display = 'none'"
-              /><span class="fallback">Guidehouse × Green Dot Bank</span>
-            </div>
-            <h2>Guidehouse × Green Dot Bank</h2>
-            <p class="role">AML Compliance Analyst</p>
-            <p class="dates">Vilnius · Hybrid · Sep 2024 — Sep 2025</p>
-          </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              From alert volume to evidence-based disposition.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Review 30+ daily alerts</h3>
-                <p>
-                  Analyze accounts and transaction-monitoring alerts in Unit21
-                  and Excel across payment activity, counterparties, timing,
-                  value and velocity.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Build the customer context</h3>
-                <p>
-                  Combine KYC/CDD/EDD, OSINT, adverse media and World-Check
-                  findings with transaction behavior.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Reach a defensible decision</h3>
-                <p>
-                  Determine closure or escalation based on evidence, unresolved
-                  risk, customer purpose and recurring typologies.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Write for the next reviewer</h3>
-                <p>
-                  Prepare audit-ready rationales and supporting documentation
-                  for SAR referral and further investigation.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Measured impact</small><b>+25%<br />−30%</b>
-              </div>
-              <div class="achievement-copy">
-                <div>
-                  <h3>
-                    More efficient reviews. Fewer unnecessary escalations.
-                  </h3>
-                  <p>
-                    Contributed to a 25% increase in investigation efficiency
-                    and a 30% reduction in false-positive escalations by
-                    tracking typologies and outcomes.
-                  </p>
-                </div>
-                <div class="tags">
-                  <span>Unit21</span><span>World-Check</span><span>Excel</span
-                  ><span>OSINT</span><span>SAR support</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="chapter" id="swedbank">
-          <div class="sticky reveal">
-            <span class="num">03 / TRANSACTION MONITORING</span>
-            <div class="brand-logo">
-              <img
-                src="https://mb.cision.com/Public/13725/2077314/ba2f1661416737b5_org.jpg"
-                alt="Swedbank logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'block';
-                "
-              /><span class="fallback">Swedbank</span>
-            </div>
-            <h2>Swedbank</h2>
-            <p class="role">Transaction Monitoring Analyst</p>
-            <p class="dates">Lithuania · Jan 2023 — May 2024</p>
-          </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              Turn case patterns into stronger controls.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Review unusual activity</h3>
-                <p>
-                  Examine alerts and payment behavior for fraud patterns,
-                  anomalies and deviations from expected account use.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Document the evidence</h3>
-                <p>
-                  Capture the activity reviewed, investigative findings,
-                  decision and escalation rationale in line with AML
-                  expectations.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Consolidate case themes</h3>
-                <p>
-                  Use Excel to organize recurring findings for reporting,
-                  quality review, threshold assessment and control-gap
-                  identification.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Improve the workflow</h3>
-                <p>
-                  Partner with compliance, fraud operations and product teams to
-                  translate case insight into process improvement.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Operational impact</small><b>Case →<br />control</b>
-              </div>
-              <div class="achievement-copy">
-                <div>
-                  <h3>Investigation findings made useful beyond one alert.</h3>
-                  <p>
-                    Converted individual case decisions into structured themes
-                    supporting quality review, threshold assessment and clearer
-                    workflow decisions.
-                  </p>
-                </div>
-                <div class="tags">
-                  <span>Alert review</span><span>Excel analysis</span
-                  ><span>Quality review</span><span>Control gaps</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="chapter" id="idbank">
-          <div class="sticky reveal">
-            <span class="num">04 / ONBOARDING & FRAUD</span>
-            <div class="brand-logo">
-              <img
-                src="https://www.e-money.am/img/banks/idbank_800.webp"
-                alt="IDBank logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'block';
-                "
-              /><span class="fallback">IDBank</span>
-            </div>
-            <h2>IDBank</h2>
-            <p class="role">
-              Compliance Operations Specialist<br />Onboarding and Fraud
-            </p>
-            <p class="dates">Yerevan · Remote · May 2022 — Jan 2023</p>
-          </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              Know the customer before risk enters the bank.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Verify identity digitally</h3>
-                <p>
-                  Review identity documents, video verification results,
-                  customer profiles and CIP requirements.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Assess customer risk</h3>
-                <p>
-                  Apply KYC, CDD, EDD and OSINT research to confirm identity and
-                  understand risk.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Investigate inconsistencies</h3>
-                <p>
-                  Analyze suspicious documents, profile mismatches and
-                  payment-fraud indicators requiring further review.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Resolve exceptions</h3>
-                <p>
-                  Maintain complete records for quality and regulatory review
-                  and coordinate resolutions with customers and operations.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Operational impact</small><b>End to<br />end</b>
-              </div>
-              <div class="achievement-copy">
-                <div>
-                  <h3>A complete onboarding-control loop.</h3>
-                  <p>
-                    Connected identity verification, fraud review, customer
-                    communication and documentation from initial application
-                    through exception resolution.
-                  </p>
-                </div>
-                <div class="tags">
-                  <span>KYC/CIP</span><span>CDD/EDD</span><span>Video ID</span
-                  ><span>Document review</span><span>OSINT</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="chapter" id="teleperformance">
-          <div class="sticky reveal">
-            <span class="num">05 / CUSTOMER OPERATIONS</span>
-            <div class="brand-logo">
-              <img
-                src="https://air.euro2day.gr/media/resizedpics/picsMain930/52/1498852-TELEPERFORMANCE_930.jpg"
-                alt="Teleperformance logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'block';
-                "
-              /><span class="fallback">Teleperformance</span>
-            </div>
-            <h2>Teleperformance</h2>
-            <p class="role">Multilingual Customer Service Representative</p>
-            <p class="dates">Lithuania · Remote · Sep 2023 — Sep 2024</p>
-          </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              Make complex customer conversations clear.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Handle inbound demand</h3>
-                <p>
-                  Managed high-volume customer calls across healthcare, legal,
-                  government and administrative service environments.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Verify and understand</h3>
-                <p>
-                  Confirmed customer information, identified the reason for
-                  contact and gathered the facts needed for accurate support.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Resolve or route</h3>
-                <p>
-                  Explained next steps clearly, de-escalated difficult
-                  interactions and routed complex cases to the correct team.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Document securely</h3>
-                <p>
-                  Recorded interactions accurately while protecting
-                  confidentiality across Armenian, English and Russian
-                  conversations.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Service impact</small><b>3<br />languages</b>
-              </div>
-              <div class="achievement-copy">
-                <div>
-                  <h3>Clear support across language and subject complexity.</h3>
-                  <p>
-                    Combined multilingual communication, verification,
-                    de-escalation and precise documentation to move customers
-                    toward resolution.
-                  </p>
-                </div>
-                <div class="tags">
-                  <span>Inbound calls</span><span>De-escalation</span
-                  ><span>Case notes</span><span>Confidentiality</span
-                  ><span>Escalation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="chapter" id="diplomasafe">
-          <div class="sticky reveal">
-            <span class="num">06 / LEAD RESEARCH</span>
-            <div class="brand-logo">
-              <img
-                src="https://logo.clearbit.com/diplomasafe.com?size=240"
-                alt="DiplomaSafe logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'block';
-                "
-              /><span class="fallback">DiplomaSafe</span>
-            </div>
-            <h2>DiplomaSafe</h2>
-            <p class="role">Lead Research Specialist</p>
-            <p class="dates">On-site · Oct 2023 — May 2024</p>
-          </div>
-          <div class="chapter-body reveal">
-            <h2 class="chapter-title">
-              Turn scattered market data into qualified opportunities.
-            </h2>
-            <div class="work-list">
-              <div class="work">
-                <span class="step">01</span>
-                <h3>Define the target</h3>
-                <p>
-                  Researched universities, education providers and
-                  decision-makers aligned with digital credential solutions.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">02</span>
-                <h3>Find and verify contacts</h3>
-                <p>
-                  Used LinkedIn, web research and Hunter to identify relevant
-                  stakeholders and validate professional contact information.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">03</span>
-                <h3>Enrich the lead</h3>
-                <p>
-                  Captured institution, role, geography, use-case and contact
-                  context so outreach could be specific and relevant.
-                </p>
-              </div>
-              <div class="work">
-                <span class="step">04</span>
-                <h3>Maintain the pipeline</h3>
-                <p>
-                  Organized research in CRM and spreadsheet workflows, removed
-                  duplicates and handed sales-ready records to outreach teams.
-                </p>
-              </div>
-            </div>
-            <div class="achievement">
-              <div class="achievement-mark">
-                <small>Research impact</small><b>Raw →<br />ready</b>
-              </div>
-              <div class="achievement-copy">
-                <div>
-                  <h3>Cleaner research for more relevant outreach.</h3>
-                  <p>
-                    Converted fragmented public information into structured,
-                    verified lead records that supported targeted
-                    business-development activity.
-                  </p>
-                </div>
-                <div class="tags">
-                  <span>LinkedIn research</span><span>Hunter</span
-                  ><span>Lead enrichment</span><span>CRM</span
-                  ><span>Data quality</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <section class="evidence" id="evidence">
-        <div class="evidence-head reveal">
-          <h2>Show the<br />reasoning.</h2>
-          <p>
-            Fictional, privacy-safe cases demonstrate how I move from trigger to
-            context, evidence and documented disposition.
-          </p>
-        </div>
-        <div class="case-stage reveal">
-          <div class="case-nav">
-            <button class="case-btn active" data-case="ato">
-              01 · Account takeover</button
-            ><button class="case-btn" data-case="p2p">02 · P2P velocity</button
-            ><button class="case-btn" data-case="ach">
-              03 · ACH pass-through
-            </button>
-          </div>
-          <div class="case-view">
-            <div class="case-top">
-              <div>
-                <span class="kicker" id="case-id"></span>
-                <h3 id="case-title"></h3>
-                <p class="case-context" id="case-context"></p>
-              </div>
-              <span class="risk" id="case-risk"></span>
-            </div>
-            <div class="flow" id="flow"></div>
-            <p class="rationale" id="case-note"></p>
           </div>
         </div>
       </section>
-      <section class="results" id="results">
-        <div class="results-head reveal">
+      <section class="section case-section" id="casework">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <span class="eyebrow">Realistic AML work samples</span>
+              <h2>Review the evidence. Make the call.</h2>
+            </div>
+            <p>
+              Fictional, privacy-safe cases show alert review, customer
+              baseline, transaction activity, investigative steps and documented
+              disposition.
+            </p>
+          </div>
+          <div class="case-shell reveal">
+            <div class="case-toolbar">
+              <b>Financial Crime Investigation Console</b
+              ><span>Fictional demonstration data</span>
+            </div>
+            <div class="case-layout">
+              <aside class="case-menu">
+                <button class="case-btn active" data-case="ato">
+                  Account takeover</button
+                ><button class="case-btn" data-case="p2p">P2P velocity</button
+                ><button class="case-btn" data-case="ach">
+                  ACH pass-through
+                </button>
+              </aside>
+              <div class="case-main">
+                <div class="case-meta">
+                  <div>
+                    <span class="eyebrow" id="caseId"></span>
+                    <h3 id="caseTitle"></h3>
+                    <p id="caseContext"></p>
+                  </div>
+                  <span class="risk-pill" id="caseRisk"></span>
+                </div>
+                <div class="profile-line" id="caseProfile"></div>
+                <div class="transaction-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Amount</th>
+                        <th>Counterparty / event</th>
+                        <th>Indicator</th>
+                      </tr>
+                    </thead>
+                    <tbody id="transactions"></tbody>
+                  </table>
+                </div>
+                <div class="investigation-flow" id="caseFlow"></div>
+                <div class="case-decision">
+                  <b>Decision rationale</b><span id="caseDecision"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section results-section" id="results">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <span class="eyebrow">Evidence of performance</span>
+              <h2>KPIs with context.</h2>
+            </div>
+            <p>
+              Supported figures are separated from qualitative impact so
+              recruiters can see both operating capacity and decision quality.
+            </p>
+          </div>
+          <div class="kpi-grid">
+            <article class="kpi wide reveal" data-kpi>
+              <small>Investigation capacity</small
+              ><b><span class="counter" data-target="30">0</span>+</b>
+              <p>
+                Daily accounts and transaction-monitoring alerts reviewed using
+                Unit21, Excel, KYC, OSINT and screening findings.
+              </p>
+              <div class="meter" style="--w: 88%"><i></i></div>
+            </article>
+            <article class="kpi blue reveal" data-kpi>
+              <small>Efficiency improvement</small
+              ><b><span class="counter" data-target="25">0</span>%</b>
+              <p>Supported through typology and outcome tracking.</p>
+              <div class="meter" style="--w: 76%"><i></i></div>
+            </article>
+            <article class="kpi gold reveal" data-kpi>
+              <small>False escalations</small
+              ><b>−<span class="counter" data-target="30">0</span>%</b>
+              <p>Reduction through clearer review logic.</p>
+              <div class="meter" style="--w: 84%"><i></i></div>
+            </article>
+            <article class="kpi reveal" data-kpi>
+              <small>Frontline banking</small
+              ><b><span class="counter" data-target="40">0</span>+</b>
+              <p>
+                Daily transactions completed with identity, cash and fraud
+                controls.
+              </p>
+              <div class="meter" style="--w: 92%"><i></i></div>
+            </article>
+            <article class="kpi reveal" data-kpi>
+              <small>Communication</small
+              ><b><span class="counter" data-target="3">0</span></b>
+              <p>Armenian, English and Russian working languages.</p>
+              <div class="meter" style="--w: 70%"><i></i></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section feedback-section" id="feedback">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <span class="eyebrow">Customer and team feedback</span>
+              <h2>Trusted in the moments that matter.</h2>
+            </div>
+            <p>
+              Recurring, anonymized themes across customer service, frontline
+              banking and investigation-quality work. No private customer or
+              employer information is shown.
+            </p>
+          </div>
+          <div class="feedback-grid">
+            <article class="feedback reveal">
+              <span class="feedback-mark">“</span>
+              <h3>Clear explanations</h3>
+              <p>
+                Complex banking, identity-verification and next-step
+                requirements were explained in plain language without making the
+                customer feel rushed.
+              </p>
+              <small>Customer-service theme · paraphrased</small>
+            </article>
+            <article class="feedback reveal">
+              <span class="feedback-mark">↗</span>
+              <h3>Ownership through resolution</h3>
+              <p>
+                Accurate notes, appropriate routing and reliable follow-through
+                helped customers and internal teams move forward without
+                restarting the issue.
+              </p>
+              <small>Operations theme · paraphrased</small>
+            </article>
+            <article class="feedback reveal">
+              <span class="feedback-mark">✓</span>
+              <h3>Decision-ready quality</h3>
+              <p>
+                Investigation records were organized around evidence, with
+                concise rationale another reviewer could understand, validate
+                and act on.
+              </p>
+              <small>Quality theme · paraphrased</small>
+            </article>
+          </div>
+          <p class="disclaimer">
+            Feedback is intentionally presented as themes rather than fabricated
+            direct quotations.
+          </p>
+        </div>
+      </section>
+      <section class="section credentials-section" id="credentials">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <span class="eyebrow">Credentials and capability</span>
+              <h2>Training applied to real work.</h2>
+            </div>
+            <p>
+              Education and professional development across
+              suspicious-transaction analysis, risk-based AML, GRC, digital
+              assets, KYC and privacy.
+            </p>
+          </div>
+          <div class="credential-grid">
+            <article class="credential reveal">
+              <span class="credential-logo">BI</span>
+              <h3>Operational Analysis of Suspicious Transaction Reports</h3>
+              <p>Basel Institute on Governance · September 2026</p>
+            </article>
+            <article class="credential reveal">
+              <span class="credential-logo">A</span>
+              <h3>Enhancing Financial Inclusion with a Risk-Based Approach</h3>
+              <p>ACAMS</p>
+            </article>
+            <article class="credential reveal">
+              <span class="credential-logo">PMI</span>
+              <h3>Leveraging AI for GRC</h3>
+              <p>Project Management Institute · April 2025</p>
+            </article>
+            <article class="credential reveal">
+              <span class="credential-logo">AML</span>
+              <h3>Foundations in AML and KYC</h3>
+              <p>Professional training</p>
+            </article>
+            <article class="credential reveal">
+              <span class="credential-logo">B/I</span>
+              <h3>Banking and Insurance AML/KYC</h3>
+              <p>Professional training</p>
+            </article>
+            <article class="credential reveal">
+              <span class="credential-logo">CFC</span>
+              <h3>Crypto Financial Crime Bootcamp + GDPR Training</h3>
+              <p>Digital assets, typologies and data privacy</p>
+            </article>
+          </div>
+          <div class="education-row reveal">
+            <div>
+              <h3>LCC International University</h3>
+              <p>
+                Bachelor of Arts in Communication · Klaipeda, Lithuania · 2024
+              </p>
+            </div>
+            <b>3.8 / 4.0 GPA</b>
+          </div>
+          <div class="capability-row">
+            <article class="capability reveal">
+              <h3>Compliance and investigations</h3>
+              <div class="chips">
+                <span>Transaction Monitoring</span
+                ><span>Fraud & AML Investigations</span
+                ><span>KYC / CIP / CDD / EDD</span
+                ><span>SAR Referral Support</span><span>Internal Controls</span
+                ><span>Risk Assessment</span><span>Control Gaps</span>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <h3>Technology and communication</h3>
+              <div class="chips">
+                <span>Unit21</span><span>World-Check</span><span>OSINT</span
+                ><span>Excel PivotTables</span><span>XLOOKUP</span
+                ><span>Power Query</span><span>Salesforce</span
+                ><span>Armenian Native</span><span>English C2</span
+                ><span>Russian B2</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="closing">
+        <div class="wrap">
           <div>
-            <span class="kicker">Performance dashboard</span>
-            <h2>Results you can measure.</h2>
+            <h2>Let’s make risk<br />decisions clearer.</h2>
+            <p>Hyannis, MA · Los Angeles, CA · 508-815-9050</p>
           </div>
-          <p>
-            Work volume and process impact presented in one clear operational
-            view. Only supported figures are shown; qualitative outcomes are
-            labeled separately.
-          </p>
+          <a class="btn" href="mailto:eyeghinyane@gmail.com"
+            >eyeghinyane@gmail.com</a
+          >
         </div>
-        <div class="kpi-board">
-          <article class="kpi-card wide reveal" data-kpi>
-            <small>AML investigation volume</small
-            ><b><span class="counter" data-target="30">0</span>+</b>
-            <p>
-              Accounts and transaction-monitoring alerts analyzed per day using
-              Unit21, Excel, KYC and external research.
-            </p>
-            <div class="kpi-meter" style="--value: 88%"><i></i></div>
-          </article>
-          <article class="kpi-card orange reveal" data-kpi>
-            <small>Investigation efficiency</small
-            ><b><span class="counter" data-target="25">0</span>%</b>
-            <p>
-              Increase supported by recurring-typology and outcome tracking.
-            </p>
-            <div class="kpi-meter" style="--value: 75%"><i></i></div>
-          </article>
-          <article class="kpi-card acid reveal" data-kpi>
-            <small>False-positive escalations</small
-            ><b>−<span class="counter" data-target="30">0</span>%</b>
-            <p>
-              Reduction achieved through clearer review and disposition logic.
-            </p>
-            <div class="kpi-meter" style="--value: 82%"><i></i></div>
-          </article>
-          <article class="kpi-card reveal" data-kpi>
-            <small>Frontline banking</small
-            ><b><span class="counter" data-target="40">0</span>+</b>
-            <p>
-              Daily branch transactions completed with identity, cash and fraud
-              controls.
-            </p>
-            <div class="kpi-meter" style="--value: 90%"><i></i></div>
-          </article>
-          <article class="kpi-card reveal" data-kpi>
-            <small>Communication coverage</small
-            ><b><span class="counter" data-target="3">0</span></b>
-            <p>Working languages: Armenian, English and Russian.</p>
-            <div class="kpi-meter" style="--value: 70%"><i></i></div>
-          </article>
-        </div>
-      </section>
-      <section class="feedback" id="feedback">
-        <div class="feedback-head reveal">
-          <div>
-            <span class="kicker">Customer and team feedback</span>
-            <h2>How the work feels to others.</h2>
-          </div>
-          <p>
-            Recurring qualitative themes from customer-facing, operations and
-            review work: clear communication, reliable follow-through and
-            careful handling of sensitive issues.
-          </p>
-        </div>
-        <div class="feedback-grid">
-          <article class="feedback-card reveal">
-            <span class="feedback-icon">◎</span>
-            <h3>Clear explanations</h3>
-            <p>
-              Customers valued having complex banking, verification and
-              next-step requirements explained in plain language without being
-              rushed.
-            </p>
-            <small>Customer-service theme</small>
-          </article>
-          <article class="feedback-card reveal">
-            <span class="feedback-icon">↗</span>
-            <h3>Ownership through resolution</h3>
-            <p>
-              Follow-through, accurate documentation and appropriate routing
-              helped prevent customers and internal partners from having to
-              restart the story.
-            </p>
-            <small>Operations theme</small>
-          </article>
-          <article class="feedback-card reveal">
-            <span class="feedback-icon">✓</span>
-            <h3>Reliable quality</h3>
-            <p>
-              Review work was recognized for organized evidence, concise
-              rationale and documentation that another reviewer could understand
-              and act on.
-            </p>
-            <small>Quality-review theme</small>
-          </article>
-        </div>
-        <p class="feedback-note">
-          Feedback is presented as anonymized, paraphrased themes. No private
-          customer or employer information is included.
-        </p>
-      </section>
-      <section class="credentials" id="credentials">
-        <div class="credential-intro reveal">
-          <h2>Training with<br />application.</h2>
-          <p>
-            Suspicious-transaction analysis, risk-based AML, GRC, banking
-            controls, crypto financial crime and privacy.
-          </p>
-        </div>
-        <div class="cert-grid">
-          <article class="cert reveal">
-            <small>Basel Institute · Sep 2026</small>
-            <h3>Operational Analysis of Suspicious Transaction Reports</h3>
-            <p>Suspicious-transaction analysis and operational reporting.</p>
-          </article>
-          <article class="cert reveal">
-            <small>ACAMS</small>
-            <h3>Enhancing Financial Inclusion with a Risk-Based Approach</h3>
-            <p>Proportionate controls and inclusive financial services.</p>
-          </article>
-          <article class="cert reveal">
-            <small>PMI · Apr 2025</small>
-            <h3>Leveraging AI for GRC</h3>
-            <p>Responsible AI across governance, risk and compliance.</p>
-          </article>
-          <article class="cert reveal">
-            <small>Professional training</small>
-            <h3>Foundations in AML and KYC</h3>
-            <p>Customer identification, monitoring and escalation.</p>
-          </article>
-          <article class="cert reveal">
-            <small>Professional training</small>
-            <h3>Banking and Insurance AML/KYC</h3>
-            <p>Controls across regulated financial services.</p>
-          </article>
-          <article class="cert reveal">
-            <small>Professional training</small>
-            <h3>Crypto Financial Crime Bootcamp + GDPR</h3>
-            <p>Digital-asset typologies and responsible data handling.</p>
-          </article>
-        </div>
-        <div class="degree reveal">
-          <div>
-            <h3>LCC International University</h3>
-            <p>
-              Bachelor of Arts in Communication · Klaipeda, Lithuania · 2024
-            </p>
-          </div>
-          <b>3.8 / 4.0</b>
-        </div>
-      </section>
-      <section class="contact">
-        <div>
-          <span class="kicker">Hyannis, MA · Los Angeles, CA</span>
-          <h2>Let’s investigate<br />what matters.</h2>
-        </div>
-        <a href="mailto:eyeghinyane@gmail.com">Email Erik ↗</a>
       </section>
     </main>
     <footer class="footer">
-      <span>Erik Yeghinyan · 508-815-9050</span
-      ><span>Armenian · English C2 · Russian B2</span
-      ><span>All cases fictional</span>
+      <div class="wrap">
+        <span>© <span id="year"></span> Erik Yeghinyan</span
+        ><span>All case data is fictional · No confidential information</span>
+      </div>
     </footer>
     <script>
+      const companies = {
+        santander: {
+          type: "Frontline banking controls",
+          title: "Santander Bank N.A.",
+          role: "Relationship Banker and Teller · First Line of Defense",
+          date: "Massachusetts · May 2026 — Present",
+          logos: [
+            [
+              "https://www.unav.edu/documents/17025494/71430267/santander.jpg/7df8ad17-9da0-b00a-ac2d-fcad510cfbc6?t=1701427518350",
+              "Santander",
+            ],
+          ],
+          work: [
+            [
+              "Execute transactions",
+              "Process deposits, withdrawals, transfers and loan, mortgage and credit-card payments accurately.",
+            ],
+            [
+              "Validate identity and activity",
+              "Confirm customer identity, transaction details and account context before completing requests.",
+            ],
+            [
+              "Recognize frontline risk",
+              "Identify possible account takeover, unusual cash activity and customer-risk concerns.",
+            ],
+            [
+              "Document and escalate",
+              "Record relevant facts, route cases through Fraud and BSA/AML channels and reconcile records.",
+            ],
+          ],
+          big: "40+ daily",
+          impact: "High-volume banking with control discipline",
+          copy: "Maintained accurate execution across a varied transaction mix while applying identity, cash and fraud controls as the first line of defense.",
+          tools: [
+            "Identity verification",
+            "Cash controls",
+            "Fraud escalation",
+            "BSA/AML",
+            "Reconciliation",
+          ],
+        },
+        guidehouse: {
+          type: "AML transaction monitoring",
+          title: "Guidehouse × Green Dot Bank",
+          role: "AML Compliance Analyst",
+          date: "Vilnius · Hybrid · Sep 2024 — Sep 2025",
+          logos: [
+            [
+              "https://mma.prnewswire.com/media/950386/Guidehouse_Logo.jpg?p=facebook",
+              "Guidehouse",
+            ],
+            [
+              "https://mms.businesswire.com/media/20250310239208/en/1258034/22/greendot_corporate_logo.jpg",
+              "Green Dot Bank",
+            ],
+          ],
+          work: [
+            [
+              "Investigate monitoring alerts",
+              "Analyze 30+ daily accounts and alerts in Unit21 and Excel across payment behavior and counterparties.",
+            ],
+            [
+              "Build customer context",
+              "Combine KYC/CDD/EDD, OSINT, adverse media and World-Check findings with transaction behavior.",
+            ],
+            [
+              "Reach a defensible decision",
+              "Determine closure or escalation from the evidence, unresolved questions and recurring typologies.",
+            ],
+            [
+              "Write for the next reviewer",
+              "Prepare audit-ready rationales and supporting documentation for SAR referral and further review.",
+            ],
+          ],
+          big: "+25% / −30%",
+          impact: "More efficient reviews. Fewer unnecessary escalations.",
+          copy: "Contributed to a 25% increase in investigation efficiency and 30% reduction in false-positive escalations by tracking typologies and outcomes.",
+          tools: [
+            "Unit21",
+            "World-Check",
+            "Excel",
+            "OSINT",
+            "Adverse media",
+            "SAR support",
+          ],
+        },
+        swedbank: {
+          type: "Transaction monitoring",
+          title: "Swedbank",
+          role: "Transaction Monitoring Analyst",
+          date: "Lithuania · Jan 2023 — May 2024",
+          logos: [
+            [
+              "https://mb.cision.com/Public/13725/2077314/ba2f1661416737b5_org.jpg",
+              "Swedbank",
+            ],
+          ],
+          work: [
+            [
+              "Review unusual activity",
+              "Examine alerts and payment behavior for fraud patterns, anomalies and deviations from expected use.",
+            ],
+            [
+              "Document the evidence",
+              "Capture investigative findings, decisions and escalation rationale in line with AML expectations.",
+            ],
+            [
+              "Consolidate case themes",
+              "Use Excel for reporting, quality review, threshold assessment and control-gap identification.",
+            ],
+            [
+              "Improve the workflow",
+              "Partner with compliance, fraud operations and product teams on process improvements.",
+            ],
+          ],
+          big: "Case → control",
+          impact: "Findings made useful beyond one alert",
+          copy: "Converted individual case decisions into structured themes supporting quality review, threshold assessment and clearer workflow decisions.",
+          tools: [
+            "Alert review",
+            "Excel analysis",
+            "Quality review",
+            "Thresholds",
+            "Control gaps",
+          ],
+        },
+        idbank: {
+          type: "Customer onboarding and fraud",
+          title: "IDBank",
+          role: "Compliance Operations Specialist · Onboarding and Fraud",
+          date: "Yerevan · Remote · May 2022 — Jan 2023",
+          logos: [
+            ["https://www.e-money.am/img/banks/idbank_800.webp", "IDBank"],
+          ],
+          work: [
+            [
+              "Verify identity digitally",
+              "Review identity documents, video verification, customer profiles and CIP requirements.",
+            ],
+            [
+              "Assess customer risk",
+              "Apply KYC, CDD, EDD and OSINT research to confirm identity and understand risk.",
+            ],
+            [
+              "Investigate inconsistencies",
+              "Analyze suspicious documents, profile mismatches and payment-fraud indicators.",
+            ],
+            [
+              "Resolve exceptions",
+              "Maintain complete records and coordinate resolutions with customers and operations.",
+            ],
+          ],
+          big: "End-to-end",
+          impact: "A complete onboarding-control loop",
+          copy: "Connected identity verification, fraud review, customer communication and documentation from initial application through exception resolution.",
+          tools: ["KYC/CIP", "CDD/EDD", "Video ID", "Document review", "OSINT"],
+        },
+        tp: {
+          type: "Multilingual customer operations",
+          title: "Teleperformance",
+          role: "Multilingual Customer Service Representative",
+          date: "Lithuania · Remote · Sep 2023 — Sep 2024",
+          logos: [
+            [
+              "https://air.euro2day.gr/media/resizedpics/picsMain930/52/1498852-TELEPERFORMANCE_930.jpg",
+              "Teleperformance",
+            ],
+          ],
+          work: [
+            [
+              "Handle inbound demand",
+              "Manage customer calls across healthcare, legal, government and administrative environments.",
+            ],
+            [
+              "Verify and understand",
+              "Confirm information, identify the reason for contact and gather the facts required for support.",
+            ],
+            [
+              "Resolve or route",
+              "Explain next steps, de-escalate difficult interactions and route complex cases correctly.",
+            ],
+            [
+              "Document securely",
+              "Record interactions accurately while protecting confidentiality across three languages.",
+            ],
+          ],
+          big: "3 languages",
+          impact: "Clear support across language and subject complexity",
+          copy: "Combined multilingual communication, verification, de-escalation and precise documentation to move customers toward resolution.",
+          tools: [
+            "Inbound calls",
+            "De-escalation",
+            "Case notes",
+            "Confidentiality",
+            "Escalation",
+          ],
+        },
+        diplomasafe: {
+          type: "Lead research and sales intelligence",
+          title: "DiplomaSafe",
+          role: "Lead Research Specialist",
+          date: "On-site · Oct 2023 — May 2024",
+          logos: [
+            [
+              "https://logo.clearbit.com/diplomasafe.com?size=240",
+              "DiplomaSafe",
+            ],
+          ],
+          work: [
+            [
+              "Define the target",
+              "Research universities, education providers and decision-makers aligned with digital credentials.",
+            ],
+            [
+              "Find and verify contacts",
+              "Use LinkedIn, web research and Hunter to identify stakeholders and validate contact information.",
+            ],
+            [
+              "Enrich the lead",
+              "Capture institution, role, geography, use case and context for relevant outreach.",
+            ],
+            [
+              "Maintain the pipeline",
+              "Organize research in CRM and spreadsheet workflows, remove duplicates and hand off sales-ready records.",
+            ],
+          ],
+          big: "Raw → ready",
+          impact: "Cleaner research for more relevant outreach",
+          copy: "Converted fragmented public information into structured, verified lead records supporting targeted business development.",
+          tools: [
+            "LinkedIn research",
+            "Hunter",
+            "Lead enrichment",
+            "CRM",
+            "Data quality",
+          ],
+        },
+      };
+      function showCompany(key) {
+        const c = companies[key];
+        document.querySelector("#companyType").textContent = c.type;
+        document.querySelector("#companyTitle").textContent = c.title;
+        document.querySelector("#companyRole").textContent = c.role;
+        document.querySelector("#companyDate").textContent = c.date;
+        document.querySelector("#companyLogos").innerHTML = c.logos
+          .map(
+            (x) =>
+              `<img src="${x[0]}" alt="${x[1]} logo" onerror="this.outerHTML='<span class=wordmark>${x[1]}</span>'">`,
+          )
+          .join("");
+        document.querySelector("#responsibilities").innerHTML = c.work
+          .map(
+            (x, i) =>
+              `<div class="responsibility"><b>0${i + 1}</b><div><strong>${x[0]}</strong><p>${x[1]}</p></div></div>`,
+          )
+          .join("");
+        document.querySelector("#impactBig").textContent = c.big;
+        document.querySelector("#impactTitle").textContent = c.impact;
+        document.querySelector("#impactCopy").textContent = c.copy;
+        document.querySelector("#companyTools").innerHTML = c.tools
+          .map((x) => `<span>${x}</span>`)
+          .join("");
+        document
+          .querySelectorAll(".company-tab")
+          .forEach((b) =>
+            b.classList.toggle("active", b.dataset.company === key),
+          );
+      }
+      document
+        .querySelectorAll(".company-tab")
+        .forEach((b) =>
+          b.addEventListener("click", () => showCompany(b.dataset.company)),
+        );
+      showCompany("santander");
       const cases = {
         ato: {
-          id: "Fraud investigation",
-          title: "New device → password reset → new payees",
-          context:
-            "Established consumer account · Activity outside known device and payment baseline",
-          risk: "Escalate · High risk",
-          steps: [
-            ["01", "Scope", "Validate trigger and data"],
+          id: "ALERT FRD-1842",
+          title: "Unrecognized access followed by rapid money movement",
+          context: "Established consumer checking account",
+          risk: "Escalate · High",
+          profile: [
+            ["Expected", "Local spending and payroll"],
+            ["Device", "New device + out-of-pattern IP"],
+            ["Prior P2P", "One known recipient below $200"],
+          ],
+          tx: [
+            ["09:41", "Login", "—", "New device", "Unrecognized"],
+            ["09:47", "Password reset", "—", "Self-service", "Access event"],
+            ["09:52", "P2P transfer", "−$450", "New recipient A", "High risk"],
+            ["09:57", "P2P transfer", "−$850", "New recipient B", "High risk"],
+          ],
+          flow: [
+            ["01", "Scope", "Validate alert and window"],
             ["02", "Baseline", "Compare KYC and history"],
             ["03", "Sequence", "Connect access and payments"],
-            ["04", "Verify", "Review device and identity"],
+            ["04", "Verify", "Review identity and device"],
             ["05", "Decide", "Protect and escalate"],
           ],
-          note: "Unrecognized access was followed by a password reset, new recipients and rapid outbound attempts. The customer denied the activity during approved verification. The sequence is inconsistent with the established baseline and presents unresolved fraud risk.",
+          decision:
+            "Customer denied the device, password reset and recipients during approved verification. The linked access and payment events are inconsistent with the established baseline and present unresolved account-takeover risk.",
         },
         p2p: {
-          id: "Fraud investigation",
-          title: "Five P2P transfers in eleven minutes",
-          context:
-            "Four new recipients · Same-day contact change · Values above prior behavior",
+          id: "ALERT FRD-2190",
+          title: "Rapid P2P transfers to newly added recipients",
+          context: "Consumer checking · eleven-minute activity window",
           risk: "Escalate · Medium-high",
-          steps: [
+          profile: [
+            ["Expected", "Payroll, utilities, retail"],
+            ["Contact", "Email changed same day"],
+            ["Prior P2P", "Infrequent and below $200"],
+          ],
+          tx: [
+            ["08:21", "Email changed", "—", "Self-service", "Review"],
+            ["08:34", "P2P transfer", "−$600", "New recipient A", "Velocity"],
+            ["08:37", "P2P transfer", "−$475", "New recipient B", "Velocity"],
+            ["08:40", "P2P transfer", "−$520", "New recipient C", "Velocity"],
+          ],
+          flow: [
             ["01", "Confirm", "Timing, values, recipients"],
             ["02", "Compare", "Historical P2P behavior"],
-            ["03", "Link", "Recipients and relationships"],
+            ["03", "Link", "Recipient relationships"],
             ["04", "Review", "Profile and session events"],
             ["05", "Decide", "Document authorization risk"],
           ],
-          note: "Rapid transfers to newly added recipients materially exceeded prior behavior and followed a same-day profile change. Recipient relationships and authorization remain unresolved, requiring fraud review.",
+          decision:
+            "Rapid transfers to four newly added recipients materially exceeded prior behavior and followed a same-day contact change. Recipient relationships and customer authorization remain unresolved.",
         },
         ach: {
-          id: "AML investigation",
-          title: "Inbound ACH → crypto and external transfers",
-          context:
-            "Small-business account · Activity inconsistent with stated consulting purpose",
-          risk: "Escalate · EDD review",
-          steps: [
+          id: "ALERT AML-6704",
+          title: "ACH credits followed by rapid outbound movement",
+          context: "Small-business checking · 90-day review",
+          risk: "Escalate · EDD",
+          profile: [
+            ["Expected", "Local consulting revenue"],
+            ["Ownership", "Single beneficial owner"],
+            ["Prior", "No crypto activity"],
+          ],
+          tx: [
+            [
+              "Day 1",
+              "Inbound ACH",
+              "+$8,750",
+              "Unrelated business",
+              "New sender",
+            ],
+            [
+              "Day 1",
+              "Crypto purchase",
+              "−$4,200",
+              "Digital asset exchange",
+              "New channel",
+            ],
+            ["Day 1", "Outbound ACH", "−$4,100", "New LLC", "Rapid movement"],
+            [
+              "Day 4",
+              "External transfer",
+              "−$8,900",
+              "New external account",
+              "Rapid movement",
+            ],
+          ],
+          flow: [
             ["01", "Expand", "Review 90-day history"],
             ["02", "Test", "KYC and business purpose"],
             ["03", "Trace", "Sources and destinations"],
             ["04", "Research", "Counterparties and OSINT"],
-            ["05", "Decide", "EDD and SAR consideration"],
+            ["05", "Decide", "EDD and SAR review"],
           ],
-          note: "Credits from unrelated businesses were followed within hours by crypto and external transfers. Most funds left within 24 hours, while KYC did not establish the purpose or party relationships. The pass-through pattern warrants enhanced review.",
+          decision:
+            "Credits from unrelated businesses were rapidly transferred to crypto, a new LLC and a new external account. KYC does not establish the business purpose or party relationships. The repeated pass-through pattern warrants enhanced review.",
         },
       };
-      const flow = document.querySelector("#flow");
-      function show(k) {
-        const c = cases[k];
-        document.querySelector("#case-id").textContent = c.id;
-        document.querySelector("#case-title").textContent = c.title;
-        document.querySelector("#case-context").textContent = c.context;
-        document.querySelector("#case-risk").textContent = c.risk;
-        document.querySelector("#case-note").textContent = c.note;
-        flow.innerHTML = c.steps
+      function showCase(key) {
+        const c = cases[key];
+        document.querySelector("#caseId").textContent = c.id;
+        document.querySelector("#caseTitle").textContent = c.title;
+        document.querySelector("#caseContext").textContent = c.context;
+        document.querySelector("#caseRisk").textContent = c.risk;
+        document.querySelector("#caseProfile").innerHTML = c.profile
           .map(
-            (s) =>
-              `<div class="flow-step"><b>${s[0]}</b><strong>${s[1]}</strong><span>${s[2]}</span></div>`,
+            (x) =>
+              `<div class="profile-item"><small>${x[0]}</small><b>${x[1]}</b></div>`,
           )
           .join("");
+        document.querySelector("#transactions").innerHTML = c.tx
+          .map(
+            (x) =>
+              `<tr><td>${x[0]}</td><td>${x[1]}</td><td>${x[2]}</td><td>${x[3]}</td><td class="tx-flag">${x[4]}</td></tr>`,
+          )
+          .join("");
+        document.querySelector("#caseFlow").innerHTML = c.flow
+          .map(
+            (x) =>
+              `<div class="flow-step"><small>${x[0]}</small><strong>${x[1]}</strong><span>${x[2]}</span></div>`,
+          )
+          .join("");
+        document.querySelector("#caseDecision").textContent = c.decision;
         document
           .querySelectorAll(".case-btn")
-          .forEach((b) => b.classList.toggle("active", b.dataset.case === k));
+          .forEach((b) => b.classList.toggle("active", b.dataset.case === key));
       }
       document
         .querySelectorAll(".case-btn")
         .forEach((b) =>
-          b.addEventListener("click", () => show(b.dataset.case)),
+          b.addEventListener("click", () => showCase(b.dataset.case)),
         );
-      show("ato");
-      const ob = new IntersectionObserver(
+      showCase("ato");
+      const reveal = new IntersectionObserver(
         (es) =>
           es.forEach((e) => {
             if (e.isIntersecting) e.target.classList.add("in");
           }),
         { threshold: 0.06 },
       );
-      document.querySelectorAll(".reveal").forEach((x) => ob.observe(x));
-      const kpiObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting || entry.target.dataset.animated) return;
-            entry.target.dataset.animated = "true";
-            entry.target.classList.add("visible");
-            const counter = entry.target.querySelector(".counter");
-            if (!counter) return;
-            const target = Number(counter.dataset.target);
-            const start = performance.now();
-            const tick = (now) => {
-              const progress = Math.min((now - start) / 950, 1);
-              counter.textContent = Math.round(
-                target * (1 - Math.pow(1 - progress, 3)),
-              );
-              if (progress < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-          });
-        },
+      document.querySelectorAll(".reveal").forEach((x) => reveal.observe(x));
+      const kpis = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting || e.target.dataset.done) return;
+            e.target.dataset.done = "1";
+            e.target.classList.add("visible");
+            const n = e.target.querySelector(".counter");
+            if (!n) return;
+            const target = +n.dataset.target,
+              start = performance.now();
+            function run(t) {
+              const p = Math.min((t - start) / 900, 1);
+              n.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+              if (p < 1) requestAnimationFrame(run);
+            }
+            requestAnimationFrame(run);
+          }),
         { threshold: 0.35 },
       );
-      document
-        .querySelectorAll("[data-kpi]")
-        .forEach((x) => kpiObserver.observe(x));
-      const railLinks = [...document.querySelectorAll(".rail-links a")];
-      const tracked = railLinks
-        .map((a) => document.querySelector(a.getAttribute("href")))
-        .filter(Boolean);
-      const updatePageState = () => {
-        const doc = document.documentElement;
-        const max = doc.scrollHeight - innerHeight;
-        document.querySelector("#progressBar").style.width =
-          `${max > 0 ? (scrollY / max) * 100 : 0}%`;
-        let active = tracked[0];
-        tracked.forEach((section) => {
-          if (section.getBoundingClientRect().top < innerHeight * 0.42)
-            active = section;
-        });
-        railLinks.forEach((a) =>
-          a.classList.toggle(
-            "active",
-            a.getAttribute("href") === `#${active?.id}`,
-          ),
-        );
-      };
-      addEventListener("scroll", updatePageState, { passive: true });
-      updatePageState();
+      document.querySelectorAll("[data-kpi]").forEach((x) => kpis.observe(x));
+      addEventListener(
+        "scroll",
+        () => {
+          const max = document.documentElement.scrollHeight - innerHeight;
+          document.querySelector("#progress").style.width =
+            `${max ? (scrollY / max) * 100 : 0}%`;
+        },
+        { passive: true },
+      );
+      document.querySelector("#year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
