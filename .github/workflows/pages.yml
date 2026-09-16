@@ -1,15 +1,18 @@
-name: Deploy AML portfolio
+name: Deploy financial crime portfolio
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: pages-mercury-revolut
+  group: github-pages
   cancel-in-progress: true
+
 jobs:
   deploy:
     environment:
@@ -17,24 +20,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Generate portfolio with Python
-        run: python3 build_portfolio.py
-      - name: Prepare public site
-        run: |
-          mkdir -p _site/assets _site/revolut _site/customer-service _site/pathward
-          cp index.html _site/index.html
-          cp -R assets/. _site/assets/
-          cp -R revolut/. _site/revolut/
-          cp -R customer-service/. _site/customer-service/
-          cp -R pathward/. _site/pathward/
-          touch _site/.nojekyll
-      - uses: actions/configure-pages@v5
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
         with:
           enablement: true
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload current portfolio
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: .
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
