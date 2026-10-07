@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Erik Yeghinyan — deposits compliance, compliance management systems, fintech partner oversight, payment controls and audit-ready remediation.">
+  <title>Erik Yeghinyan | Deposits Compliance Analyst</title>
+  <style>
+    :root {
+      --ink: #101722;
+      --muted: #5c6675;
+      --paper: #f6f7f9;
+      --card: #ffffff;
+      --line: #dce1e8;
+      --navy: #172a46;
+      --blue: #315fba;
+      --blue-soft: #e9effa;
+      --green: #146c58;
+      --green-soft: #e8f4ef;
+      --amber: #8b5f12;
+      --amber-soft: #f8f0df;
+      --silver: linear-gradient(135deg, #ffffff 0%, #dce2e9 34%, #f8f9fb 57%, #bdc7d3 100%);
+      --shadow: 0 24px 60px rgba(32, 47, 68, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 88% 4%, rgba(49, 95, 186, .08), transparent 27rem),
+        linear-gradient(180deg, #ffffff 0, var(--paper) 38rem, #f8f9fb 100%);
+      font: 16px/1.65 Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    button { font: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.05; letter-spacing: -.045em; }
+    h1 { margin-bottom: 24px; font-size: clamp(3.7rem, 8vw, 7.4rem); font-weight: 650; }
+    h2 { margin-bottom: 14px; font-size: clamp(2.2rem, 4.8vw, 4rem); }
+    h3 { margin-bottom: 10px; font-size: 1.4rem; }
+    p { color: var(--muted); }
+
+    .shell { width: min(1240px, calc(100% - 48px)); margin: 0 auto; }
+    .eyebrow { color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .dot { color: #8593a7; }
+    .muted { color: var(--muted); }
+    .small { font-size: .88rem; }
+    .label { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .status {
+      display: inline-flex; align-items: center; gap: 7px; width: fit-content;
+      padding: 6px 10px; border-radius: 999px; font-size: .76rem; font-weight: 800;
+    }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .direct { color: var(--green); background: var(--green-soft); }
+    .knowledge { color: var(--blue); background: var(--blue-soft); }
+    .example { color: var(--amber); background: var(--amber-soft); }
+
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid rgba(220, 225, 232, .82);
+      background: rgba(255, 255, 255, .86); backdrop-filter: blur(18px);
+    }
+    nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 820; letter-spacing: -.02em; }
+    .brand-mark {
+      width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #c9d0d9;
+      border-radius: 11px; background: var(--silver); box-shadow: inset 0 1px 0 white;
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { color: #4f5c6d; text-decoration: none; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { padding: 9px 14px; border: 1px solid #cbd3de; border-radius: 10px; background: white; }
+
+    .hero { padding: 88px 0 54px; display: grid; grid-template-columns: 1.35fr .85fr; gap: 68px; align-items: center; }
+    .hero .lead { max-width: 700px; font-size: 1.15rem; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 46px; padding: 0 18px; border: 1px solid var(--navy); border-radius: 10px;
+      color: white; background: var(--navy); text-decoration: none; font-weight: 800; font-size: .9rem;
+    }
+    .button.secondary { color: var(--ink); background: white; border-color: #cbd3de; }
+    .metal-card {
+      position: relative; overflow: hidden; padding: 30px; border: 1px solid #cfd6df; border-radius: 28px;
+      background: var(--silver); box-shadow: var(--shadow), inset 0 1px 0 white;
+    }
+    .metal-card::after {
+      content: ""; position: absolute; inset: -40% -60% auto auto; width: 300px; height: 300px;
+      border-radius: 50%; background: rgba(255, 255, 255, .58); filter: blur(18px); transform: rotate(24deg);
+    }
+    .card-top, .card-signature { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 14px; }
+    .card-top { align-items: center; padding-bottom: 21px; border-bottom: 1px solid rgba(74, 93, 119, .24); }
+    .card-top b { font-size: 1.35rem; letter-spacing: -.06em; }
+    .card-top span { color: #526178; font-size: .68rem; font-weight: 800; letter-spacing: .15em; }
+    .card-role { position: relative; z-index: 1; margin: 31px 0 24px; }
+    .card-role strong { display: block; font-size: 2.5rem; line-height: 1; letter-spacing: -.065em; }
+    .card-role span { display: block; margin-top: 10px; color: #506177; }
+    .card-lines { position: relative; z-index: 1; display: grid; gap: 0; }
+    .card-lines div { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-top: 1px solid rgba(74, 93, 119, .21); }
+    .card-lines span { color: #536176; font-size: .84rem; }
+    .card-lines b { color: #213652; font-size: .94rem; }
+    .card-signature { margin-top: 25px; color: #4e5f75; font-size: .67rem; font-weight: 800; letter-spacing: .13em; }
+
+    .metrics { display: grid; grid-template-columns: repeat(5, 1fr); margin: 12px 0 42px; border: 1px solid var(--line); border-radius: 18px; background: white; overflow: hidden; }
+    .metric { min-height: 132px; padding: 23px; }
+    .metric + .metric { border-left: 1px solid var(--line); }
+    .metric strong { display: block; margin-bottom: 7px; color: #233956; font-size: 2rem; letter-spacing: -.055em; }
+    .metric span { color: var(--muted); font-size: .82rem; }
+
+    section { padding: 68px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 38px; margin-bottom: 31px; }
+    .section-head p { max-width: 520px; margin: 0; }
+    .section-head h2 { margin-top: 10px; }
+
+    .coverage-controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .filter-button, .tab-button {
+      padding: 10px 14px; border: 1px solid #d4dae3; border-radius: 10px; background: white;
+      color: #536072; cursor: pointer; font-weight: 760; font-size: .82rem;
+    }
+    .filter-button[aria-pressed="true"], .tab-button[aria-selected="true"] { color: white; background: var(--navy); border-color: var(--navy); }
+    .coverage-list { display: grid; gap: 10px; }
+    .coverage-row {
+      display: grid; grid-template-columns: 1.05fr 1.55fr auto; align-items: center; gap: 22px;
+      padding: 21px 22px; border: 1px solid var(--line); border-radius: 16px; background: white;
+    }
+    .coverage-row h3 { margin: 0; font-size: 1.04rem; letter-spacing: -.02em; }
+    .coverage-row p { margin: 0; font-size: .9rem; }
+
+    .oversight {
+      display: grid; grid-template-columns: 310px 1fr; min-height: 500px;
+      border: 1px solid var(--line); border-radius: 24px; background: white; overflow: hidden; box-shadow: var(--shadow);
+    }
+    .oversight-tabs { padding: 18px; background: #f0f3f7; border-right: 1px solid var(--line); }
+    .oversight-tabs .tab-button { width: 100%; margin-bottom: 8px; padding: 15px; text-align: left; }
+    .oversight-panel { padding: 34px; }
+    .oversight-panel h3 { font-size: 2rem; }
+    .panel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
+    .panel-card { min-height: 150px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fbfcfe; }
+    .panel-card b { display: block; margin-bottom: 8px; }
+    .panel-card p { margin-bottom: 0; font-size: .85rem; }
+    .deliverable { padding: 20px; border-left: 4px solid var(--blue); border-radius: 0 13px 13px 0; background: var(--blue-soft); color: #29436b; }
+
+    .workflow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .step { position: relative; padding: 19px 16px; border: 1px solid var(--line); border-radius: 15px; background: white; }
+    .step::after { content: "→"; position: absolute; right: -10px; top: 50%; z-index: 2; color: #9aa6b7; font-weight: 900; }
+    .step:last-child::after { display: none; }
+    .step span { color: var(--blue); font-size: .72rem; font-weight: 850; }
+    .step b { display: block; margin-top: 10px; font-size: .88rem; }
+
+    .monitor {
+      display: grid; grid-template-columns: .9fr 1.3fr; gap: 18px; padding: 24px;
+      border: 1px solid var(--line); border-radius: 24px; background: white; box-shadow: var(--shadow);
+    }
+    .finding { padding: 27px; border-radius: 18px; background: linear-gradient(145deg, #f2f5f9, #ffffff); }
+    .finding h3 { font-size: 1.9rem; }
+    .finding dl { display: grid; grid-template-columns: 90px 1fr; gap: 11px 16px; margin: 25px 0 0; }
+    .finding dt { color: #526279; font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .finding dd { margin: 0; font-size: .9rem; }
+    .kri-board { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; }
+    .kri-head, .kri-row { display: grid; grid-template-columns: 1.5fr .75fr .75fr .65fr; gap: 12px; align-items: center; padding: 14px 17px; }
+    .kri-head { color: #687487; background: #f3f5f8; font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .kri-row { border-top: 1px solid var(--line); font-size: .85rem; }
+    .signal { width: 9px; height: 9px; display: inline-block; margin-right: 7px; border-radius: 50%; }
+    .green { background: #1b8d6d; }
+    .amber { background: #c28b24; }
+
+    .payment-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .payments, .regulations { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: white; }
+    .pill-grid { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 10px 13px; border: 1px solid #d7dee8; border-radius: 999px; background: #f8fafc; font-size: .83rem; font-weight: 760; }
+    .reg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 21px; }
+    .reg { padding: 16px; border-radius: 14px; background: #f0f4fa; }
+    .reg b { display: block; color: #263c5b; }
+    .reg span { color: var(--muted); font-size: .78rem; }
+
+    .proofs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .proof-card { padding: 23px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+    .proof-card strong { display: block; margin: 15px 0 3px; font-size: 3.2rem; letter-spacing: -.07em; }
+    .proof-card blockquote { min-height: 54px; margin: 16px 0; color: #344a69; }
+    .proof-card button { padding: 0; border: 0; color: var(--blue); background: transparent; cursor: pointer; font-weight: 800; }
+
+    .experience { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .role { padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+    .role-head { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+    .role h3 { margin: 6px 0 5px; font-size: 1.65rem; }
+    .role ul { margin: 0; padding: 0; list-style: none; }
+    .role li { position: relative; padding-left: 18px; margin-top: 10px; color: #536072; font-size: .9rem; }
+    .role li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 900; }
+
+    .credential-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+    .credential { padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, #fff, #f2f5f8); }
+    .credential .issuer { color: var(--blue); font-size: .78rem; font-weight: 850; }
+    .credential h3 { margin-top: 13px; font-size: 1.15rem; line-height: 1.25; letter-spacing: -.025em; }
+
+    .contact {
+      padding: 48px; border: 1px solid #cfd7e1; border-radius: 28px;
+      background: var(--silver); box-shadow: var(--shadow); text-align: center;
+    }
+    .contact p { max-width: 630px; margin: 0 auto 25px; }
+    footer { padding: 30px 0 44px; }
+    footer .shell { display: flex; justify-content: space-between; gap: 20px; color: #6a7483; font-size: .8rem; }
+
+    dialog { width: min(1000px, calc(100% - 28px)); max-height: 90vh; padding: 18px; border: 1px solid var(--line); border-radius: 20px; }
+    dialog::backdrop { background: rgba(13, 23, 38, .72); backdrop-filter: blur(5px); }
+    .dialog-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 15px; }
+    .dialog-top button { padding: 8px 12px; border: 1px solid #cbd3de; border-radius: 9px; background: white; cursor: pointer; }
+    dialog img { display: block; width: 100%; height: auto; border-radius: 12px; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 3px solid #e3a72f; outline-offset: 4px; }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; gap: 34px; padding-top: 60px; }
+      .metal-card { max-width: 650px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metric + .metric { border-left: 0; }
+      .metric { border-bottom: 1px solid var(--line); }
+      .metrics .metric:last-child { grid-column: 1 / -1; }
+      .coverage-row { grid-template-columns: 1fr; gap: 10px; }
+      .oversight { grid-template-columns: 1fr; }
+      .oversight-tabs { display: flex; overflow-x: auto; gap: 8px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .oversight-tabs .tab-button { width: auto; min-width: max-content; margin: 0; }
+      .workflow { grid-template-columns: repeat(3, 1fr); }
+      .step:nth-child(3)::after { display: none; }
+      .monitor, .payment-layout { grid-template-columns: 1fr; }
+      .proofs, .credential-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 30px, 1240px); }
+      .nav-links a:not(.nav-cta) { display: none; }
+      h1 { font-size: 3.4rem; }
+      section { padding: 50px 0; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 14px; }
+      .metrics { grid-template-columns: 1fr; }
+      .metrics .metric:last-child { grid-column: auto; }
+      .metric { min-height: auto; }
+      .panel-grid, .experience { grid-template-columns: 1fr; }
+      .workflow { grid-template-columns: 1fr 1fr; }
+      .step:nth-child(2n)::after { display: none; }
+      .step:nth-child(3)::after { display: block; }
+      .kri-head { display: none; }
+      .kri-row { grid-template-columns: 1fr 1fr; }
+      .kri-row span:last-child { text-align: right; }
+      .reg-grid { grid-template-columns: 1fr; }
+      .role-head { display: block; }
+      .contact { padding: 34px 22px; }
+      footer .shell { display: block; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="shell" aria-label="Primary navigation">
+      <a class="brand" href="../"><span class="brand-mark">EY</span><span>Erik Yeghinyan</span></a>
+      <div class="nav-links">
+        <a href="#fit">Fit map</a>
+        <a href="#cms">CMS</a>
+        <a href="#payments">Payments</a>
+        <a href="#evidence">Evidence</a>
+        <a class="nav-cta" href="mailto:eyeghinyane@gmail.com">Connect</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Lead Bank <span class="dot">•</span> Deposits Compliance Analyst</div>
+        <h1>Erik<br>Yeghinyan<span class="dot">.</span></h1>
+        <h2 style="font-size:clamp(1.55rem,3vw,2.55rem);color:#30435e">Compliance that turns partner risk into a documented path forward.</h2>
+        <p class="lead">I bring bank-fintech investigations, branch deposit operations, onboarding due diligence and audit-ready reporting into one control-focused view. My work is built for clear decisions: what happened, which control applies, what the evidence shows and what must be corrected.</p>
+        <div class="hero-actions">
+          <a class="button" href="#fit">Review role alignment</a>
+          <a class="button secondary" href="#partner-review">Open partner review model</a>
+        </div>
+      </div>
+
+      <aside class="metal-card" aria-label="Professional profile card">
+        <div class="card-top"><b>EY</b><span>DEPOSITS COMPLIANCE</span></div>
+        <div class="card-role"><strong>CMS + Partner Oversight</strong><span>Banking operations • Fintech controls • Consumer protection</span></div>
+        <div class="card-lines">
+          <div><span>Banking experience</span><b>2+ years</b></div>
+          <div><span>Daily reviews</span><b>30+</b></div>
+          <div><span>Quality and SLA</span><b>100%</b></div>
+          <div><span>Branch transactions</span><b>40+ daily</b></div>
+        </div>
+        <div class="card-signature"><span>LOS ANGELES</span><span>U.S. WORK AUTHORIZED</span></div>
+      </aside>
+    </header>
+
+    <div class="metrics reveal" aria-label="Performance metrics">
+      <div class="metric"><strong>100%</strong><span>QA and SLA adherence</span></div>
+      <div class="metric"><strong>30%</strong><span>Fewer false-positive escalations</span></div>
+      <div class="metric"><strong>25%</strong><span>Faster review efficiency</span></div>
+      <div class="metric"><strong>30+</strong><span>Accounts and alerts reviewed daily</span></div>
+      <div class="metric"><strong>97.62–100%</strong><span>Documented disposition scores</span></div>
+    </div>
+
+    <section id="fit" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">01 / Requirement coverage</div><h2>Every required field, mapped to evidence.</h2></div>
+        <p>Direct experience is separated from regulatory knowledge and portfolio demonstrations so the alignment is strong without overstating scope.</p>
+      </div>
+      <div class="coverage-controls" role="group" aria-label="Filter requirement coverage">
+        <button class="filter-button" aria-pressed="true" data-filter="all">All requirements</button>
+        <button class="filter-button" aria-pressed="false" data-filter="direct">Direct experience</button>
+        <button class="filter-button" aria-pressed="false" data-filter="knowledge">Knowledge and method</button>
+      </div>
+      <div class="coverage-list" id="coverage-list">
+        <article class="coverage-row" data-kind="direct"><h3>1–3 years of banking experience</h3><p>Bank-fintech transaction monitoring, customer due diligence and U.S. branch deposit operations across Green Dot Bank, Santander, Swedbank and ID Bank.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Day-to-day partner due diligence</h3><p>Reviewed 30+ accounts and alerts daily, assessed KYC/CDD context, traced ACH and P2P activity, and documented risk-based outcomes.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Controls and key risk indicators</h3><p>Monitored velocity, account-takeover, device, behavioral and payment indicators; reduced false positives by approximately 30% through structured comparison.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Escalation and reporting</h3><p>Converted evidence into investigation narratives, branch unusual-activity referrals, senior-review packages and documented SAR/No-SAR rationale.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Complaint and trend analysis</h3><p>Resolved account, payment and service exceptions at Santander and connected recurring customer-contact themes with transaction and product data at Swedbank.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Exam and audit management support</h3><p>Maintained traceable case notes, evidence, quality scores and decision rationale suitable for QA, audit support and regulator-facing review requests.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="knowledge"><h3>Policy, procedure and marketing review</h3><p>Applies a structured review method: map each requirement, test disclosures and controls, identify gaps, document risk, recommend changes and retain approval evidence.</p><span class="status knowledge">Demonstrated method</span></article>
+        <article class="coverage-row" data-kind="knowledge"><h3>Action plans and corrective action</h3><p>Defines the issue, root cause, owner, due date, evidence of completion and post-remediation validation before closure.</p><span class="status knowledge">Demonstrated method</span></article>
+        <article class="coverage-row" data-kind="knowledge"><h3>Consumer-protection laws and rules</h3><p>Working knowledge of UDAAP, FTC Guidelines, Regulation E, Regulation CC, Nacha Rules and Visa/Mastercard Rules.</p><span class="status knowledge">Regulatory knowledge</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Communication, judgment and autonomy</h3><p>Maintained 100% QA/SLA while making high-volume risk decisions independently and coordinating outcomes with compliance, operations, product and branch teams.</p><span class="status direct">Direct experience</span></article>
+        <article class="coverage-row" data-kind="direct"><h3>Curiosity and growth mindset</h3><p>Continued professional training through the Basel Institute on Governance, ACAMS and Project Management Institute.</p><span class="status direct">Direct evidence</span></article>
+      </div>
+    </section>
+
+    <section id="cms" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">02 / Compliance management system</div><h2>A practical CMS view of partner oversight.</h2></div>
+        <p>Select a workstream to see the evidence, control logic and deliverable I would use with a fintech partner.</p>
+      </div>
+      <div class="oversight" id="partner-review">
+        <div class="oversight-tabs" role="tablist" aria-label="Partner oversight workstreams" id="oversight-tabs"></div>
+        <div class="oversight-panel" id="oversight-panel" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">03 / Monitoring and remediation</div><h2>From control test to verified closure.</h2></div>
+        <p>A repeatable review cycle keeps partner monitoring evidence-based and gives business teams a clear corrective path.</p>
+      </div>
+      <div class="workflow" aria-label="Compliance monitoring workflow">
+        <div class="step"><span>01</span><b>Scope partner activity</b></div>
+        <div class="step"><span>02</span><b>Map requirements and controls</b></div>
+        <div class="step"><span>03</span><b>Test transactions and complaints</b></div>
+        <div class="step"><span>04</span><b>Compare KRIs and trends</b></div>
+        <div class="step"><span>05</span><b>Document finding and action plan</b></div>
+        <div class="step"><span>06</span><b>Validate remediation evidence</b></div>
+      </div>
+
+      <div class="monitor" style="margin-top:22px">
+        <article class="finding">
+          <span class="status example">Illustrative partner review</span>
+          <h3 style="margin-top:18px">Complaint coding can hide an emerging payment issue.</h3>
+          <p>A partner’s instant-payment delay complaints are split across broad service categories, reducing the accuracy of trend reporting.</p>
+          <dl>
+            <dt>Risk</dt><dd>Recurring payment friction may remain below escalation thresholds.</dd>
+            <dt>Action</dt><dd>Update taxonomy, reclassify a sample, retrain support and define a recurrence KRI.</dd>
+            <dt>Owner</dt><dd>Partner operations with Deposits Compliance oversight.</dd>
+            <dt>Closure</dt><dd>Thirty-day validation sample plus complaint-trend comparison.</dd>
+          </dl>
+        </article>
+        <div>
+          <div class="kri-board" aria-label="Illustrative key risk indicator board">
+            <div class="kri-head"><span>Control indicator</span><span>Result</span><span>Threshold</span><span>Status</span></div>
+            <div class="kri-row"><b>Reg E case timeliness</b><span>98.6%</span><span>≥98%</span><span><i class="signal green"></i>On target</span></div>
+            <div class="kri-row"><b>Repeat payment complaints</b><span>2.8 / 1K</span><span>≤2.0 / 1K</span><span><i class="signal amber"></i>Review</span></div>
+            <div class="kri-row"><b>ACH administrative returns</b><span>0.72%</span><span>≤0.50%</span><span><i class="signal amber"></i>Review</span></div>
+            <div class="kri-row"><b>Marketing approvals retained</b><span>100%</span><span>100%</span><span><i class="signal green"></i>On target</span></div>
+          </div>
+          <p class="small" style="margin:13px 4px 0">Illustrative values demonstrate the monitoring structure; they are not represented as employer results.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="payments" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">04 / Payments and consumer protection</div><h2>Controls across the deposit lifecycle.</h2></div>
+        <p>My direct payment experience is paired with working knowledge of the rules that govern partner design, servicing, disclosures and error handling.</p>
+      </div>
+      <div class="payment-layout">
+        <article class="payments">
+          <h3>Payment channels</h3>
+          <p>Transaction review and operational context across traditional and embedded-finance payment activity.</p>
+          <div class="pill-grid">
+            <span class="pill">Debit cards</span><span class="pill">Prepaid cards</span><span class="pill">Checks</span>
+            <span class="pill">ACH</span><span class="pill">Wires</span><span class="pill">P2P</span>
+            <span class="pill">Instant payments</span><span class="pill">Cash deposits</span><span class="pill">Account transfers</span>
+          </div>
+        </article>
+        <article class="regulations">
+          <h3>Regulatory framework</h3>
+          <div class="reg-grid">
+            <div class="reg"><b>UDAAP</b><span>Fairness, clarity and customer harm</span></div>
+            <div class="reg"><b>FTC Guidelines</b><span>Marketing and consumer claims</span></div>
+            <div class="reg"><b>Regulation E</b><span>EFT disclosures and error resolution</span></div>
+            <div class="reg"><b>Regulation CC</b><span>Funds availability and holds</span></div>
+            <div class="reg"><b>Nacha Rules</b><span>ACH authorization and returns</span></div>
+            <div class="reg"><b>Visa/Mastercard</b><span>Card-program operating rules</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidence" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">05 / Performance evidence</div><h2>Quality that is documented.</h2></div>
+        <p>Original weekly feedback from Global Investigations and Compliance. Open each record to view the supporting image.</p>
+      </div>
+      <div class="proofs">
+        <article class="proof-card"><span class="label muted">February 10–14</span><strong>100%</strong><span class="small muted">Disposition score</span><blockquote>“Amazing job! Continue this great work!”</blockquote><button data-proof="../bsa/proof-february.jpeg" data-title="February 10–14 KPI feedback">Open original proof</button></article>
+        <article class="proof-card"><span class="label muted">March 10–14</span><strong>100%</strong><span class="small muted">Disposition score</span><blockquote>“Well done! Keep this up!”</blockquote><button data-proof="../bsa/proof-march-10.jpeg" data-title="March 10–14 KPI feedback">Open original proof</button></article>
+        <article class="proof-card"><span class="label muted">March 24–28</span><strong>97.62%</strong><span class="small muted">Above 95% quality target</span><blockquote>“Well done! Continue this great work!”</blockquote><button data-proof="../bsa/proof-march-24.jpeg" data-title="March 24–28 KPI feedback">Open original proof</button></article>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">06 / Relevant experience</div><h2>Controls, customers and payments.</h2></div>
+        <p>Each role is reduced to three job-relevant points: control execution, evidence and cross-functional outcome.</p>
+      </div>
+      <div class="experience">
+        <article class="role">
+          <div class="role-head"><div><span class="label muted">May 2026–Sep 2026</span><h3>Santander Bank USA</h3><b>Teller / Relationship Banker</b></div><span class="status direct">Branch deposits</span></div>
+          <ul><li>Processed 40+ daily cash, check, account-transfer and debit-card service transactions under CIP/KYC and operational controls.</li><li>Resolved account-access, payment and service exceptions, documented customer concerns and escalated recurring or higher-risk issues.</li><li>Prepared CTR information in SanAlert and converted transaction context into complete unusual-activity referrals for BSA review.</li></ul>
+        </article>
+        <article class="role">
+          <div class="role-head"><div><span class="label muted">Sep 2024–Sep 2025</span><h3>Green Dot Bank</h3><b>Analyst, Global Investigations &amp; Compliance</b></div><span class="status direct">Bank-fintech</span></div>
+          <ul><li>Maintained 100% QA/SLA while reviewing 30+ daily accounts and alerts in Unit21 across ACH, P2P, account-takeover, velocity and device indicators.</li><li>Reduced false positives approximately 30% by comparing activity with KYC/CDD context, transaction flows, counterparties and key risk indicators.</li><li>Improved review efficiency 25% through standardized evidence, narratives, trend summaries and risk-based escalation or closure recommendations.</li></ul>
+        </article>
+        <article class="role">
+          <div class="role-head"><div><span class="label muted">2024–2025</span><h3>Swedbank Lithuania</h3><b>Transaction Monitoring / Digital Product Analyst</b></div><span class="status direct">Digital controls</span></div>
+          <ul><li>Combined transactions, device data, behavioral signals and customer-contact records to identify unusual activity and control failures.</li><li>Analyzed alert and service trends and reported recurring process weaknesses to operations and product teams.</li><li>Managed cases independently, made timely risk judgments and routed higher-risk issues with complete evidence for resolution.</li></ul>
+        </article>
+        <article class="role">
+          <div class="role-head"><div><span class="label muted">Sep 2023–Sep 2024</span><h3>ID Bank</h3><b>Compliance Operations Specialist</b></div><span class="status direct">Due diligence</span></div>
+          <ul><li>Conducted live-video identity verification, CIP/KYC/CDD/EDD, OFAC/PEP screening, adverse-media research and customer risk profiling.</li><li>Reviewed customer files against procedures, documented exceptions and recommended escalation or corrective action when controls were not met.</li><li>Supported lifecycle oversight through risk-profile refreshes, enhanced reviews and traceable case notes for QA, audit and suspicious-activity review.</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials" class="reveal">
+      <div class="section-head">
+        <div><div class="eyebrow">07 / Credentials</div><h2>Continued compliance learning.</h2></div>
+        <p>Professional training is presented accurately as course completion, without claiming the CAMS designation.</p>
+      </div>
+      <div class="credential-grid">
+        <article class="credential"><span class="issuer">BASEL INSTITUTE ON GOVERNANCE · SEP 2026</span><h3>Operational Analysis of Suspicious Transaction Reports</h3></article>
+        <article class="credential"><span class="issuer">ACAMS · AUG 2026</span><h3>Enhancing Financial Inclusion with a Risk-Based Approach</h3><p class="small">Course completion</p></article>
+        <article class="credential"><span class="issuer">PROJECT MANAGEMENT INSTITUTE · APR 2025</span><h3>Leveraging AI for Governance, Risk, and Compliance</h3></article>
+      </div>
+      <p style="margin:24px 0 0"><b style="color:var(--ink)">Education:</b> Bachelor of Arts, Contemporary Communication · LCC International University · 2024 · GPA 8.57/10<br><b style="color:var(--ink)">Languages:</b> Armenian native · English C2 · Russian advanced</p>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="contact">
+        <div class="eyebrow">Available for U.S. remote work</div>
+        <h2 style="margin-top:12px">Let’s build a safer path for partner innovation.</h2>
+        <p>Los Angeles based, fully authorized to work in the United States without sponsorship, and ready to support Lead’s Deposits Compliance team.</p>
+        <a class="button" href="mailto:eyeghinyane@gmail.com">eyeghinyane@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>© 2026 Erik Yeghinyan</span><span>Case examples are anonymized or clearly marked as illustrative.</span></div></footer>
+
+  <dialog id="proof-dialog">
+    <div class="dialog-top"><h3 id="proof-title">Performance proof</h3><button type="button" id="close-dialog">Close</button></div>
+    <img id="proof-image" alt="Original performance feedback image">
+  </dialog>
+
+  <script>
+    const workstreams = [
+      {
+        name: 'Partner due diligence',
+        title: 'Establish who the partner is, what the program does and where risk enters.',
+        intro: 'I begin with the product, customer, payment flow, third parties, geographies and control owners. Due diligence stays connected to lifecycle oversight instead of ending at approval.',
+        cards: [
+          ['Inputs', 'Program design, customer segments, flow of funds, vendors, policies, complaints and prior findings.'],
+          ['Checks', 'Ownership, licensing, product risk, control design, operating evidence and escalation paths.'],
+          ['Judgment', 'Separate missing information from a control weakness and document the risk created by each gap.']
+        ],
+        deliverable: 'Deliverable: due-diligence record, risk summary, open-item log and clear recommendation for approval, condition or escalation.'
+      },
+      {
+        name: 'Control monitoring',
+        title: 'Use controls and KRIs to find weakness before it becomes customer harm.',
+        intro: 'Monitoring combines operational data, transaction samples, complaint patterns and prior issues. I compare actual performance with the control requirement and the partner’s documented procedure.',
+        cards: [
+          ['Design test', 'Confirm the control addresses the applicable requirement and identifies its owner and evidence.'],
+          ['Operating test', 'Sample activity, validate timestamps and outcomes, and investigate exceptions.'],
+          ['Trend test', 'Compare KRIs over time and determine whether isolated exceptions form a recurring pattern.']
+        ],
+        deliverable: 'Deliverable: monitoring worksheet, exception population, evidence citations, finding severity and recommended remediation.'
+      },
+      {
+        name: 'Policy and marketing',
+        title: 'Translate requirements into language and controls customers can rely on.',
+        intro: 'My review method maps laws and rules to partner policies, procedures, disclosures and marketing claims, then checks consistency between what the partner says and what operations deliver.',
+        cards: [
+          ['Inventory', 'Identify governing requirements, product terms, disclosures, approval owners and change history.'],
+          ['Compare', 'Test required content, timing, clarity, claim support and alignment with operating procedures.'],
+          ['Recommend', 'State the gap, affected material, risk and exact change required before approval.']
+        ],
+        deliverable: 'Deliverable: annotated review, requirement-to-language matrix, change recommendation and retained approval evidence.'
+      },
+      {
+        name: 'Complaints and trends',
+        title: 'Treat complaints as control data, not isolated service tickets.',
+        intro: 'I organize complaints by product, channel, issue, severity, root cause and outcome. Trend analysis connects customer language with operational and transaction evidence.',
+        cards: [
+          ['Classify', 'Use consistent categories for payment delays, unauthorized activity, holds, disclosures and account access.'],
+          ['Quantify', 'Track rate, recurrence, aging, severity and concentration by partner, product or channel.'],
+          ['Escalate', 'Identify customer harm, control gaps, repeat issues and regulatory implications.']
+        ],
+        deliverable: 'Deliverable: complaint dashboard, emerging-risk summary, root-cause analysis and action-plan recommendation.'
+      },
+      {
+        name: 'Audit and remediation',
+        title: 'Make each finding traceable from evidence to verified closure.',
+        intro: 'A strong remediation process defines the requirement, condition, risk and root cause. Closure depends on evidence that the fix works, not only confirmation that a task was completed.',
+        cards: [
+          ['Finding', 'Requirement, observed condition, evidence, affected population, risk and severity.'],
+          ['Action plan', 'Owner, milestones, due date, interim control and specific completion evidence.'],
+          ['Validation', 'Retest the control, review post-change trends and confirm sustainable operation.']
+        ],
+        deliverable: 'Deliverable: issue log, corrective-action plan, audit/exam evidence package and validation record.'
+      }
+    ];
+
+    const tabs = document.querySelector('#oversight-tabs');
+    const panel = document.querySelector('#oversight-panel');
+    function renderWorkstream(index) {
+      const item = workstreams[index];
+      tabs.innerHTML = workstreams.map((entry, i) => `<button class="tab-button" role="tab" aria-selected="${i === index}" onclick="renderWorkstream(${i})">${entry.name}</button>`).join('');
+      panel.innerHTML = `<div class="eyebrow">Partner workstream ${String(index + 1).padStart(2, '0')}</div><h3>${item.title}</h3><p>${item.intro}</p><div class="panel-grid">${item.cards.map(card => `<article class="panel-card"><b>${card[0]}</b><p>${card[1]}</p></article>`).join('')}</div><div class="deliverable">${item.deliverable}</div>`;
+    }
+    renderWorkstream(0);
+
+    document.querySelectorAll('.filter-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        document.querySelectorAll('.coverage-row').forEach(row => row.hidden = filter !== 'all' && row.dataset.kind !== filter);
+      });
+    });
+
+    const dialog = document.querySelector('#proof-dialog');
+    document.querySelectorAll('[data-proof]').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelector('#proof-title').textContent = button.dataset.title;
+        document.querySelector('#proof-image').src = button.dataset.proof;
+        dialog.showModal();
+      });
+    });
+    document.querySelector('#close-dialog').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: .08 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
