@@ -1,29 +1,38 @@
-# Erik Yeghinyan — AML & Financial Crime Portfolio
+# Erik Yeghinyan — Account Resolution & Financial Operations Portfolio
 
 [View the live portfolio](https://eyeghin.github.io/erikyeghinyan-portfolio/) · [LinkedIn](https://linkedin.com/in/erik-yeghinyan) · [Email](mailto:eyeghinyane@gmail.com)
 
-AML, fraud, transaction-monitoring and banking operations portfolio focused on how customer context, payment behavior and investigative evidence support clear, defensible decisions.
+Professional portfolio focused on respectful customer communication, financial account operations, accurate case documentation, confidentiality and follow-through. Includes illustrative financial crime reviews as evidence of transferable analytical skills.
 
 ## Professional focus
 
-- Transaction monitoring and fraud investigations
-- KYC, CIP, CDD and EDD
-- SAR referral support and audit-ready documentation
-- Internal controls, risk assessment and control-gap identification
-- Account takeover, unusual cash activity, ACH and P2P patterns
-- OSINT, adverse media, World-Check, Unit21 and advanced Excel
+- Account inquiries, issue resolution and service follow-through
+- Inbound and outbound customer communication
+- Customer account status updates and CRM documentation
+- Payment processing and transactional accuracy
+- Conflict resolution, escalation and confidentiality
+- AML/BSA account reviews, KYC/CDD/EDD and fraud indicators
 
 ## Experience snapshot
 
 | Organization | Role | Dates |
 |---|---|---|
-| Santander Bank N.A. | Relationship Banker and Teller, First Line of Defense | May 2026–Present |
-| Guidehouse — Green Dot Bank | AML Compliance Analyst | September 2024–September 2025 |
-| Swedbank | Transaction Monitoring Analyst | January 2023–May 2024 |
-| IDBank | Compliance Operations Specialist, Onboarding and Fraud | May 2022–January 2023 |
+| Santander Bank USA | Teller / Relationship Banker | May 2026–September 2026 |
+| BTalk LLC | Account Representative | September 2025–May 2026 |
+| Guidehouse — Green Dot Bank program | AML Compliance Analyst | September 2024–September 2025 |
+| Teleperformance | Multilingual Customer Service Representative / Interpreter | September 2023–September 2024 |
 
-## Portfolio design
+## Evidence of results
 
-The site is a self-contained, responsive static page built for GitHub Pages. It includes professional experience, measurable results, interactive fictional investigation examples, certifications, tools, education and contact information.
+- 40+ banking transactions processed daily at Santander
+- 5–10 outbound client calls daily at Santander
+- Individual 10/10 customer satisfaction survey naming Erik
+- 30+ financial account reviews daily at Guidehouse
+- Reported QA results of 97.62%–100% on investigations
+- Professional support in English, Armenian and Russian
 
-> All case examples are fictional and created solely to demonstrate analytical approach. No customer information, confidential employer material, internal procedures or actual suspicious-activity reports are included.
+## Portfolio design and scope
+
+Responsive single-page portfolio hosted on GitHub Pages. It includes career achievements, original customer-service feedback, relevant tools, professional learning and interactive synthetic financial case studies.
+
+> The case studies are fictional and demonstrate a review methodology, not actual customer investigations. No confidential customer data, employer systems or suspicious activity reports are included. Customer feedback excerpts are attributed and carefully distinguished from individual versus branch-level comments.
