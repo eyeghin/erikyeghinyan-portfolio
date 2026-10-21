@@ -46,13 +46,53 @@
     @media(max-width:760px){.shell{width:calc(100% - 42px)}.navigation{height:70px}.nav-links{display:none}.nav-mail{display:none}.hero{padding:54px 0 65px}.hero h1{font-size:clamp(55px,12.5vw,88px)}.hero-signature{margin-top:37px}.hero-footer .button{width:100%}.hero-board{min-height:480px}.board-main{padding:25px}.board-top{padding:21px 24px}.board-footer{padding:19px 24px}.board-number{font-size:87px}.proof-row{grid-template-columns:repeat(2,1fr)}.proof-stat{padding:20px 15px;border-bottom:1px solid var(--border)}.proof-stat:nth-child(2){border-right:0}.proof-stat:nth-child(3),.proof-stat:nth-child(4){border-bottom:0}.proof-stat:nth-child(3){padding-left:0}.proof-stat strong{font-size:30px}.section{padding:63px 0}.section-intro{display:block}.section-intro>p{margin-top:19px}.proof-interactive,.lab-grid{grid-template-columns:1fr}.proof-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.proof-choice{min-height:103px;padding:13px;display:block}.proof-choice .proof-choice-title{font-size:12px}.proof-choice .proof-choice-sub{font-size:8px}.proof-choice .chev{display:none}.proof-detail{padding:24px;min-height:395px}.proof-detail h3{font-size:23px}.proof-detail .quote{font-size:17px}.role{grid-template-columns:1fr;gap:10px}.role-company{font-size:28px}.lab-sidebar{padding:20px}.scenario-buttons{grid-template-columns:1fr}.scenario-card{padding:23px;min-height:425px}.values-grid{grid-template-columns:1fr;gap:32px}.value-block .eyebrow{margin-bottom:18px}.contact{padding-top:70px}.contact h2{font-size:clamp(49px,10vw,80px)}.contact-cta .button{width:100%}.contact-info{margin-top:67px}.education{display:block}.education p{margin-bottom:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.js-motion .fade-up:not(.in){opacity:1;transform:none}}
     @media print{.nav-shell,.hero-board,.scenario-card,.lab-sidebar,.contact-cta,.reading-progress,.theme-toggle,.proof-choices,.filter-bar,.toast{display:none!important}body{background:#fff!important;color:#000!important}.section{padding:25px 0}.shell{width:95%}.hero{padding:25px 0}h1{font-size:50px}.proof-detail{border:1px solid #aaa;min-height:0}.proof-interactive,.experience-list,.hero-layout{display:block}.role{break-inside:avoid}.workshop,.contact{color:#000;background:#fff}.section-intro>p,.lead{color:#444}.contact{padding:20px 0}.contact-info{margin-top:15px}}
-  </style>
+  
+/* Guidehouse QA scorecard: verified figures from candidate-reported résumé records */
+.qa-section{background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.qa-overline{display:flex;align-items:center;gap:10px;color:var(--accent);margin-bottom:20px}
+.qa-overline::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.qa-grid{display:grid;grid-template-columns:minmax(260px,.92fr) minmax(420px,1.08fr);gap:clamp(24px,4.5vw,72px);align-items:start}
+.qa-intro h2{margin-bottom:24px}
+.qa-intro>p:not(.eyebrow){font-size:15px;line-height:1.85;color:var(--muted);max-width:475px}
+.qa-achievements{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.qa-achi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;min-height:128px}
+.qa-achi strong{font-size:27px;font-weight:800;letter-spacing:-.07em;line-height:1.2;display:block;color:var(--ink)}
+.qa-achi span{display:block;font-size:11px;margin-top:12px;color:var(--muted);line-height:1.6}
+.qa-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.qa-card-top{padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border)}
+.qa-card-label{font:500 10px var(--mono);letter-spacing:.1em;color:var(--muted)}
+.qa-card-body{padding:31px}
+.qa-card-title{font-size:18px;font-weight:800;letter-spacing:-.03em}
+.qa-score-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 30px}
+.qa-choice{background:var(--bg);border:1px solid var(--border);border-radius:10px;min-width:0;padding:16px 10px;text-align:center;transition:background .2s,transform .2s,border-color .2s}
+.qa-choice:hover{transform:translateY(-2px)}
+.qa-choice[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:#fff}
+.qa-choice strong{display:block;font-size:clamp(22px,2.65vw,35px);letter-spacing:-.065em;font-weight:800;line-height:1.15}
+.qa-choice span{display:block;font:9px var(--mono);letter-spacing:.04em;margin-top:8px;opacity:.72}
+.qa-comparison{background:var(--bg);border-radius:13px;padding:25px;border:1px solid var(--border)}
+.qa-comparison-hd{display:flex;justify-content:space-between;gap:20px;align-items:end}
+.qa-highlight{font-size:clamp(44px,5vw,70px);line-height:1;font-weight:800;letter-spacing:-.07em;color:var(--ink)}
+.qa-uplift{font-size:14px;font-weight:800;color:var(--olive)}
+.qa-graph{margin-top:30px;position:relative}
+.qa-track{position:relative;height:15px;border-radius:30px;background:var(--border);overflow:visible}
+.qa-fill{height:100%;width:100%;background:var(--accent);border-radius:30px;transition:width .45s ease}
+.qa-target-line{position:absolute;left:95%;top:-9px;bottom:-9px;border-left:2px dashed var(--ink);z-index:2}
+.qa-scale{display:flex;justify-content:space-between;gap:8px;margin-top:18px;font:10px var(--mono);color:var(--muted)}
+.qa-scale strong{color:var(--ink)}
+.qa-card-foot{padding:24px 30px;border-top:1px solid var(--border);display:flex;gap:12px;align-items:start;justify-content:space-between}
+.qa-card-foot p{font-size:12px;line-height:1.7;color:var(--muted);max-width:460px}
+.qa-status{font-size:11px;color:var(--olive);font-weight:800;white-space:nowrap}
+.qa-notes{margin-top:20px;font:11px/1.7 var(--mono);color:var(--muted)}
+@media(max-width:960px){.qa-grid{grid-template-columns:1fr}.qa-intro>p:not(.eyebrow){max-width:750px}}
+@media(max-width:580px){.qa-card-top,.qa-card-body,.qa-card-foot{padding:19px}.qa-choice{padding:16px 3px}.qa-choice strong{font-size:23px}.qa-choice span{font-size:8px}.qa-comparison{padding:18px}.qa-achievements{gap:9px}.qa-achi{padding:15px;min-height:118px}.qa-card-foot{display:block}.qa-status{margin-top:9px;display:block}}
+@media(prefers-reduced-motion:reduce){.qa-choice:hover{transform:none}.qa-fill{transition:none}}
+</style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <div class="nav-shell"><nav class="shell navigation" aria-label="Primary navigation">
   <a href="#top" class="identity"><span class="identity-symbol" aria-hidden="true">EY</span><span class="identity-name">ERIK YEGHINYAN<small>CLIENT EXPERIENCE / OPERATIONS</small></span></a>
-  <div class="nav-right"><div class="nav-links"><a href="#impact">Impact</a><a href="#recognition">Recognition</a><a href="#experience">Experience</a><a href="#approach">Approach</a></div><div class="nav-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20.6 13.1A8.8 8.8 0 0 1 10.9 3.4 8.8 8.8 0 1 0 20.6 13.1Z"/></svg></button><a href="#contact" class="nav-mail">LET'S CONNECT ↗</a></div></div>
+  <div class="nav-right"><div class="nav-links"><a href="#impact">Impact</a><a href="#qa-results">QA Results</a><a href="#recognition">Recognition</a><a href="#experience">Experience</a><a href="#approach">Approach</a></div><div class="nav-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20.6 13.1A8.8 8.8 0 0 1 10.9 3.4 8.8 8.8 0 1 0 20.6 13.1Z"/></svg></button><a href="#contact" class="nav-mail">LET'S CONNECT ↗</a></div></div>
 </nav><div class="reading-progress" id="reading-progress" aria-hidden="true"></div></div>
 <main id="main">
   <header class="hero shell" id="top"><div class="hero-layout"><div>
@@ -64,7 +104,43 @@
   </div>
   <aside class="hero-board" aria-label="Interactive performance highlights"><div class="board-top"><span class="eyebrow">PERFORMANCE FILE / EY-001</span><span class="board-indicator"><i></i> CAREER HIGHLIGHTS</span></div><div class="board-main"><div class="eyebrow" style="color:#d3bab0">SELECT A PERFORMANCE SIGNAL</div><div class="board-number" id="board-number">10<small>/10</small></div><p class="board-caption" id="board-caption">Individual customer satisfaction survey that specifically recognized my service.</p><div class="board-chart" id="board-chart" aria-hidden="true"></div><div class="board-bottom" role="group" aria-label="Performance metric"><button type="button" class="board-pick active" data-board="customer" aria-pressed="true">CUSTOMERS</button><button type="button" class="board-pick" data-board="quality" aria-pressed="false">QUALITY</button><button type="button" class="board-pick" data-board="volume" aria-pressed="false">VOLUME</button></div></div><div class="board-footer"><span id="board-source">SOURCE: SANTANDER FEEDBACK</span><span class="board-foot-accent">EXPLORE ↗</span></div></aside>
   </div></header>
-  <div class="proof-band" id="impact"><div class="shell proof-row"><div class="proof-stat"><strong>10/10</strong><p>Named customer satisfaction feedback at Santander</p></div><div class="proof-stat"><strong>100%</strong><p>Consecutive QA scores recognized on weekly team charts</p></div><div class="proof-stat"><strong>40+</strong><p>Daily financial transactions handled at Santander</p></div><div class="proof-stat"><strong>30+</strong><p>Outbound calls per day at BTalk</p></div></div></div>
+  <div class="proof-band" id="impact"><div class="shell proof-row"><div class="proof-stat"><strong>10/10</strong><p>Named customer satisfaction feedback at Santander</p></div><div class="proof-stat"><strong>100% ×2</strong><p>Perfect QA results; another recorded result: 97.62% (95% target)</p></div><div class="proof-stat"><strong>40+</strong><p>Daily financial transactions handled at Santander</p></div><div class="proof-stat"><strong>30+</strong><p>Outbound calls per day at BTalk</p></div></div></div>
+
+  <section class="section qa-section" id="qa-results" aria-labelledby="qa-heading">
+    <div class="shell"><div class="qa-grid">
+      <div class="qa-intro fade-up">
+        <div class="eyebrow qa-overline">GUIDEHOUSE · GREEN DOT BANK · QUALITY PERFORMANCE</div>
+        <h2 id="qa-heading">The exact <span class="serif accent">QA scores.</span></h2>
+        <p>Quality was measured against a <strong>95% QA benchmark.</strong> These three reported assessment scores all exceeded it. Consecutive perfect results earned repeated mentions in weekly team quality-achiever charts.</p>
+        <div class="qa-achievements">
+          <div class="qa-achi"><strong>95%</strong><span>QA benchmark target</span></div>
+          <div class="qa-achi"><strong>100% × 2</strong><span>Perfect QA assessments, consecutively reported</span></div>
+          <div class="qa-achi"><strong>30+</strong><span>Financial account reviews each day</span></div>
+          <div class="qa-achi"><strong>Weekly</strong><span>Quality-achiever chart recognition</span></div>
+        </div>
+      </div>
+      <div class="qa-card fade-up">
+        <div class="qa-card-top"><span class="qa-card-label">QUALITY ASSURANCE / RECORDED RESULTS</span><span class="eyebrow">03 SCORES ↗</span></div>
+        <div class="qa-card-body">
+          <h3 class="qa-card-title">Select a result to compare against the 95% benchmark</h3>
+          <div class="qa-score-list" role="group" aria-label="Reported Guidehouse QA assessment scores">
+            <button type="button" class="qa-choice" data-qa-score="100" data-qa-index="1" aria-pressed="true"><strong>100%</strong><span>RESULT 01</span></button>
+            <button type="button" class="qa-choice" data-qa-score="100" data-qa-index="2" aria-pressed="false"><strong>100%</strong><span>RESULT 02</span></button>
+            <button type="button" class="qa-choice" data-qa-score="97.62" data-qa-index="3" aria-pressed="false"><strong>97.62%</strong><span>RESULT 03</span></button>
+          </div>
+          <div class="qa-comparison" aria-live="polite">
+            <div class="qa-comparison-hd"><div><p class="qa-card-label">SELECTED QA RESULT</p><div id="qa-selected" class="qa-highlight">100%</div></div><div style="text-align:right"><p class="qa-card-label">ABOVE TARGET</p><div id="qa-delta" class="qa-uplift">+5.00 percentage points</div></div></div>
+            <div class="qa-graph">
+              <div class="qa-track" role="img" id="qa-track" aria-label="QA result 100 percent, benchmark 95 percent"><div class="qa-fill" id="qa-fill" style="width:100%"></div><span class="qa-target-line" aria-hidden="true"></span></div>
+              <div class="qa-scale"><span>0%</span><strong>↥ BENCHMARK: 95%</strong><span>100%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="qa-card-foot"><p><strong>How I sustained quality:</strong> evidence-based account reviews, accurate investigation notes, risk assessment, and careful compliance decisions.</p><span class="qa-status" id="qa-status">BENCHMARK EXCEEDED ✓</span></div>
+      </div>
+    </div>
+    <p class="qa-notes">Performance figures are drawn from earlier résumé records (100%, 100%, 97.62%; target 95%). Individual assessment dates and original weekly chart screenshots are not supplied here; result numbers are not presented as a dated time series.</p></div>
+  </section>
   <section class="section recognition" id="recognition"><div class="shell"><div class="section-intro fade-up"><div><p class="eyebrow">01 / RECOGNITION THAT SPEAKS FOR ITSELF</p><h2>Results people<br><span class="serif accent">remember.</span></h2></div><p>Recognition across customers, district performance charts, and weekly quality reviews. Explore the context behind each achievement—not just the number.</p></div>
     <div class="proof-interactive fade-up"><div class="proof-choices" role="tablist" aria-label="Achievement stories"><button class="proof-choice active" type="button" id="tab-0" role="tab" aria-controls="recognition-detail" aria-selected="true" tabindex="0" data-proof="customer"><span><span class="proof-choice-title">Customer voice</span><span class="proof-choice-sub">01 / SANTANDER</span></span><span class="chev">↗</span></button><button class="proof-choice" type="button" id="tab-1" role="tab" aria-controls="recognition-detail" aria-selected="false" tabindex="-1" data-proof="district"><span><span class="proof-choice-title">District recognition</span><span class="proof-choice-sub">02 / SANTANDER</span></span><span class="chev">↗</span></button><button class="proof-choice" type="button" id="tab-2" role="tab" aria-controls="recognition-detail" aria-selected="false" tabindex="-1" data-proof="quality"><span><span class="proof-choice-title">Perfect QA streak</span><span class="proof-choice-sub">03 / GUIDEHOUSE</span></span><span class="chev">↗</span></button></div>
       <article class="proof-detail" id="recognition-detail" role="tabpanel" aria-labelledby="tab-0" aria-live="polite"><span class="proof-watermark" aria-hidden="true">01</span><div class="proof-detail-content"><div class="index"><span class="eyebrow" id="proof-kicker">CUSTOMER SATISFACTION / 2026</span><span class="eyebrow" id="proof-index">01 — 03</span></div><div class="proof-value" id="proof-value">10<span>/10</span></div><h3 id="proof-title">A customer named me. That matters.</h3><p class="proof-description" id="proof-description">Recognition feels different when it comes directly from the person you helped.</p><blockquote class="quote" id="proof-quote">“Erik has been on the desk recently and has been exceptional with his customer service.”</blockquote><div class="detail-action"><button type="button" class="button" id="show-evidence">View original survey <span class="arrow">↗</span></button><span class="evidence-note" id="proof-note">21 AUG 2026 · INDIVIDUAL VISIT SCORE</span></div></div></article>
@@ -75,7 +151,7 @@
     <div class="experience-list" id="role-list">
       <article class="role fade-up" data-tags="support accuracy"><div><span class="role-number">01 / 04</span><div class="role-date">MAY — SEP 2026</div><h3 class="role-company">Santander Bank USA</h3><p class="role-title">Teller / Customer Service</p></div><div><div class="role-metrics"><span>40+ TRANSACTIONS / DAY</span><span>5–20 CUSTOMER CALLS / DAY</span><span>10/10 FEEDBACK</span></div><ul class="role-bullets"><li><strong>Handled 40+ daily customer transactions,</strong> including deposits, transfers, withdrawals, and payments while investigating discrepancies and answering account questions.</li><li><strong>Supported 5–20 inbound and outbound calls per day plus email inquiries,</strong> clarifying account concerns, explaining services, and coordinating accurate follow-through.</li><li><strong>Earned named 10/10 satisfaction feedback</strong> and appeared on district monthly performance charts within a short period of joining, as reported.</li></ul></div></article>
       <article class="role fade-up" data-tags="support"><div><span class="role-number">02 / 04</span><div class="role-date">SEP 2025 — MAY 2026</div><h3 class="role-company">BTalk LLC</h3><p class="role-title">Account Representative</p></div><div><div class="role-metrics"><span>30+ OUTBOUND CALLS / DAY</span><span>CRM CASE FOLLOW-UP</span></div><ul class="role-bullets"><li><strong>Handled 30+ outbound customer calls each day,</strong> qualifying needs, explaining service options, and addressing questions or objections through tailored conversations.</li><li><strong>Updated CRM account and contact statuses, call outcomes,</strong> and follow-up actions after outreach to keep customer records useful and current.</li><li><strong>Used active listening and de-escalation</strong> to address concerns and route unresolved situations with specific context for additional support.</li></ul></div></article>
-      <article class="role fade-up" data-tags="accuracy"><div><span class="role-number">03 / 04</span><div class="role-date">SEP 2024 — SEP 2025</div><h3 class="role-company">Green Dot Bank</h3><p class="role-title">AML Compliance Analyst · through Guidehouse</p></div><div><div class="role-metrics"><span>30+ ACCOUNTS / DAY</span><span>REPEATED 100% QA</span><span>25% EFFICIENCY GAIN</span></div><ul class="role-bullets"><li><strong>Reviewed 30+ financial accounts daily,</strong> analyzing customer records, payment patterns, and risk indicators to document clear, timely decisions.</li><li><strong>Earned consecutive 100% quality-assurance scores,</strong> repeatedly appearing on weekly team quality-achiever charts; reported QA range was 97.62%–100%.</li><li><strong>Contributed to a 25% improvement in review efficiency</strong> and approximately 30% fewer false-positive escalations through stronger investigation research and documentation.</li></ul></div></article>
+      <article class="role fade-up" data-tags="accuracy"><div><span class="role-number">03 / 04</span><div class="role-date">SEP 2024 — SEP 2025</div><h3 class="role-company">Green Dot Bank</h3><p class="role-title">AML Compliance Analyst · through Guidehouse</p></div><div><div class="role-metrics"><span>30+ ACCOUNTS / DAY</span><span>QA: 100%, 100%, 97.62%</span><span>95% QA TARGET</span><span>25% EFFICIENCY GAIN</span></div><ul class="role-bullets"><li><strong>Reviewed 30+ financial accounts daily,</strong> analyzing customer records, payment patterns, and risk indicators to document clear, timely decisions.</li><li><strong>Earned consecutive 100% quality-assurance scores,</strong> repeatedly appearing on weekly team quality-achiever charts; reported QA range was 97.62%–100%.</li><li><strong>Contributed to a 25% improvement in review efficiency</strong> and approximately 30% fewer false-positive escalations through stronger investigation research and documentation.</li></ul></div></article>
       <article class="role fade-up" data-tags="support overnight"><div><span class="role-number">04 / 04</span><div class="role-date">SEP 2023 — SEP 2024</div><h3 class="role-company">Teleperformance</h3><p class="role-title">Customer Service Representative / Interpreter</p></div><div><div class="role-metrics"><span>10–50 CALLS / OVERNIGHT SHIFT</span><span>3 LANGUAGES</span><span>REMOTE SUPPORT</span></div><ul class="role-bullets"><li><strong>Managed between 10 and 50 customer calls per overnight shift,</strong> varying with demand, while staying accurate and responsive throughout the shift.</li><li><strong>Resolved routine requests and interpreted</strong> sensitive customer conversations in English, Armenian, and Russian, explaining next steps clearly.</li><li><strong>Documented service interactions</strong> and escalated complex cases with sufficient context to maintain continuity across shifts and teams.</li></ul></div></article>
     </div><p class="role-counter" id="role-counter" aria-live="polite">Showing 4 of 4 roles</p>
   </div></section>
@@ -101,13 +177,29 @@
   syncTheme(); themeButton.addEventListener('click',function(){var next = document.documentElement.dataset.theme === 'light'?'dark':'light';document.documentElement.dataset.theme=next;try{localStorage.setItem('ey-theme',next)}catch(_){}syncTheme();});
   function scrollProgress(){var max=document.documentElement.scrollHeight-window.innerHeight;$('#reading-progress').style.width=(max>0?(window.scrollY/max)*100:0)+'%';}
   document.addEventListener('scroll',scrollProgress,{passive:true});window.addEventListener('resize',scrollProgress);scrollProgress();
-  var boards={customer:{value:'10',suffix:'/10',caption:'Named individual customer satisfaction feedback recognizing exceptional service.',source:'SOURCE: SANTANDER · AUG 2026',steps:['LISTEN','CLARIFY','REASSURE']},quality:{value:'100',suffix:'%',caption:'Consecutive perfect QA results recognized on Guidehouse weekly team charts.',source:'SOURCE: GUIDEHOUSE · WEEKLY QA',steps:['RESEARCH','VERIFY','DOCUMENT']},volume:{value:'40',suffix:'+',caption:'Daily banking transactions handled while supporting customer account inquiries.',source:'SOURCE: SANTANDER · WORK VOLUME',steps:['RESPOND','PRIORITIZE','FOLLOW UP']}};
+  var boards={customer:{value:'10',suffix:'/10',caption:'Named individual customer satisfaction feedback recognizing exceptional service.',source:'SOURCE: SANTANDER · AUG 2026',steps:['LISTEN','CLARIFY','REASSURE']},quality:{value:'100',suffix:'%',caption:'Exact recorded QA results: 100%, 100%, 97.62% — each above the 95% benchmark.',source:'SOURCE: GUIDEHOUSE · WEEKLY QA',steps:['RESEARCH','VERIFY','DOCUMENT']},volume:{value:'40',suffix:'+',caption:'Daily banking transactions handled while supporting customer account inquiries.',source:'SOURCE: SANTANDER · WORK VOLUME',steps:['RESPOND','PRIORITIZE','FOLLOW UP']}};
   function showBoard(name){var item=boards[name];if(!item)return;$('#board-number').innerHTML=item.value+'<small>'+item.suffix+'</small>';$('#board-caption').textContent=item.caption;$('#board-source').textContent=item.source;$('#board-chart').innerHTML='';item.steps.forEach(function(label){var box=document.createElement('div');box.className='method-node';var icon=document.createElement('span');icon.className='node-icon';icon.textContent='↗';var t=document.createElement('span');t.textContent=label;box.appendChild(icon);box.appendChild(t);$('#board-chart').appendChild(box);});$$('[data-board]').forEach(function(btn){var active=btn.dataset.board===name;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});}
   $$('[data-board]').forEach(function(btn){btn.addEventListener('click',function(){showBoard(btn.dataset.board);});});showBoard('customer');
+
+  /* Dedicated Guidehouse QA performance score selector */
+  var qaScoreButtons=$('[data-qa-score]');
+  function showQAScore(button){
+    var score=Number(button.dataset.qaScore);
+    var formatted=score===100?'100%':score.toFixed(2)+'%';
+    var delta=(score-95).toFixed(2);
+    $('#qa-selected').textContent=formatted;
+    $('#qa-delta').textContent='+'+delta+' percentage points';
+    $('#qa-fill').style.width=score+'%';
+    $('#qa-track').setAttribute('aria-label','Selected QA result '+formatted+', target 95 percent; exceeded by '+delta+' percentage points');
+    $('#qa-status').textContent='RESULT '+String(button.dataset.qaIndex).padStart(2,'0')+' · BENCHMARK EXCEEDED ✓';
+    qaScoreButtons.forEach(function(b){b.setAttribute('aria-pressed',String(b===button));});
+  }
+  qaScoreButtons.forEach(function(btn){btn.addEventListener('click',function(){showQAScore(btn);});});
+
   var proofData={
     customer:{kicker:'CUSTOMER SATISFACTION / AUG 2026',index:'01 — 03',value:'10<span>/10</span>',title:'A customer named me. That matters.',description:'A Santander customer specifically recognized my service in a 10/10 individual visit-satisfaction survey.',quote:'“Erik has been on the desk recently and has been exceptional with his customer service. That\'s what brings people to the branch system.”',note:'21 AUG 2026 · INDIVIDUAL VISIT SCORE',hasEvidence:true},
     district:{kicker:'DISTRICT VISIBILITY / SANTANDER',index:'02 — 03',value:'<span>DISTRICT</span>',title:'Recognition in a short time.',description:'I appeared on Santander monthly district performance charts soon after joining, while handling banking transactions, calls, and customer account questions. A numerical rank was not recorded.',quote:'',note:'MONTHLY DISTRICT CHART · SELF-REPORTED',hasEvidence:false},
-    quality:{kicker:'TEAM QUALITY / GUIDEHOUSE',index:'03 — 03',value:'100<span>%</span>',title:'Consistency that gets noticed.',description:'Consecutive 100% quality-assurance scores earned repeated recognition on weekly team quality-achiever charts, alongside 30+ daily financial account reviews.',quote:'',note:'WEEKLY TEAM QUALITY CHART · SELF-REPORTED',hasEvidence:false}
+    quality:{kicker:'TEAM QUALITY / GUIDEHOUSE',index:'03 — 03',value:'100<span>%</span>',title:'Consistency that gets noticed.',description:'Exact reported QA results: 100%, 100%, 97.62%, each above a 95% benchmark. Consecutive perfect evaluations earned repeated recognition on weekly team quality-achiever charts, alongside 30+ daily financial account reviews.',quote:'',note:'WEEKLY TEAM QUALITY CHART · SELF-REPORTED',hasEvidence:false}
   };
   var proofButtons=$$('[data-proof]');
   function showProof(name,focus){var data=proofData[name];if(!data)return;var panel=$('#recognition-detail');$('#proof-kicker').textContent=data.kicker;$('#proof-index').textContent=data.index;$('#proof-value').innerHTML=data.value;$('#proof-value').classList.toggle('long',name==='district');$('#proof-title').textContent=data.title;$('#proof-description').textContent=data.description;$('#proof-quote').textContent=data.quote;$('#proof-quote').hidden=!data.quote;$('#proof-note').textContent=data.note;$('#show-evidence').hidden=!data.hasEvidence;panel.setAttribute('aria-labelledby',proofButtons.find(function(b){return b.dataset.proof===name}).id);proofButtons.forEach(function(b){var active=b.dataset.proof===name;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;});if(focus){proofButtons.find(function(b){return b.dataset.proof===name}).focus();}}
