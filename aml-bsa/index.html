@@ -3,199 +3,263 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#09070a">
-<meta name="description" content="Erik Yeghinyan — AML / BSA portfolio reimagined as a premium cinematic investigation experience.">
-<title>Erik Yeghinyan — After the Signal / AML & BSA</title>
+<meta name="theme-color" content="#060608">
+<meta name="description" content="Erik Yeghinyan — AML / BSA portfolio designed as a cinematic investigative experience.">
+<title>Erik Yeghinyan — Dark Signal / AML & BSA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#09070a; --bg2:#120d14; --panel:#151116cc; --panel2:#1d161fcc; --line:#ffffff18;
-  --text:#f8f4ef; --muted:#baafa5; --soft:#8e847c; --gold:#d8b16b; --champ:#f2ddba; --ember:#f08b69; --wine:#6e2940; --glow:#ffd9a1;
-  --shadow:0 30px 90px rgba(0,0,0,.45); --radius:28px;
+  --bg:#060608; --bg2:#0d0e12; --bg3:#15161d; --panel:#111319cc; --panel2:#171922e0; --line:#ffffff12;
+  --text:#f1ede8; --muted:#aba39a; --soft:#7f7a74; --silver:#d3d4db; --ember:#ce7153; --red:#7c2b2f; --gold:#caa169; --smoke:#8f826e;
+  --shadow:0 24px 80px rgba(0,0,0,.5); --shadow2:0 10px 34px rgba(0,0,0,.32); --radius:26px;
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 20% 10%,#2f1c1f55,transparent 28%),radial-gradient(circle at 85% 15%,#4e294433,transparent 25%),linear-gradient(180deg,#09070a 0%,#0f0b10 50%,#09070a 100%);color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");mix-blend-mode:soft-light;z-index:20}
-*::selection{background:var(--champ);color:#1b1410} a{color:inherit;text-decoration:none} button{font:inherit;border:0;cursor:pointer} .wrap{width:min(1360px,calc(100% - 80px));margin:auto}
-.mono{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#a99e95}.eyebrow{display:flex;align-items:center;gap:16px}.eyebrow:before{content:"";width:48px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.nav{position:fixed;top:0;left:0;right:0;z-index:30;background:linear-gradient(180deg,#09070ae8,#09070a7d,transparent);backdrop-filter:blur(18px)}
-.navin{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font:800 22px Manrope,sans-serif;letter-spacing:-.08em}.logo span{color:var(--gold)} .navlinks{display:flex;gap:28px;align-items:center}.navlinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cabfb6;opacity:.9}.navlinks a:hover{color:#fff}.navcta{padding:14px 20px;border-radius:999px;background:linear-gradient(135deg,var(--champ),var(--gold));color:#120d11;font-size:11px;font-weight:800;letter-spacing:.12em;box-shadow:0 10px 35px rgba(216,177,107,.22)}
-.hero{position:relative;min-height:100svh;padding-top:110px;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 38%,rgba(255,214,146,.13),transparent 17%),radial-gradient(circle at 70% 38%,rgba(255,214,146,.08),transparent 34%),radial-gradient(circle at 68% 35%,rgba(225,102,74,.08),transparent 45%),linear-gradient(90deg,transparent 0%,rgba(255,255,255,.02) 48%,transparent 100%);pointer-events:none}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(520px,45%);gap:32px;align-items:center;min-height:calc(100svh - 110px)}
-.kicker{color:var(--champ)}
-.hero h1{margin:20px 0 24px;font:600 clamp(60px,8vw,138px)/.92 Manrope,sans-serif;letter-spacing:-.09em;max-width:780px}.hero h1 em{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-style:italic;color:var(--champ);letter-spacing:-.03em}.hero p{max-width:560px;color:var(--muted);font-size:17px;line-height:1.9}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:18px 24px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:transform .25s ease,box-shadow .25s ease}.btn.primary{background:linear-gradient(135deg,var(--champ),var(--gold));color:#120d11;box-shadow:0 16px 40px rgba(216,177,107,.2)}.btn.secondary{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#ede7e2}.btn:hover{transform:translateY(-3px)}
-.hero-meta{margin-top:42px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:760px}.meta-card{padding:18px 18px 20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));backdrop-filter:blur(12px)}.meta-card strong{display:block;font-size:34px;line-height:1;letter-spacing:-.07em}.meta-card span{display:block;margin-top:10px;color:var(--soft);font-size:13px;line-height:1.55}
-.stage{position:relative;height:min(860px,82vh);min-height:620px;display:grid;place-items:center}.stage-core{position:relative;width:min(92%,700px);aspect-ratio:1/1;filter:drop-shadow(0 25px 75px rgba(0,0,0,.45));transform-style:preserve-3d}
-.aurora{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(253,230,187,.36),rgba(240,139,105,.06) 24%,rgba(31,16,25,.2) 47%,rgba(10,8,12,.1) 58%,transparent 68%);filter:blur(2px);animation:breath 7s ease-in-out infinite}
-.ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,242,224,.18)} .ring.r2{inset:8%;border-style:dashed;animation:spin 34s linear infinite}.ring.r3{inset:18%;border-color:rgba(216,177,107,.28)} .ring.r4{inset:28%;border-color:rgba(255,255,255,.12);animation:spinReverse 24s linear infinite}
-.beam{position:absolute;left:50%;top:10%;width:1px;height:80%;background:linear-gradient(180deg,transparent,rgba(242,221,186,.85),transparent);box-shadow:0 0 30px rgba(255,236,198,.6);transform:translateX(-50%)}
-.core-ball{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.92),rgba(255,227,170,.4) 14%,rgba(216,177,107,.18) 34%,rgba(88,35,45,.45) 58%,rgba(19,12,18,.95) 74%);box-shadow:inset 0 0 70px rgba(255,236,198,.18),0 0 80px rgba(255,200,120,.18)}
-.cross{position:absolute;inset:11%;border-radius:50%}.cross::before,.cross::after{content:"";position:absolute;background:rgba(255,255,255,.08)}.cross::before{left:50%;top:0;transform:translateX(-50%);width:1px;height:100%}.cross::after{top:50%;left:0;transform:translateY(-50%);height:1px;width:100%}
-.float-card{position:absolute;display:flex;flex-direction:column;gap:10px;padding:18px 18px 18px 20px;width:220px;border-radius:22px;background:linear-gradient(180deg,rgba(31,23,28,.92),rgba(20,16,21,.82));border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(14px);box-shadow:var(--shadow)}
-.float-card small{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)} .float-card strong{font:700 28px/1 Manrope,sans-serif;letter-spacing:-.06em} .float-card p{margin:0;color:#cabfb5;font-size:12px;line-height:1.6}
-.fc1{left:-3%;top:14%;transform:rotate(-7deg)} .fc2{right:-4%;top:20%;transform:rotate(8deg)} .fc3{left:6%;bottom:12%;transform:rotate(5deg)} .fc4{right:2%;bottom:8%;transform:rotate(-6deg)}
-.orbit-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;z-index:2}.orbit-tag b{display:block;font:600 clamp(36px,4vw,58px)/1 "Cormorant Garamond",serif;letter-spacing:-.03em;color:#f8efe1}.orbit-tag span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#cabfb6}
-.scrollcue{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#91857a;font-size:11px;letter-spacing:.18em;text-transform:uppercase;z-index:5}
-.marquee{overflow:hidden;border-block:1px solid rgba(255,255,255,.08);background:linear-gradient(90deg,#181115,#140f14,#181115);padding:20px 0}.track{display:flex;gap:56px;width:max-content;white-space:nowrap;animation:marq 28s linear infinite}.track span{font:700 28px/1 Manrope,sans-serif;letter-spacing:-.06em;color:#f6f0ea}.track b{font-family:"Cormorant Garamond",serif;font-weight:600;font-style:italic;color:var(--gold)}
-.section{padding:130px 0}.section-head{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start}.section-head h2{margin:0;font:600 clamp(44px,6vw,92px)/.96 Manrope,sans-serif;letter-spacing:-.08em}.section-head h2 em{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;color:var(--champ)}.section-head p{max-width:780px;color:var(--muted);font-size:18px;line-height:1.85}
-.filmstrip{margin-top:56px;display:grid;grid-template-columns:300px 1fr;gap:24px}.chapters{display:flex;flex-direction:column;gap:12px}.chapter-btn{position:relative;text-align:left;padding:22px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);color:#f1ece6;transition:.25s}.chapter-btn small{display:block;margin-bottom:8px;color:var(--gold);font-size:10px;letter-spacing:.18em;text-transform:uppercase}.chapter-btn strong{display:block;font-size:24px;line-height:1.1;letter-spacing:-.04em}.chapter-btn span{display:block;margin-top:10px;color:#aa9f97;font-size:13px;line-height:1.55}.chapter-btn.active,.chapter-btn:hover{transform:translateX(6px);background:linear-gradient(180deg,rgba(216,177,107,.12),rgba(255,255,255,.04));border-color:rgba(216,177,107,.35)}
-.screen{border:1px solid rgba(255,255,255,.08);border-radius:32px;background:linear-gradient(180deg,rgba(20,15,20,.92),rgba(15,11,16,.95));overflow:hidden;box-shadow:var(--shadow)} .screen-top{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)} .lights{display:flex;gap:8px}.lights i{width:10px;height:10px;border-radius:50%;background:#3f3137;border:1px solid rgba(255,255,255,.08)} .lights i:nth-child(1){background:#8b4b54}.lights i:nth-child(2){background:#9b8454}.lights i:nth-child(3){background:#547765}
-.screen-body{padding:28px;display:grid;grid-template-columns:1.05fr .95fr;gap:22px;min-height:560px}.scene{border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}.scene h3,.sidepanel h3{margin:0 0 10px;font-size:28px;letter-spacing:-.05em}.scene p,.sidepanel p{color:#b9afa6;font-size:14px;line-height:1.75}.viz{margin-top:18px;height:300px;border-radius:24px;background:radial-gradient(circle at 50% 50%,rgba(242,221,186,.08),transparent 45%),linear-gradient(180deg,#151017,#0f0c12);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
-.viz .node{position:absolute;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7eb,#d8b16b 28%,#4f3243 65%,#1a131a 100%);box-shadow:0 0 25px rgba(216,177,107,.18)} .viz .node span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#120d10;font-weight:800;text-align:center;line-height:1.15}
-.viz svg{position:absolute;inset:0;width:100%;height:100%}.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.time-card{padding:14px 12px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)} .time-card strong{display:block;font-size:22px;letter-spacing:-.05em} .time-card span{display:block;margin-top:8px;color:#a99d94;font-size:12px;line-height:1.45}
-.sidepanel{display:flex;flex-direction:column;gap:16px}.side-card{padding:20px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}.score{display:flex;align-items:flex-end;gap:8px}.score strong{font:700 82px/.88 Manrope,sans-serif;letter-spacing:-.08em}.score span{font-size:14px;color:#b7ada5;margin-bottom:14px}.flaglist,.logic-list{padding:0;margin:10px 0 0;list-style:none;display:flex;flex-direction:column;gap:10px}.flaglist li,.logic-list li{padding:13px 14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);font-size:13px;line-height:1.55;color:#d7cdc4}.decision{display:flex;gap:12px;flex-wrap:wrap}.decision button{padding:16px 18px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.decision .ghost{background:rgba(255,255,255,.05);color:#f1ebe4;border:1px solid rgba(255,255,255,.08)} .decision .gold{background:linear-gradient(135deg,var(--champ),var(--gold));color:#130d10}
-.outcome{padding:18px;border-radius:22px;background:rgba(216,177,107,.07);border:1px solid rgba(216,177,107,.18);min-height:98px;color:#e6ddd5;font-size:14px;line-height:1.7}
-.proof-grid{margin-top:54px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.proof-card{padding:28px;border-radius:28px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));min-height:220px}.proof-card strong{display:block;font:700 clamp(38px,4vw,64px)/1 Manrope,sans-serif;letter-spacing:-.08em}.proof-card b{display:block;margin-top:20px;font-size:16px}.proof-card p{margin:10px 0 0;color:#afa39a;font-size:14px;line-height:1.7}
-.philosophy{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:56px}.ph-card{padding:30px;border-radius:30px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02))}.ph-card h3{margin:0 0 14px;font-size:36px;letter-spacing:-.06em}.ph-card p{margin:0;color:#b7aca3;font-size:15px;line-height:1.85}
-.end{padding:150px 0 120px;text-align:center;position:relative;overflow:hidden}.end::before{content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:min(65vw,780px);aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,rgba(216,177,107,.16),transparent 58%);filter:blur(10px)} .end h2{position:relative;z-index:1;margin:14px auto 18px;font:600 clamp(60px,8vw,124px)/.92 Manrope,sans-serif;letter-spacing:-.09em;max-width:900px}.end h2 em{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;color:var(--champ)} .end p{position:relative;z-index:1;max-width:620px;margin:0 auto 34px;color:#c0b5ab;font-size:18px;line-height:1.8}
-.footer{padding:20px 0 40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8e8279;border-top:1px solid rgba(255,255,255,.06)}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
-@keyframes spin{to{transform:rotate(360deg)}} @keyframes spinReverse{to{transform:rotate(-360deg)}} @keyframes breath{50%{transform:scale(1.03)}} @keyframes marq{to{transform:translateX(-50%)}}
-@media (max-width:1200px){.hero-grid{grid-template-columns:1fr}.stage{height:auto;min-height:unset;padding:30px 0 60px}.section-head,.filmstrip,.screen-body,.proof-grid,.philosophy{grid-template-columns:1fr}.hero h1{max-width:unset}.hero-meta{grid-template-columns:1fr}.wrap{width:min(100% - 36px,1360px)}.navlinks a:not(.navcta){display:none}}
-@media (max-width:760px){.hero{padding-top:95px}.navin{height:72px}.hero h1{font-size:52px}.hero h1 em{display:inline}.hero p{font-size:15px}.btn{width:100%}.fc1,.fc2,.fc3,.fc4{display:none}.stage-core{width:100%;max-width:520px}.section{padding:90px 0}.section-head h2{font-size:46px}.screen-body{padding:18px}.scene,.side-card{padding:18px}.viz{height:250px}.proof-card{min-height:unset}.footer{font-size:12px}}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
+radial-gradient(circle at 18% 10%,rgba(115,43,47,.16),transparent 20%),
+radial-gradient(circle at 80% 15%,rgba(202,161,105,.10),transparent 18%),
+radial-gradient(circle at 70% 50%,rgba(255,255,255,.03),transparent 22%),
+linear-gradient(180deg,#060608 0%,#0a0b0f 30%,#08090c 100%);
+color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.09;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");z-index:40}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.015) 50%,transparent 100%);opacity:.4;z-index:1}
+::selection{background:#cab18a;color:#110f0b} a{text-decoration:none;color:inherit} button{font:inherit;border:0;cursor:pointer} img{max-width:100%;display:block}
+.wrap{width:min(1380px,calc(100% - 72px));margin:auto} .mono{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8e8984}.serif{font-family:"Cormorant Garamond",serif}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(180deg,rgba(6,6,8,.92),rgba(6,6,8,.58),transparent);backdrop-filter:blur(14px)}
+.navin{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font:800 22px Manrope,sans-serif;letter-spacing:-.08em}.logo span{color:var(--gold)} .navlinks{display:flex;align-items:center;gap:28px}.navlinks a{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#c5c0ba;opacity:.88}.navlinks a:hover{color:#fff}.navcta{padding:13px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+.hero{min-height:100svh;position:relative;overflow:hidden;padding-top:92px}
+.hero .vignette{position:absolute;inset:0;background:
+radial-gradient(circle at 30% 30%,rgba(255,255,255,.04),transparent 18%),
+radial-gradient(circle at 76% 34%,rgba(255,234,196,.09),transparent 15%),
+radial-gradient(circle at 76% 40%,rgba(206,113,83,.10),transparent 30%),
+linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.3) 68%,rgba(0,0,0,.72));pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.03fr) minmax(520px,.97fr);gap:36px;align-items:center;min-height:calc(100svh - 92px)}
+.kicker{display:flex;align-items:center;gap:14px;color:#ddd1bf}.kicker:before{content:"";width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.hero h1{margin:22px 0 24px;font:700 clamp(60px,8vw,142px)/.9 Manrope,sans-serif;letter-spacing:-.095em;max-width:820px;text-wrap:balance}.hero h1 em{display:block;font:600 clamp(42px,4.6vw,76px)/.9 "Cormorant Garamond",serif;font-style:italic;letter-spacing:-.03em;color:#d9d1c5}
+.hero p{max-width:590px;font-size:17px;line-height:1.9;color:#b7afa6}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 24px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;transition:transform .24s ease,box-shadow .24s ease}.btn.primary{background:linear-gradient(135deg,#dcc39a,#caa169);color:#15110c;box-shadow:0 14px 38px rgba(202,161,105,.16)}.btn.secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#ece7e1}.btn:hover{transform:translateY(-3px)}
+.hero-facts{margin-top:42px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:780px}.fact{padding:18px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px)} .fact strong{display:block;font:700 34px/1 Manrope,sans-serif;letter-spacing:-.07em}.fact span{display:block;margin-top:10px;font-size:13px;line-height:1.55;color:#9d948a}
+.cinema{position:relative;display:grid;place-items:center;height:min(860px,82vh);min-height:640px}
+.caseframe{position:relative;width:min(96%,760px);aspect-ratio:1/.96;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#0c0e14,#151821);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 90px rgba(0,0,0,.46)}
+.caseframe:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 72% 28%,rgba(255,228,179,.18),transparent 14%),
+radial-gradient(circle at 72% 28%,rgba(206,113,83,.18),transparent 34%),
+linear-gradient(180deg,rgba(255,255,255,.03),transparent 18%),
+linear-gradient(180deg,transparent,rgba(0,0,0,.42));pointer-events:none}
+.case-top{position:absolute;inset:0 0 auto 0;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);backdrop-filter:blur(10px);z-index:2}.leds{display:flex;gap:8px}.leds i{width:10px;height:10px;border-radius:50%;background:#4c3a39;border:1px solid rgba(255,255,255,.08)}.leds i:nth-child(2){background:#716144}.leds i:nth-child(3){background:#42564c}
+.frame-grid{position:absolute;inset:66px 0 0 0;display:grid;grid-template-columns:1.08fr .92fr}
+.board{position:relative;padding:32px;border-right:1px solid rgba(255,255,255,.06);overflow:hidden}
+.board:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 48% 42%,rgba(255,255,255,.03),transparent 34%),repeating-linear-gradient(90deg,transparent,transparent 104px,rgba(255,255,255,.03) 105px),repeating-linear-gradient(0deg,transparent,transparent 104px,rgba(255,255,255,.025) 105px);opacity:.28}
+.target{position:absolute;left:50%;top:50%;width:68%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(255,255,255,.14)} .target:before,.target:after{content:"";position:absolute;border-radius:50%;inset:12%;border:1px dashed rgba(255,255,255,.12)} .target:after{inset:25%;border-style:solid;border-color:rgba(202,161,105,.16)}
+.targetline-h,.targetline-v{position:absolute;background:rgba(255,255,255,.08)} .targetline-h{height:1px;width:74%;left:13%;top:50%} .targetline-v{width:1px;height:74%;left:50%;top:13%}
+.board svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.board .node{position:absolute;display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f7f0e5,#cab18a 28%,#6d5246 56%,#171318 100%);box-shadow:0 0 28px rgba(202,161,105,.18), inset 0 0 12px rgba(255,255,255,.24);z-index:2;transition:transform .2s ease,box-shadow .2s ease}.board .node.active{transform:scale(1.08);box-shadow:0 0 38px rgba(202,161,105,.3), inset 0 0 12px rgba(255,255,255,.24)} .board .node span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;text-align:center;line-height:1.12;color:#14110e}
+.evidence{position:absolute;padding:16px 18px;width:200px;border-radius:20px;background:linear-gradient(180deg,rgba(18,20,26,.94),rgba(10,11,14,.92));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow2);z-index:3}.ev1{left:4%;top:7%;transform:rotate(-6deg)} .ev2{right:4%;top:10%;transform:rotate(6deg)} .ev3{left:9%;bottom:8%;transform:rotate(4deg)}
+.evidence small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)} .evidence strong{display:block;margin-top:8px;font-size:24px;letter-spacing:-.05em} .evidence p{margin:8px 0 0;color:#a8a197;font-size:12px;line-height:1.55}
+.dossier{padding:24px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:2;background:linear-gradient(180deg,rgba(15,16,22,.68),rgba(11,12,16,.82))}
+.dossier h3{margin:0;font-size:30px;letter-spacing:-.05em}.dossier p{margin:0;color:#b4ada4;font-size:14px;line-height:1.75}.scorebox,.listbox,.actionbox,.note{padding:18px 18px 19px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}.score{display:flex;align-items:flex-end;gap:8px}.score strong{font:700 82px/.9 Manrope,sans-serif;letter-spacing:-.08em}.score span{margin-bottom:12px;color:#a79f95;font-size:13px}.bullets,.logic{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:9px}.bullets li,.logic li{padding:12px 13px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.04);font-size:13px;line-height:1.55;color:#ddd6cf}
+.case-switch{display:flex;gap:10px;flex-wrap:wrap}.case-switch button{padding:12px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#e9e5df;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.case-switch button.active{background:linear-gradient(135deg,#dcc39a,#caa169);color:#1a140f;border-color:transparent}
+.dispo{display:flex;gap:10px;flex-wrap:wrap}.dispo button{padding:14px 16px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.dispo .ghost{background:rgba(255,255,255,.05);color:#ece8e2;border:1px solid rgba(255,255,255,.08)} .dispo .gold{background:linear-gradient(135deg,#dcc39a,#caa169);color:#17120e}
+.outcome{margin-top:12px;padding:16px;border-radius:18px;background:rgba(202,161,105,.08);border:1px solid rgba(202,161,105,.15);min-height:90px;color:#ddd4cb;font-size:13px;line-height:1.7}
+.scrollnote{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#80786f;font-size:11px;letter-spacing:.18em;text-transform:uppercase;z-index:5}
+.band{overflow:hidden;padding:18px 0;border-block:1px solid rgba(255,255,255,.06);background:linear-gradient(90deg,#111216,#0d0d10,#111216)} .bandtrack{display:flex;gap:54px;width:max-content;white-space:nowrap;animation:marq 26s linear infinite}.bandtrack span{font:700 26px/1 Manrope,sans-serif;letter-spacing:-.06em;color:#ede7e0}.bandtrack b{font:600 28px/1 "Cormorant Garamond",serif;font-style:italic;color:#caa169}
+.section{padding:128px 0}.section-head{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start}.section-head h2{margin:0;font:700 clamp(44px,5.7vw,94px)/.95 Manrope,sans-serif;letter-spacing:-.09em}.section-head h2 em{font:600 1.03em/1 "Cormorant Garamond",serif;font-style:italic;color:#d9d0c3}.section-head p{max-width:790px;color:#b7aea5;font-size:18px;line-height:1.85}
+.storygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:54px}.storycard{min-height:320px;padding:26px;border-radius:28px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));position:relative;overflow:hidden}.storycard:before{content:"";position:absolute;inset:auto auto 14px 14px;width:96px;height:96px;border-radius:22px;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),rgba(255,255,255,.02) 44%,transparent 62%);opacity:.55}.storycard b{display:block;margin-top:22px;font-size:28px;letter-spacing:-.05em}.storycard p{margin:10px 0 0;color:#a79f95;font-size:14px;line-height:1.76}
+.proofgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}.proof{padding:28px;border-radius:28px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));min-height:220px}.proof strong{display:block;font:700 clamp(40px,4vw,64px)/1 Manrope,sans-serif;letter-spacing:-.08em}.proof b{display:block;margin-top:18px;font-size:16px}.proof p{margin:10px 0 0;color:#a69d93;font-size:14px;line-height:1.72}
+.method{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:54px}.method .box{padding:28px;border-radius:28px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}.method h3{margin:0 0 12px;font-size:36px;letter-spacing:-.06em}.method p{margin:0;color:#b5ada3;font-size:15px;line-height:1.82}
+.ending{padding:148px 0 118px;position:relative;text-align:center;overflow:hidden}.ending:before{content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:min(70vw,860px);aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,rgba(202,161,105,.15),transparent 58%);filter:blur(10px)} .ending h2{position:relative;z-index:2;margin:16px auto 18px;font:700 clamp(58px,8vw,128px)/.9 Manrope,sans-serif;letter-spacing:-.09em;max-width:900px}.ending h2 em{display:block;font:600 clamp(44px,4.8vw,74px)/.9 "Cormorant Garamond",serif;font-style:italic;color:#dad0c2}.ending p{position:relative;z-index:2;max-width:650px;margin:0 auto 32px;color:#bdb4aa;font-size:18px;line-height:1.8}
+.footer{padding:18px 0 40px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#867e76;font-size:12px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .85s ease,transform .85s ease}.reveal.show{opacity:1;transform:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (max-width:1240px){.hero-grid,.storygrid,.proofgrid,.method,.section-head{grid-template-columns:1fr}.hero-facts{grid-template-columns:1fr}.cinema{height:auto;min-height:unset;padding:32px 0 44px}.caseframe{width:100%;min-height:860px}.frame-grid{grid-template-columns:1fr}.board{min-height:470px;border-right:0;border-bottom:1px solid rgba(255,255,255,.06)}.wrap{width:min(100% - 36px,1380px)}.navlinks a:not(.navcta){display:none}}
+@media (max-width:760px){.navin{height:72px}.hero{padding-top:86px}.hero h1{font-size:52px}.hero h1 em{font-size:38px}.hero p{font-size:15px}.btn{width:100%}.storycard,.proof,.method .box{min-height:unset}.caseframe{border-radius:24px}.board,.dossier{padding:18px}.evidence{display:none}.board .node{width:58px;height:58px}.score strong{font-size:64px}.ending h2{font-size:52px}.ending h2 em{font-size:38px}}
 </style>
 </head>
 <body>
-<header class="nav"><div class="wrap navin"><a class="logo" href="#top">Erik <span>Yeghinyan</span></a><nav class="navlinks"><a href="#story">Story</a><a href="#cases">Cases</a><a href="#proof">Proof</a><a href="#contact" class="navcta">Start a Conversation</a></nav></div></header>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="logo" href="#top">Erik <span>Yeghinyan</span></a>
+    <nav class="navlinks">
+      <a href="#story">Story</a>
+      <a href="#lab">Case Lab</a>
+      <a href="#proof">Proof</a>
+      <a class="navcta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 <main id="top">
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow mono kicker">Premium AML / BSA Portfolio</div>
-      <h1>Every transfer leaves a trace.<em>Not everyone sees the pattern.</em></h1>
-      <p>I wanted this portfolio to feel less like a standard résumé and more like the mood of an actual investigation—quiet pressure, incomplete signals, disciplined judgment, and the moment scattered activity resolves into a narrative. It showcases my AML, BSA, fraud, KYC, and operational banking experience through a more cinematic lens.</p>
-      <div class="hero-actions"><a class="btn primary" href="#cases">Enter the case room</a><a class="btn secondary" href="#proof">See the proof</a></div>
-      <div class="hero-meta">
-        <article class="meta-card"><strong>30+</strong><span>accounts or alerts reviewed daily in AML operations.</span></article>
-        <article class="meta-card"><strong>100%</strong><span>reported QA accuracy in assigned review work.</span></article>
-        <article class="meta-card"><strong>40+</strong><span>daily transactions handled in Santander branch operations.</span></article>
+  <section class="hero">
+    <div class="vignette"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker mono">Cinematic AML / BSA Portfolio</div>
+        <h1>Dark. Investigative. Precise.<em>The mood of financial-crime analysis, reimagined.</em></h1>
+        <p>This portfolio is designed to feel like an investigation in motion—not a generic compliance webpage. The visual language is darker, more impressive, and more cinematic: signals emerging from noise, cases taking shape, and decisions grounded in structured reasoning. It highlights my AML, BSA, fraud, KYC, and banking operations background through atmosphere and interaction.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#lab">Enter the case lab</a>
+          <a class="btn secondary" href="#proof">View performance proof</a>
+        </div>
+        <div class="hero-facts">
+          <article class="fact"><strong>30+</strong><span>Accounts or alerts reviewed daily in AML operations.</span></article>
+          <article class="fact"><strong>100%</strong><span>Reported QA accuracy in assigned review work.</span></article>
+          <article class="fact"><strong>40+</strong><span>Daily branch transactions handled in Santander operations.</span></article>
+        </div>
       </div>
-    </div>
-    <div class="stage">
-      <div class="stage-core" id="stageCore">
-        <div class="aurora"></div>
-        <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
-        <div class="beam"></div><div class="cross"></div><div class="core-ball"></div>
-        <div class="orbit-tag"><b>after the signal</b><span>aml / bsa / financial crime</span></div>
-        <aside class="float-card fc1"><small>chapter i</small><strong>Signal</strong><p>Unusual movement is not enough. The real work begins when context starts breaking.</p></aside>
-        <aside class="float-card fc2"><small>chapter ii</small><strong>Network</strong><p>Risk sharpens when counterparties, devices, and timing begin to echo one another.</p></aside>
-        <aside class="float-card fc3"><small>chapter iii</small><strong>Reasoning</strong><p>The difference is disciplined documentation, not dramatic assumptions.</p></aside>
-        <aside class="float-card fc4"><small>chapter iv</small><strong>Escalation</strong><p>Every disposition needs a defensible rationale and an auditable trail.</p></aside>
-      </div>
-    </div>
-  </div>
-  <div class="scrollcue">scroll to continue ↓</div>
-</section>
-<section class="marquee"><div class="track"><span>Transaction <b>monitoring</b></span><span>KYC / CDD / <b>EDD</b></span><span>Financial <b>crime</b></span><span>Suspicious <b>patterns</b></span><span>Risk <b>judgment</b></span><span>Branch + digital <b>operations</b></span><span>Transaction <b>monitoring</b></span><span>KYC / CDD / <b>EDD</b></span><span>Financial <b>crime</b></span><span>Suspicious <b>patterns</b></span><span>Risk <b>judgment</b></span><span>Branch + digital <b>operations</b></span></div></section>
-<section class="section" id="story">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="mono">01 / The point of view</div><div><h2>Compliance, told with <em>atmosphere.</em></h2><p>This version is intentionally more art directed. Instead of repeating the usual dashboard aesthetic, it frames AML work as what it really feels like: attention under uncertainty. Strong controls matter, but so do observation, patience, and the ability to connect facts without overstating them. The result is premium, darker, more cinematic, and more memorable for a recruiter.</p></div></div>
-    <div class="philosophy">
-      <article class="ph-card reveal"><h3>What I do</h3><p>Transaction monitoring, KYC/CDD/EDD review support, branch banking operations, alert analysis, documentation, and escalations tied to potential suspicious activity. I focus on patterns, rationale, and consistency.</p></article>
-      <article class="ph-card reveal"><h3>What this is not</h3><p>These interactive scenes are synthetic demonstrations. They are designed to showcase how I think through signals, relationships, red flags, and next steps—without implying the use of real customer data or claiming experience I do not have.</p></article>
-    </div>
-  </div>
-</section>
-<section class="section" id="cases">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="mono">02 / Case room</div><div><h2>A cinematic <em>investigation lab.</em></h2><p>Select a chapter to move through a fictional scenario. Each scene combines narrative, visual structure, and a decision panel. The point is not spectacle alone—the interaction is there to show how I parse risk.</p></div></div>
-    <div class="filmstrip reveal">
-      <div class="chapters" id="chapters"></div>
-      <div class="screen">
-        <div class="screen-top"><div class="lights"><i></i><i></i><i></i></div><div class="mono">Demonstration environment / fictional data</div></div>
-        <div class="screen-body">
-          <div class="scene">
-            <div class="mono" id="sceneCode">Scene 01</div>
-            <h3 id="sceneTitle">Layering, seen as choreography.</h3>
-            <p id="sceneText">A fast pass-through chain forms the spine of this case, with counterparties that become more interesting when timing is compared.</p>
-            <div class="viz" id="vizArea"></div>
-            <div class="time-grid" id="timeline"></div>
-          </div>
-          <aside class="sidepanel">
-            <div class="side-card">
-              <div class="mono">Composite risk index</div>
-              <div class="score"><strong id="score">87</strong><span>/100</span></div>
-              <p id="scoreSummary">Elevated because the movement pattern appears coordinated rather than incidental.</p>
+      <div class="cinema">
+        <div class="caseframe" id="caseFrame">
+          <div class="case-top"><div class="leds"><i></i><i></i><i></i></div><div class="mono">Live analysis environment / synthetic demonstration</div></div>
+          <div class="frame-grid">
+            <div class="board" id="networkBoard">
+              <div class="target"></div><div class="targetline-h"></div><div class="targetline-v"></div>
+              <svg id="networkSvg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+              <aside class="evidence ev1"><small>Exposure</small><strong id="ev1Title">Layering</strong><p id="ev1Text">Activity becomes suspicious when speed, repetition, and relationship overlap.</p></aside>
+              <aside class="evidence ev2"><small>Signal</small><strong id="ev2Title">Counterparty Echo</strong><p id="ev2Text">One entity appears repeatedly in places it should not.</p></aside>
+              <aside class="evidence ev3"><small>Judgment</small><strong id="ev3Title">Escalation Logic</strong><p id="ev3Text">Document the why—not just the alert outcome.</p></aside>
             </div>
-            <div class="side-card"><div class="mono">Why it matters</div><ul class="flaglist" id="flagList"></ul></div>
-            <div class="side-card"><div class="mono">Analyst logic</div><ul class="logic-list" id="logicList"></ul></div>
-            <div class="side-card"><div class="mono">Disposition</div><div class="decision"><button class="ghost" id="reviewBtn">Review more</button><button class="gold" id="escalateBtn">Escalate</button></div><div class="outcome" id="outcome">Choose a response to reveal the reasoning.</div></div>
-          </aside>
+            <aside class="dossier">
+              <div class="case-switch" id="caseSwitch"></div>
+              <div class="scorebox"><div class="mono">Composite risk index</div><div class="score"><strong id="riskScore">87</strong><span>/100</span></div><p id="riskSummary">Elevated because a seemingly clean flow reveals a coordinated pattern when sequenced.</p></div>
+              <div class="listbox"><div class="mono">Case summary</div><h3 id="caseTitle">Layering across linked entities.</h3><p id="caseText">Transfers move quickly through a small set of relationships, giving the appearance of flow while weakening the legitimate-business narrative.</p></div>
+              <div class="listbox"><div class="mono">Why it stands out</div><ul class="bullets" id="flagList"></ul></div>
+              <div class="listbox"><div class="mono">Analyst reasoning</div><ul class="logic" id="logicList"></ul></div>
+              <div class="actionbox"><div class="mono">Disposition path</div><div class="dispo"><button class="ghost" id="reviewBtn">Review More</button><button class="gold" id="escalateBtn">Escalate</button></div><div class="outcome" id="outcome">Choose a path to reveal the reasoning.</div></div>
+              <div class="note mono">Synthetic demonstrations only — designed to show analytical thinking, not real customer data.</div>
+            </aside>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="section" id="proof">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="mono">03 / Proof</div><div><h2>Numbers, but still <em>beautifully framed.</em></h2><p>These are actual work-related performance details already reflected elsewhere in my materials—not scores from the fictional case room.</p></div></div>
-    <div class="proof-grid">
-      <article class="proof-card reveal"><strong>30+</strong><b>Accounts or alerts daily</b><p>Reviewed within AML operations while maintaining pace and consistency.</p></article>
-      <article class="proof-card reveal"><strong>25%</strong><b>Efficiency improvement</b><p>Reported improvement in review throughput by streamlining analytical workflows.</p></article>
-      <article class="proof-card reveal"><strong>100%</strong><b>QA accuracy</b><p>Maintained reported review accuracy while meeting assigned deadlines and SLAs.</p></article>
-      <article class="proof-card reveal"><strong>40+</strong><b>Daily teller transactions</b><p>Handled while supporting customer verification, escalations, and operational control.</p></article>
+    <div class="scrollnote">scroll to continue ↓</div>
+  </section>
+
+  <section class="band"><div class="bandtrack"><span>Transaction <b>Monitoring</b></span><span>KYC / CDD / <b>EDD</b></span><span>Financial <b>Crime</b></span><span>Fraud <b>Signals</b></span><span>Investigative <b>Judgment</b></span><span>Branch <b>Operations</b></span><span>Transaction <b>Monitoring</b></span><span>KYC / CDD / <b>EDD</b></span><span>Financial <b>Crime</b></span><span>Fraud <b>Signals</b></span><span>Investigative <b>Judgment</b></span><span>Branch <b>Operations</b></span></div></section>
+
+  <section class="section" id="story">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mono">01 / Story direction</div>
+        <div>
+          <h2>Built to feel like <em>an actual investigation.</em></h2>
+          <p>The goal was simple: make the page feel impressive without becoming decorative. This design uses darkness, tension, and restrained motion to communicate what financial-crime work actually feels like—reading unclear patterns, resisting easy conclusions, and building a rationale that can stand up to scrutiny.</p>
+        </div>
+      </div>
+      <div class="storygrid">
+        <article class="storycard reveal"><div class="mono">Signal</div><b>Not every alert deserves drama.</b><p>The important work is finding which details matter, and which details are just noise. The design mirrors that shift from ambiguity to clarity.</p></article>
+        <article class="storycard reveal"><div class="mono">Network</div><b>Relationships tell the real story.</b><p>Customers, counterparties, devices, branches, timing, and amounts become more powerful once they are viewed together instead of in isolation.</p></article>
+        <article class="storycard reveal"><div class="mono">Decision</div><b>Escalation requires discipline.</b><p>This portfolio uses fictional cases to show how I think through review, documentation, and escalation—not to overclaim experience or use real data.</p></article>
+      </div>
     </div>
-  </div>
-</section>
-<section class="end" id="contact">
-  <div class="wrap" style="position:relative;z-index:1">
-    <div class="mono">Erik Yeghinyan / AML / BSA / Financial Crime</div>
-    <h2>Looking for someone who can read the noise<em>without losing the human story?</em></h2>
-    <p>I’m open to AML, fraud, investigations, transaction monitoring, KYC, and banking operations roles. If you want a candidate who can bring both rigor and presence, let’s talk.</p>
-    <a class="btn primary" href="mailto:eyeghinyane@gmail.com?subject=AML%20Opportunity">Start a conversation</a>
-  </div>
-</section>
+  </section>
+
+  <section class="section" id="lab">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mono">02 / Case Lab</div>
+        <div>
+          <h2>Interactive scenes from <em>the shadows.</em></h2>
+          <p>Each scenario below is fictional and intentionally cinematic, but the reasoning reflects the type of structured thinking that matters in AML and fraud work. Click between cases and test the disposition path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proof">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mono">03 / Proof</div>
+        <div>
+          <h2>Real performance. <em>No generic filler.</em></h2>
+          <p>These reflect actual previously reported work metrics and responsibilities—not the synthetic case-room scores above.</p>
+        </div>
+      </div>
+      <div class="proofgrid">
+        <article class="proof reveal"><strong>30+</strong><b>Daily AML reviews</b><p>Handled through structured alert or account review work with attention to documentation and turnaround expectations.</p></article>
+        <article class="proof reveal"><strong>25%</strong><b>Reported efficiency gain</b><p>Improved review throughput by streamlining investigative workflow and reducing time lost to unnecessary repetition.</p></article>
+        <article class="proof reveal"><strong>100%</strong><b>Quality assurance accuracy</b><p>Maintained reported QA precision while working within expected compliance and operational controls.</p></article>
+        <article class="proof reveal"><strong>40+</strong><b>Daily teller transactions</b><p>Completed in Santander branch operations while supporting customer verification and unusual-activity escalation awareness.</p></article>
+      </div>
+      <div class="method">
+        <div class="box reveal"><h3>What I bring</h3><p>Experience across AML operations, transaction monitoring, KYC/CDD/EDD-related review support, financial-crime reasoning, and customer-facing banking environments—plus the ability to present risk clearly and professionally.</p></div>
+        <div class="box reveal"><h3>What this portfolio communicates</h3><p>I wanted it to feel memorable to hiring teams: dark, investigative, and premium, while still remaining honest about what is real experience and what is a fictional demonstration format.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ending" id="contact">
+    <div class="wrap" style="position:relative;z-index:2">
+      <div class="mono">Erik Yeghinyan / AML / BSA / Fraud / Banking Operations</div>
+      <h2>Need someone who can find the pattern<em>without losing the logic?</em></h2>
+      <p>I’m open to AML, financial-crime, fraud, KYC, transaction monitoring, and banking operations opportunities. If you want this even more intense, I can keep pushing the art direction—but this version already leans hard into the cinematic investigative look you asked for.</p>
+      <a class="btn primary" href="mailto:eyeghinyane@gmail.com?subject=AML%20Opportunity">Start a conversation</a>
+    </div>
+  </section>
 </main>
-<footer class="wrap footer"><span>ERIK YEGHINYAN © 2026</span><span>Actual work experience + fictional case demonstrations</span><a href="#top">Back to top ↑</a></footer>
+
+<footer class="wrap footer">
+  <span>ERIK YEGHINYAN © 2026</span>
+  <span>Actual work background + fictional interactive case demonstrations</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
 <script>
-const chapters=[
+const cases=[
   {
-    code:'Scene 01', title:'Layering, seen as choreography.', risk:87,
-    text:'A rapid series of connected movements creates the impression of flow without a clear underlying commercial reason. Timing turns separate transfers into one story.',
-    scoreSummary:'Elevated because multiple linked transfers behave like a coordinated pass-through chain.',
-    flags:['High-speed onward movement after receipt.','Several counterparties connect through one pressure point.','Activity pattern appears cleaner than the business rationale.'],
-    logic:['Map all linked entities before judging any one transfer in isolation.','Compare transfer speed, amounts, and counterparty repetition.','Document why context does or does not explain the pattern.'],
-    timeline:[['08:12','Origin account sends the first transfer.'],['08:31','Intermediary account forwards most of the amount.'],['09:06','Linked entity appears again with a mirrored movement.'],['09:42','Funds disperse to a final recipient cluster.']],
-    review:'Review more: collect source-of-funds detail, counterparty explanations, and account-purpose context before final disposition.',
-    escalate:'Escalate: the rapid pass-through structure and repeated relationship pattern warrant documented BSA review for possible suspicious activity.',
-    nodes:[['Origin',16,66],['Bridge',40,28],['Linked',56,64],['Final',82,28],['Shadow',78,80]], edges:[[0,1],[1,2],[2,3],[2,4],[1,4]]
+    short:'Layering',
+    title:'Layering across linked entities.',
+    text:'Transfers move quickly through a small set of relationships, giving the appearance of flow while weakening the legitimate-business narrative.',
+    risk:87,
+    riskSummary:'Elevated because a seemingly clean flow reveals a coordinated pattern when sequenced.',
+    flags:['Rapid pass-through movement after receipt.','One relationship acts as a pressure point across the chain.','The flow pattern looks cleaner than the narrative around it.'],
+    logic:['Map the network before overcommitting to one alert explanation.','Compare timing, repetition, and transfer behavior together.','Frame escalation around documented pattern rather than suspicion language alone.'],
+    review:'Review more: obtain source-of-funds detail, customer purpose, and counterparty context before final disposition.',
+    escalate:'Escalate: the repeated linked flow and timing structure support BSA review for potential suspicious activity.',
+    evidence:[['Exposure','Layering','Activity becomes suspicious when speed, repetition, and relationship overlap.'],['Signal','Counterparty Echo','One entity appears repeatedly in places it should not.'],['Judgment','Escalation Logic','Document the why—not just the alert outcome.']],
+    nodes:[['Origin',16,66],['Bridge',38,30],['Linked',55,60],['Final',81,28],['Shadow',80,79]],
+    edges:[[0,1],[1,2],[2,3],[2,4],[1,4]]
   },
   {
-    code:'Scene 02', title:'A takeover starts with one small inconsistency.', risk:92,
-    text:'The customer history looks stable until identity signals break. A new device, credentials update, and unfamiliar payment path transform routine activity into a potential compromise.',
-    scoreSummary:'Highest risk because authentication and movement signals align around a possible account takeover event.',
-    flags:['New device appears before a sensitive change.','Password reset occurs close to outbound transfer.','A new payee enters the pattern at the worst possible moment.'],
-    logic:['Separate normal account history from the event cluster.','Evaluate authentication, device, payee, and transaction behavior together.','Frame recommendations around control actions and customer protection.'],
-    timeline:[['17:04','New device login succeeds.'],['17:09','Credentials are reset.'],['17:15','New payee is added.'],['17:21','Outbound transfer is initiated.']],
-    review:'Review more: verify the device fingerprint, customer outreach, access history, and the new payee profile before final action.',
-    escalate:'Escalate: the stacked fraud signals support urgent fraud-operations review and appropriate protective controls.',
-    nodes:[['Customer',14,62],['Device',34,24],['Reset',42,80],['Payee',72,30],['Transfer',82,78]], edges:[[0,1],[1,2],[1,3],[2,4],[3,4]]
+    short:'Takeover',
+    title:'Potential account takeover sequence.',
+    text:'Stable historical behavior breaks suddenly when a new device, a credential event, and a new payment path cluster too tightly together.',
+    risk:92,
+    riskSummary:'Highest risk because access, authentication, and payment signals align around a potential compromise event.',
+    flags:['Unexpected device presence before sensitive changes.','Password reset precedes payment action.','New payee arrives at exactly the wrong time.'],
+    logic:['Separate the customer’s baseline from the event cluster.','Assess device, access, payee, and transfer behavior as one story.','Anchor decisions in control actions and customer protection.'],
+    review:'Review more: verify access history, device fingerprint, customer outreach, and the new payee profile.',
+    escalate:'Escalate: the stacked fraud indicators support urgent fraud-operations review and protective action.',
+    evidence:[['Entry','New Device','A new device reframes what looked like routine access.'],['Signal','Reset Before Transfer','Sequence matters more than any one event by itself.'],['Decision','Protective Controls','The right next step protects the customer and the institution.']],
+    nodes:[['Client',14,62],['Device',33,26],['Reset',41,79],['Payee',73,31],['Transfer',83,77]],
+    edges:[[0,1],[1,2],[1,3],[2,4],[3,4]]
   },
   {
-    code:'Scene 03', title:'Structuring reveals itself through rhythm.', risk:81,
-    text:'Each deposit by itself sits in a grey zone. The pattern emerges when multiple near-threshold cash events repeat across place and time, converging on the same destination.',
-    scoreSummary:'Elevated because dispersion and threshold proximity repeat with unusual discipline.',
-    flags:['Near-threshold deposits recur across locations.','Timing and branch spread reduce the chance of coincidence.','Activity appears inconsistent with the known customer profile.'],
-    logic:['View deposit events as a sequence, not single isolated acts.','Compare branch dispersion, intervals, and historical expectations.','Keep language precise: the concern is pattern and context, not assumption of intent.'],
-    timeline:[['Mon','Cash deposit at Branch A.'],['Wed','Similar deposit at Branch B.'],['Fri','Third deposit pattern at Branch C.'],['Next Mon','Common account receives consolidated effect.']],
-    review:'Review more: compare cash behavior to expected operations, business profile, and CTR obligations before concluding the review.',
-    escalate:'Escalate: repeated near-threshold activity across branches supports BSA evaluation for possible structuring.',
-    nodes:[['Client',14,60],['Branch A',36,24],['Branch B',42,78],['Branch C',72,36],['Account',84,76]], edges:[[0,1],[0,2],[1,3],[2,4],[3,4]]
+    short:'Structuring',
+    title:'Possible cash structuring rhythm.',
+    text:'Each deposit sits near a threshold but never quite touches it. The pattern sharpens when branch dispersion and repeated behavior are layered together.',
+    risk:81,
+    riskSummary:'Elevated because near-threshold cash behavior repeats across place and time with unusual consistency.',
+    flags:['Repeated near-threshold activity across locations.','Branch and date dispersion lower the chance of coincidence.','Cash pattern appears inconsistent with the expected profile.'],
+    logic:['Treat the deposits as a sequence, not isolated events.','Compare intervals, locations, and historical expectations.','Be precise: focus on pattern and context without presuming intent.'],
+    review:'Review more: compare cash activity to customer profile, expected operations, and CTR obligations.',
+    escalate:'Escalate: the repeated near-threshold pattern across branches supports BSA evaluation for possible structuring.',
+    evidence:[['Rhythm','Near Threshold','The pattern is subtle only until it repeats.'],['Spread','Branch Dispersion','Geography becomes part of the analytical signal.'],['Decision','Context First','Escalation depends on disciplined comparison, not instinct.']],
+    nodes:[['Customer',14,60],['A',36,25],['B',42,78],['C',72,37],['Account',84,77]],
+    edges:[[0,1],[0,2],[1,3],[2,4],[3,4]]
   }
 ];
-const chapterWrap=document.getElementById('chapters');
-chapters.forEach((c,i)=>{const b=document.createElement('button');b.className='chapter-btn'+(i===0?' active':'');b.innerHTML=`<small>${c.code}</small><strong>${c.title}</strong><span>${c.text}</span>`;b.onclick=()=>renderChapter(i);chapterWrap.appendChild(b)});
-const ids={sceneCode:'sceneCode',sceneTitle:'sceneTitle',sceneText:'sceneText',score:'score',scoreSummary:'scoreSummary',flagList:'flagList',logicList:'logicList',timeline:'timeline',outcome:'outcome',vizArea:'vizArea'};
+const caseSwitch=document.getElementById('caseSwitch');
+const networkSvg=document.getElementById('networkSvg');
+const board=document.getElementById('networkBoard');
+const ids={title:'caseTitle',text:'caseText',score:'riskScore',riskSummary:'riskSummary',flag:'flagList',logic:'logicList',outcome:'outcome',ev1Title:'ev1Title',ev1Text:'ev1Text',ev2Title:'ev2Title',ev2Text:'ev2Text',ev3Title:'ev3Title',ev3Text:'ev3Text'};
 let current=0;
-function renderViz(c){const viz=document.getElementById(ids.vizArea);viz.innerHTML=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${c.edges.map(([a,b])=>`<line x1="${c.nodes[a][1]}" y1="${c.nodes[a][2]}" x2="${c.nodes[b][1]}" y2="${c.nodes[b][2]}" stroke="rgba(242,221,186,.32)" stroke-width=".35" vector-effect="non-scaling-stroke" />`).join('')}</svg>`;c.nodes.forEach(n=>{const d=document.createElement('div');d.className='node';d.style.left=`calc(${n[1]}% - 32px)`;d.style.top=`calc(${n[2]}% - 32px)`;d.innerHTML=`<span>${n[0]}</span>`;viz.appendChild(d)})}
-function renderTimeline(c){document.getElementById(ids.timeline).innerHTML=c.timeline.map(([t,tx])=>`<div class="time-card"><strong>${t}</strong><span>${tx}</span></div>`).join('')}
-function renderChapter(i){current=i;const c=chapters[i];document.querySelectorAll('.chapter-btn').forEach((b,idx)=>b.classList.toggle('active',idx===i));document.getElementById(ids.sceneCode).textContent=c.code;document.getElementById(ids.sceneTitle).textContent=c.title;document.getElementById(ids.sceneText).textContent=c.text;document.getElementById(ids.score).textContent=c.risk;document.getElementById(ids.scoreSummary).textContent=c.scoreSummary;document.getElementById(ids.flagList).innerHTML=c.flags.map(x=>`<li>${x}</li>`).join('');document.getElementById(ids.logicList).innerHTML=c.logic.map(x=>`<li>${x}</li>`).join('');document.getElementById(ids.outcome).textContent='Choose a response to reveal the reasoning.';renderTimeline(c);renderViz(c)}
-document.getElementById('reviewBtn').onclick=()=>document.getElementById(ids.outcome).textContent=chapters[current].review;
-document.getElementById('escalateBtn').onclick=()=>document.getElementById(ids.outcome).textContent=chapters[current].escalate;
-renderChapter(0);
-if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'))}
-const stage=document.getElementById('stageCore');if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)/r.width;const y=(e.clientY-r.top-r.height/2)/r.height;stage.style.transform=`perspective(1200px) rotateY(${x*8}deg) rotateX(${y*-8}deg)`});stage.addEventListener('pointerleave',()=>stage.style.transform='')}
+cases.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c.short;b.className=i===0?'active':'';b.onclick=()=>renderCase(i);caseSwitch.appendChild(b)});
+function clearNodes(){board.querySelectorAll('.node').forEach(n=>n.remove())}
+function renderNetwork(c){networkSvg.innerHTML=c.edges.map(([a,b])=>`<line x1="${c.nodes[a][1]}" y1="${c.nodes[a][2]}" x2="${c.nodes[b][1]}" y2="${c.nodes[b][2]}" stroke="rgba(202,161,105,.36)" stroke-width=".36" vector-effect="non-scaling-stroke"/>`).join('');clearNodes();c.nodes.forEach((n,idx)=>{const d=document.createElement('div');d.className='node'+(idx===0?' active':'');d.style.left=`calc(${n[1]}% - 33px)`;d.style.top=`calc(${n[2]}% - 33px)`;d.innerHTML=`<span>${n[0]}</span>`;d.onclick=()=>{board.querySelectorAll('.node').forEach(x=>x.classList.remove('active'));d.classList.add('active')};board.appendChild(d)})}
+function renderEvidence(c){document.getElementById(ids.ev1Title).textContent=c.evidence[0][1];document.getElementById(ids.ev1Text).textContent=c.evidence[0][2];document.getElementById(ids.ev2Title).textContent=c.evidence[1][1];document.getElementById(ids.ev2Text).textContent=c.evidence[1][2];document.getElementById(ids.ev3Title).textContent=c.evidence[2][1];document.getElementById(ids.ev3Text).textContent=c.evidence[2][2]}
+function renderCase(i){current=i;const c=cases[i];caseSwitch.querySelectorAll('button').forEach((b,idx)=>b.classList.toggle('active',idx===i));document.getElementById(ids.title).textContent=c.title;document.getElementById(ids.text).textContent=c.text;document.getElementById(ids.score).textContent=c.risk;document.getElementById(ids.riskSummary).textContent=c.riskSummary;document.getElementById(ids.flag).innerHTML=c.flags.map(x=>`<li>${x}</li>`).join('');document.getElementById(ids.logic).innerHTML=c.logic.map(x=>`<li>${x}</li>`).join('');document.getElementById(ids.outcome).textContent='Choose a path to reveal the reasoning.';renderEvidence(c);renderNetwork(c)}
+document.getElementById('reviewBtn').onclick=()=>document.getElementById(ids.outcome).textContent=cases[current].review;
+document.getElementById('escalateBtn').onclick=()=>document.getElementById(ids.outcome).textContent=cases[current].escalate;
+renderCase(0);
+if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'))}
+const frame=document.getElementById('caseFrame');if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){frame.addEventListener('pointermove',e=>{const r=frame.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)/r.width;const y=(e.clientY-r.top-r.height/2)/r.height;frame.style.transform=`perspective(1400px) rotateY(${x*4}deg) rotateX(${y*-4}deg)`});frame.addEventListener('pointerleave',()=>frame.style.transform='')}
 </script>
 </body>
 </html>
